@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */; };
+		8BB98F7F1EC677B800F86FE1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F7E1EC677B800F86FE1 /* Actions.sks */; };
+		8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F801EC677B800F86FE1 /* GameScene.swift */; };
+		8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F821EC677B800F86FE1 /* GameViewController.swift */; };
+		8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F841EC677B800F86FE1 /* Main.storyboard */; };
+		8BB98F961EC677B800F86FE1 /* WhiplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */; };
+		8BB98FA11EC677B800F86FE1 /* WhiplashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */; };
+		8BB98FB91EC678C100F86FE1 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FAF1EC678C100F86FE1 /* Base.lproj */; };
+		8BB98FBA1EC678C100F86FE1 /* ConstantsAndStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB01EC678C100F86FE1 /* ConstantsAndStructs.swift */; };
+		8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB11EC678C100F86FE1 /* Platform.swift */; };
+		8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB21EC678C100F86FE1 /* platform1.png */; };
+		8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB31EC678C100F86FE1 /* platform2.png */; };
+		8BB98FBE1EC678C100F86FE1 /* platform3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB41EC678C100F86FE1 /* platform3.png */; };
+		8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */; };
+		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
+		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
+		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BB98F921EC677B800F86FE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BB98F6F1EC677B800F86FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BB98F761EC677B800F86FE1;
+			remoteInfo = Whiplash;
+		};
+		8BB98F9D1EC677B800F86FE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BB98F6F1EC677B800F86FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BB98F761EC677B800F86FE1;
+			remoteInfo = Whiplash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8BB98F771EC677B800F86FE1 /* Whiplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BB98F7E1EC677B800F86FE1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		8BB98F801EC677B800F86FE1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8BB98F821EC677B800F86FE1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8BB98F851EC677B800F86FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BB98F8C1EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB98F911EC677B800F86FE1 /* WhiplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiplashTests.swift; sourceTree = "<group>"; };
+		8BB98F971EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB98F9C1EC677B800F86FE1 /* WhiplashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiplashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiplashUITests.swift; sourceTree = "<group>"; };
+		8BB98FA21EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB98FAF1EC678C100F86FE1 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		8BB98FB01EC678C100F86FE1 /* ConstantsAndStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAndStructs.swift; sourceTree = "<group>"; };
+		8BB98FB11EC678C100F86FE1 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		8BB98FB21EC678C100F86FE1 /* platform1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform1.png; sourceTree = "<group>"; };
+		8BB98FB31EC678C100F86FE1 /* platform2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform2.png; sourceTree = "<group>"; };
+		8BB98FB41EC678C100F86FE1 /* platform3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform3.png; sourceTree = "<group>"; };
+		8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformGenerator.swift; sourceTree = "<group>"; };
+		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
+		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
+		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BB98F741EC677B800F86FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F8E1EC677B800F86FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F991EC677B800F86FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BB98F6E1EC677B800F86FE1 = {
+			isa = PBXGroup;
+			children = (
+				8BB98F791EC677B800F86FE1 /* Whiplash */,
+				8BB98F941EC677B800F86FE1 /* WhiplashTests */,
+				8BB98F9F1EC677B800F86FE1 /* WhiplashUITests */,
+				8BB98F781EC677B800F86FE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BB98F781EC677B800F86FE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98F771EC677B800F86FE1 /* Whiplash.app */,
+				8BB98F911EC677B800F86FE1 /* WhiplashTests.xctest */,
+				8BB98F9C1EC677B800F86FE1 /* WhiplashUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BB98F791EC677B800F86FE1 /* Whiplash */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB71EC678C100F86FE1 /* ToDo.txt */,
+				8BB98FC31EC67B4D00F86FE1 /* Images */,
+				8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */,
+				8BB98F7E1EC677B800F86FE1 /* Actions.sks */,
+				8BB98F821EC677B800F86FE1 /* GameViewController.swift */,
+				8BB98FB01EC678C100F86FE1 /* ConstantsAndStructs.swift */,
+				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
+				8BB98FC21EC67AF700F86FE1 /* Objects */,
+				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
+				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
+				8BB98FAF1EC678C100F86FE1 /* Base.lproj */,
+				8BB98F8C1EC677B800F86FE1 /* Info.plist */,
+			);
+			path = Whiplash;
+			sourceTree = "<group>";
+		};
+		8BB98F941EC677B800F86FE1 /* WhiplashTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */,
+				8BB98F971EC677B800F86FE1 /* Info.plist */,
+			);
+			path = WhiplashTests;
+			sourceTree = "<group>";
+		};
+		8BB98F9F1EC677B800F86FE1 /* WhiplashUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */,
+				8BB98FA21EC677B800F86FE1 /* Info.plist */,
+			);
+			path = WhiplashUITests;
+			sourceTree = "<group>";
+		};
+		8BB98FC21EC67AF700F86FE1 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
+				8BB98FC41EC67B9500F86FE1 /* Platform Generation */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		8BB98FC31EC67B4D00F86FE1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB21EC678C100F86FE1 /* platform1.png */,
+				8BB98FB31EC678C100F86FE1 /* platform2.png */,
+				8BB98FB41EC678C100F86FE1 /* platform3.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		8BB98FC41EC67B9500F86FE1 /* Platform Generation */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB11EC678C100F86FE1 /* Platform.swift */,
+				8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */,
+			);
+			name = "Platform Generation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BB98F761EC677B800F86FE1 /* Whiplash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB98FA51EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "Whiplash" */;
+			buildPhases = (
+				8BB98F731EC677B800F86FE1 /* Sources */,
+				8BB98F741EC677B800F86FE1 /* Frameworks */,
+				8BB98F751EC677B800F86FE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Whiplash;
+			productName = Whiplash;
+			productReference = 8BB98F771EC677B800F86FE1 /* Whiplash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BB98F901EC677B800F86FE1 /* WhiplashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB98FA81EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashTests" */;
+			buildPhases = (
+				8BB98F8D1EC677B800F86FE1 /* Sources */,
+				8BB98F8E1EC677B800F86FE1 /* Frameworks */,
+				8BB98F8F1EC677B800F86FE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BB98F931EC677B800F86FE1 /* PBXTargetDependency */,
+			);
+			name = WhiplashTests;
+			productName = WhiplashTests;
+			productReference = 8BB98F911EC677B800F86FE1 /* WhiplashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8BB98F9B1EC677B800F86FE1 /* WhiplashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB98FAB1EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashUITests" */;
+			buildPhases = (
+				8BB98F981EC677B800F86FE1 /* Sources */,
+				8BB98F991EC677B800F86FE1 /* Frameworks */,
+				8BB98F9A1EC677B800F86FE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BB98F9E1EC677B800F86FE1 /* PBXTargetDependency */,
+			);
+			name = WhiplashUITests;
+			productName = WhiplashUITests;
+			productReference = 8BB98F9C1EC677B800F86FE1 /* WhiplashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BB98F6F1EC677B800F86FE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Palm Studios";
+				TargetAttributes = {
+					8BB98F761EC677B800F86FE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WT6AWRDT6Y;
+						ProvisioningStyle = Automatic;
+					};
+					8BB98F901EC677B800F86FE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WT6AWRDT6Y;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8BB98F761EC677B800F86FE1;
+					};
+					8BB98F9B1EC677B800F86FE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WT6AWRDT6Y;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8BB98F761EC677B800F86FE1;
+					};
+				};
+			};
+			buildConfigurationList = 8BB98F721EC677B800F86FE1 /* Build configuration list for PBXProject "Whiplash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BB98F6E1EC677B800F86FE1;
+			productRefGroup = 8BB98F781EC677B800F86FE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BB98F761EC677B800F86FE1 /* Whiplash */,
+				8BB98F901EC677B800F86FE1 /* WhiplashTests */,
+				8BB98F9B1EC677B800F86FE1 /* WhiplashUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BB98F751EC677B800F86FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */,
+				8BB98FB91EC678C100F86FE1 /* Base.lproj in Resources */,
+				8BB98FBE1EC678C100F86FE1 /* platform3.png in Resources */,
+				8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */,
+				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
+				8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */,
+				8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */,
+				8BB98F7F1EC677B800F86FE1 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F8F1EC677B800F86FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F9A1EC677B800F86FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BB98F731EC677B800F86FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */,
+				8BB98FBA1EC678C100F86FE1 /* ConstantsAndStructs.swift in Sources */,
+				8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */,
+				8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */,
+				8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */,
+				8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */,
+				8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F8D1EC677B800F86FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98F961EC677B800F86FE1 /* WhiplashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F981EC677B800F86FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98FA11EC677B800F86FE1 /* WhiplashUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BB98F931EC677B800F86FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BB98F761EC677B800F86FE1 /* Whiplash */;
+			targetProxy = 8BB98F921EC677B800F86FE1 /* PBXContainerItemProxy */;
+		};
+		8BB98F9E1EC677B800F86FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BB98F761EC677B800F86FE1 /* Whiplash */;
+			targetProxy = 8BB98F9D1EC677B800F86FE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BB98F841EC677B800F86FE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BB98F851EC677B800F86FE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BB98FA31EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BB98FA41EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BB98FA61EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = Whiplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8BB98FA71EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = Whiplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8BB98FA91EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whiplash.app/Whiplash";
+			};
+			name = Debug;
+		};
+		8BB98FAA1EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whiplash.app/Whiplash";
+			};
+			name = Release;
+		};
+		8BB98FAC1EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Whiplash;
+			};
+			name = Debug;
+		};
+		8BB98FAD1EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Whiplash;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BB98F721EC677B800F86FE1 /* Build configuration list for PBXProject "Whiplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA31EC677B800F86FE1 /* Debug */,
+				8BB98FA41EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB98FA51EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "Whiplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA61EC677B800F86FE1 /* Debug */,
+				8BB98FA71EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB98FA81EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA91EC677B800F86FE1 /* Debug */,
+				8BB98FAA1EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB98FAB1EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FAC1EC677B800F86FE1 /* Debug */,
+				8BB98FAD1EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BB98F6F1EC677B800F86FE1 /* Project object */;
+}

@@ -1,0 +1,7 @@
+-add ads
+-menu popup with link to gamecenter, link to buy app, and restart/resume button
+-pause button that brings up menu
+-music
+-mute button
+-change graphics
+-app icon
