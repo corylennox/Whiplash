@@ -6,10 +6,15 @@
 //  Copyright © 2016 Palm Studios. All rights reserved.
 //
 
+import Firebase
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
+
+let kBannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+
+class GameViewController: UIViewController, GADInterstitialDelegate
+{
     var scene: GameScene!
     
     override func viewDidLoad() {
@@ -27,6 +32,15 @@ class GameViewController: UIViewController {
         
         //present scene
         skView.presentScene(scene)
+        
+        
+        let bannerView = GADBannerView(adSize:kGADAdSizeBanner,origin: CGPoint(x: 0.0, y: 300))
+        bannerView.adUnitID = kBannerAdUnitID
+        bannerView.rootViewController = self
+        //bannerView.load(GADRequest())
+        
+        skView.addSubview(bannerView)
+        bannerView.load(GADRequest())
     }
     
     override var prefersStatusBarHidden: Bool {
