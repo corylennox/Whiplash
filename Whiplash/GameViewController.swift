@@ -6,9 +6,10 @@
 //  Copyright © 2016 Palm Studios. All rights reserved.
 //
 
-import Firebase
 import UIKit
 import SpriteKit
+import Firebase
+import GoogleMobileAds
 
 
 let kBannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
