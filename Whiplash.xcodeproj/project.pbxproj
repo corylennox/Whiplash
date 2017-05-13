@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */; };
+		8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */; };
 		8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */; };
 		8BB98F7F1EC677B800F86FE1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F7E1EC677B800F86FE1 /* Actions.sks */; };
 		8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F801EC677B800F86FE1 /* GameScene.swift */; };
@@ -24,6 +26,8 @@
 		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
 		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
 		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
+		97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */; };
+		BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiplash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash.release.xcconfig"; sourceTree = "<group>"; };
+		3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BB98F771EC677B800F86FE1 /* Whiplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB98F7E1EC677B800F86FE1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -67,6 +75,12 @@
 		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.release.xcconfig"; sourceTree = "<group>"; };
+		A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whiplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3E36AF810CB803D7AA19500 /* Pods-Whiplash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiplash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash.debug.xcconfig"; sourceTree = "<group>"; };
+		FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC94324FCF3A4DD69049B81 /* Pods-WhiplashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +104,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171D4FA01B1B324555DF0530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */,
+				FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */,
+				3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7878177C07081D111042D385 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3E36AF810CB803D7AA19500 /* Pods-Whiplash.debug.xcconfig */,
+				343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */,
+				FFC94324FCF3A4DD69049B81 /* Pods-WhiplashTests.debug.xcconfig */,
+				9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */,
+				3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */,
+				A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8BB98F6E1EC677B800F86FE1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +141,8 @@
 				8BB98F941EC677B800F86FE1 /* WhiplashTests */,
 				8BB98F9F1EC677B800F86FE1 /* WhiplashUITests */,
 				8BB98F781EC677B800F86FE1 /* Products */,
+				7878177C07081D111042D385 /* Pods */,
+				171D4FA01B1B324555DF0530 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				8BB98FB71EC678C100F86FE1 /* ToDo.txt */,
+				8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */,
 				8BB98FC31EC67B4D00F86FE1 /* Images */,
 				8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */,
 				8BB98F7E1EC677B800F86FE1 /* Actions.sks */,
@@ -186,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BB98FA51EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "Whiplash" */;
 			buildPhases = (
+				265D9C9AA5CE0C52A703AF81 /* [CP] Check Pods Manifest.lock */,
 				8BB98F731EC677B800F86FE1 /* Sources */,
 				8BB98F741EC677B800F86FE1 /* Frameworks */,
 				8BB98F751EC677B800F86FE1 /* Resources */,
+				9D8A5017937EE544F0B8D467 /* [CP] Embed Pods Frameworks */,
+				44906F84D1993BCD13DA05F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BB98FA81EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashTests" */;
 			buildPhases = (
+				03FCB8B95E9BB795B7AFDA75 /* [CP] Check Pods Manifest.lock */,
 				8BB98F8D1EC677B800F86FE1 /* Sources */,
 				8BB98F8E1EC677B800F86FE1 /* Frameworks */,
 				8BB98F8F1EC677B800F86FE1 /* Resources */,
+				E9DD75F261D170D87878C394 /* [CP] Embed Pods Frameworks */,
+				5A315CAD84CB592CDD91FBFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BB98FAB1EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashUITests" */;
 			buildPhases = (
+				3236985712884DD8AE0EF6A2 /* [CP] Check Pods Manifest.lock */,
 				8BB98F981EC677B800F86FE1 /* Sources */,
 				8BB98F991EC677B800F86FE1 /* Frameworks */,
 				8BB98F9A1EC677B800F86FE1 /* Resources */,
+				D284B463C28928CE3505039D /* [CP] Embed Pods Frameworks */,
+				C99CE5A7BC12DFDFC3945827 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +343,7 @@
 			files = (
 				8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */,
 				8BB98FB91EC678C100F86FE1 /* Base.lproj in Resources */,
+				8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */,
 				8BB98FBE1EC678C100F86FE1 /* platform3.png in Resources */,
 				8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */,
 				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
@@ -315,6 +368,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03FCB8B95E9BB795B7AFDA75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		265D9C9AA5CE0C52A703AF81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3236985712884DD8AE0EF6A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44906F84D1993BCD13DA05F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A315CAD84CB592CDD91FBFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D8A5017937EE544F0B8D467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C99CE5A7BC12DFDFC3945827 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D284B463C28928CE3505039D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9DD75F261D170D87878C394 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8BB98F731EC677B800F86FE1 /* Sources */ = {
@@ -471,6 +662,7 @@
 		};
 		8BB98FA61EC677B800F86FE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E36AF810CB803D7AA19500 /* Pods-Whiplash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WT6AWRDT6Y;
@@ -485,6 +677,7 @@
 		};
 		8BB98FA71EC677B800F86FE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WT6AWRDT6Y;
@@ -499,6 +692,7 @@
 		};
 		8BB98FA91EC677B800F86FE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC94324FCF3A4DD69049B81 /* Pods-WhiplashTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +708,7 @@
 		};
 		8BB98FAA1EC677B800F86FE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -529,6 +724,7 @@
 		};
 		8BB98FAC1EC677B800F86FE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = WT6AWRDT6Y;
@@ -543,6 +739,7 @@
 		};
 		8BB98FAD1EC677B800F86FE1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = WT6AWRDT6Y;

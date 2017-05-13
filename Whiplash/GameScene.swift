@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import Firebase
 
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
