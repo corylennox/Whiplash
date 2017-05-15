@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+let AD_HEIGHT: CGFloat = 75
+
 let ANCHOR_RADIUS: CGFloat = 58
 
 //Ball

@@ -1,4 +1,5 @@
--add ads
+-place screen properly so that it accounts for the ad
+-scale platform to height of the device?
 -menu popup with link to gamecenter, link to buy app, and restart/resume button
 -pause button that brings up menu
 -music

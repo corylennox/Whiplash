@@ -28,17 +28,17 @@ class GameViewController: UIViewController, GADInterstitialDelegate
         skView.preferredFramesPerSecond = 60
 
         // Create and configure the scene
-        scene = GameScene(size: skView.bounds.size)
-        scene.scaleMode = .aspectFill
+        let gsSize = CGSize(width: skView.bounds.size.width, height: skView.bounds.size.height - AD_HEIGHT)
+        scene = GameScene(size: gsSize)
+        scene.scaleMode = .aspectFit
         
         //present scene
         skView.presentScene(scene)
         
-        
-        let bannerView = GADBannerView(adSize:kGADAdSizeBanner,origin: CGPoint(x: 0.0, y: 300))
+        let adSize = GADAdSizeFullWidthPortraitWithHeight(AD_HEIGHT)
+        let bannerView = GADBannerView(adSize:adSize, origin: CGPoint(x: 0.0, y: skView.bounds.size.height - AD_HEIGHT))
         bannerView.adUnitID = kBannerAdUnitID
         bannerView.rootViewController = self
-        //bannerView.load(GADRequest())
         
         skView.addSubview(bannerView)
         bannerView.load(GADRequest())
