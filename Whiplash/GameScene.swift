@@ -25,6 +25,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view: SKView)
     {
+        
+        //size = CGSize(width: size.width, height: size.height - AD_HEIGHT)
+        
         backgroundColor = SKColor.lightGray
 
         addPhysicsWorld()
@@ -118,7 +121,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let bottomPlatform = platformGenerator.platforms.first
         
         //delete and generate new plat
-        if (bottomPlatform?.position.y)! + ANCHOR_RADIUS < 0
+        if (bottomPlatform?.position.y)! + ANCHOR_RADIUS < AD_HEIGHT
         {
             platformGenerator.removeBottomPlatform()
             platformGenerator.generateNextPlatform(movingLong: true, movingLat: true, rotating: true)
@@ -157,8 +160,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func addBorder()
     {
-        //let frame = CGRect(x: 0, y: 0, width: self.frame.size.width + ANCHOR_RADIUS*2, height: self.frame.size.height + ANCHOR_RADIUS*2)
-        border = SKPhysicsBody(edgeLoopFrom: self.frame)
+        let frame = CGRect(x: 0, y: AD_HEIGHT, width: self.frame.size.width, height: self.frame.size.height - AD_HEIGHT)
+        border = SKPhysicsBody(edgeLoopFrom: frame)
         border.categoryBitMask = CollisionCategoryBitMask.Border
         border.contactTestBitMask = CollisionCategoryBitMask.Ball
         border.collisionBitMask = 0

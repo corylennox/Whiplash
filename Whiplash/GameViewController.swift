@@ -12,7 +12,8 @@ import Firebase
 import GoogleMobileAds
 
 
-let kBannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+// let kBannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+let kBannerAdUnitID = "ca-app-pub-5168834967300522/4058151097"
 
 class GameViewController: UIViewController, GADInterstitialDelegate
 {
@@ -28,14 +29,13 @@ class GameViewController: UIViewController, GADInterstitialDelegate
         skView.preferredFramesPerSecond = 60
 
         // Create and configure the scene
-        let gsSize = CGSize(width: skView.bounds.size.width, height: skView.bounds.size.height - AD_HEIGHT)
-        scene = GameScene(size: gsSize)
+        scene = GameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFit
         
         //present scene
         skView.presentScene(scene)
         
-        let adSize = GADAdSizeFullWidthPortraitWithHeight(AD_HEIGHT)
+        let adSize = kGADAdSizeBanner
         let bannerView = GADBannerView(adSize:adSize, origin: CGPoint(x: 0.0, y: skView.bounds.size.height - AD_HEIGHT))
         bannerView.adUnitID = kBannerAdUnitID
         bannerView.rootViewController = self
