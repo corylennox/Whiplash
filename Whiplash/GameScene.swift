@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import GoogleMobileAds
 
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
@@ -20,14 +21,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     var scoreLabel: ScoreLabel!
     var highScoreLabel: ScoreLabel!
-    var isStarted = false
-    var isGameOver = false
+    var gameIsStarted = false
+    var gameIsOver = false
+    var gameIsPaused = false
     
     override func didMove(to view: SKView)
     {
-        
-        //size = CGSize(width: size.width, height: size.height - AD_HEIGHT)
-        
         backgroundColor = SKColor.lightGray
 
         addPhysicsWorld()
@@ -42,11 +41,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-        if isGameOver
+        if gameIsOver
         {
             restart()
         }
-        else if !isStarted
+        else if !gameIsStarted
         {
             start()
         }
@@ -55,7 +54,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         {
             return
         }
-
+        
+        
         scene?.physicsWorld.remove(joint)
         
         // Calculate vector components x and y
@@ -121,7 +121,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let bottomPlatform = platformGenerator.platforms.first
         
         //delete and generate new plat
-        if (bottomPlatform?.position.y)! + ANCHOR_RADIUS < AD_HEIGHT
+        if (bottomPlatform?.position.y)! + ANCHOR_RADIUS < 0
         {
             platformGenerator.removeBottomPlatform()
             platformGenerator.generateNextPlatform(movingLong: true, movingLat: true, rotating: true)
@@ -160,8 +160,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func addBorder()
     {
-        let frame = CGRect(x: 0, y: AD_HEIGHT, width: self.frame.size.width, height: self.frame.size.height - AD_HEIGHT)
-        border = SKPhysicsBody(edgeLoopFrom: frame)
+        border = SKPhysicsBody(edgeLoopFrom: self.frame)
         border.categoryBitMask = CollisionCategoryBitMask.Border
         border.contactTestBitMask = CollisionCategoryBitMask.Ball
         border.collisionBitMask = 0
@@ -200,8 +199,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         
         joinPhysicsBodies(bodyA: ball.physicsBody!, bodyB: startingPlat.physicsBody!, point: anchor)
         currentPlatform = startingPlat
-
-
     }
     
     func addScoreLabels()
@@ -248,7 +245,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func start()
     {
-        isStarted = true
+        gameIsStarted = true
         
         let tapToStartLabel = childNode(withName: "tapToStartLabel")
         tapToStartLabel?.removeFromParent()
@@ -262,6 +259,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func restart()
     {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShow"), object: nil)
         let newScene = GameScene(size: view!.bounds.size)
         newScene.scaleMode = .aspectFill
         view!.presentScene(newScene)
@@ -269,7 +267,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func gameOver()
     {
-        isGameOver = true
+        gameIsOver = true
         
         // stop everything
         for platform in platformGenerator.platforms
@@ -311,4 +309,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         self.physicsWorld.add(joint)
     }
     
+    func pauseGame()
+    {
+        ball.isPaused = true
+        for platform in platformGenerator.platforms
+        {
+            platform.isPaused = true
+        }
+        gameIsPaused = true
+        
+        //display menu
+
+    }
+    
+    func unpauseGame()
+    {
+        ball.isPaused = false
+        for platform in platformGenerator.platforms
+        {
+            platform.isPaused = false
+        }
+        gameIsPaused = false
+    }
 }

@@ -9,7 +9,8 @@
 import Foundation
 import SpriteKit
 
-class Platform: SKSpriteNode {
+class Platform: SKSpriteNode
+{
     var isMovingRight: Bool?
     var moveRight: SKAction!
     var moveLeft: SKAction!
@@ -55,7 +56,8 @@ class Platform: SKSpriteNode {
         }
     }
     
-    func startMovingLong() {
+    func startMovingLong()
+    {
         let moveDown = SKAction.moveBy(x: 0, y: -PLATFORM_DESCENT_SPEED, duration: 1)
         run(SKAction.repeatForever(moveDown))
     }
@@ -78,7 +80,8 @@ class Platform: SKSpriteNode {
         }
     }
     
-    func stopActions() {
+    func stopActions()
+    {
         removeAllActions()
     }
     

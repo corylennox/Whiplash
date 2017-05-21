@@ -1,8 +1,16 @@
--place screen properly so that it accounts for the ad
--scale platform to height of the device?
+create menu object--skspritenode?
+    buttons--each one its own
+    label
+create menu adding function
+    gamecenter
+    purchase no ads
+    resume
+
 -menu popup with link to gamecenter, link to buy app, and restart/resume button
 -pause button that brings up menu
 -music
 -mute button
 -change graphics
 -app icon
+-come out with ipad version
+-add ad banner
