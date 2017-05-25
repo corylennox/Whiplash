@@ -18,6 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     var ball: SKShapeNode!
     var border: SKPhysicsBody!
     var joint = SKPhysicsJointFixed()
+    var menuButton = SKSpriteNode()
     
     var scoreLabel: ScoreLabel!
     var highScoreLabel: ScoreLabel!
@@ -37,15 +38,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         addScoreLabels()
         loadHighscore()
         addTapToStartLabel()
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-        if gameIsOver
-        {
-            restart()
+        if let touch = touches.first{
+            let pos = touch.location(in: self)
+            let node = self.atPoint(pos)
+            
+            if node == menuButton {
+                restart()
+            }
         }
-        else if !gameIsStarted
+        if !gameIsStarted
         {
             start()
         }
@@ -54,6 +60,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         {
             return
         }
+        
+        
+        
         
         
         scene?.physicsWorld.remove(joint)
@@ -72,6 +81,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         ball.physicsBody?.applyImpulse(dir)
         
         currentPlatform = nil
+        
+        if let touch = touches.first{
+            let pos = touch.location(in: self)
+            let node = self.atPoint(pos)
+            
+            if node == menuButton {
+                restart()
+            }
+        }
     }
     
     //contact between two PhysicsBodys occurred
@@ -152,7 +170,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate
             scoreLabel.scoreChanged = false;
         }
     }
-    
+    func addMenu()
+    {
+        let texture = SKTexture(imageNamed: "platform1")
+        let sizeTexture = CGSize(width: texture.size().width, height: texture.size().width)
+        menuButton = SKSpriteNode(texture: texture, color: UIColor.clear, size: sizeTexture)
+        menuButton.position = CGPoint(x: frame.midX, y: frame.midY)
+        self.addChild(menuButton)
+    }
     func addPhysicsWorld()
     {
         physicsWorld.contactDelegate = self
@@ -292,6 +317,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         {
             defaults.set(highScoreLabel.number, forKey: "highscore")
         }
+        
+        addMenu()
     }
     
     func blinkAnimation() -> SKAction {
