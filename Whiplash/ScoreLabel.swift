@@ -22,7 +22,7 @@ class ScoreLabel: SKLabelNode {
         
         fontColor = UIColor.black
         fontName = "Helvetica"
-        fontSize = 35.0
+        fontSize = 35.0 * SCALE
         
         number = num
         text = "\(num)"

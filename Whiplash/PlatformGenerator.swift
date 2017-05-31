@@ -12,10 +12,9 @@ import SpriteKit
 class PlatformGenerator: SKSpriteNode
 {
     var platforms = [Platform]()
-    
-    var rotationSpeed = Range(lower: PLATFORM_ROTATION_SPEED, upper: PLATFORM_ROTATION_SPEED)
-    var lateralSpeed = Range(lower: PLATFORM_LATERAL_SPEED ,upper: PLATFORM_LATERAL_SPEED)
-    var distanceApart = Range(lower: PLATFORM_DISTANCE_APART, upper: PLATFORM_DISTANCE_APART)
+    var rotationSpeed = PLATFORM_ROTATION_SPEED * CGFloat.pi
+    var lateralSpeed = PLATFORM_LATERAL_SPEED
+    var distanceApart = PLATFORM_DISTANCE_APART
     
     func calcNumOfPlatsPerScreen() -> Int
     {
@@ -44,9 +43,7 @@ class PlatformGenerator: SKSpriteNode
     
     func generateNextPlatform(movingLong: Bool, movingLat: Bool, rotating: Bool)
     {
-        let randRotationSpeed = CGFloat(arc4random_uniform(UInt32(100*rotationSpeed.upper-100*rotationSpeed.lower)) + UInt32(100*rotationSpeed.lower)) / 100
-        let randLateralSpeed = CGFloat(arc4random_uniform(UInt32(lateralSpeed.upper-lateralSpeed.lower)) + UInt32(lateralSpeed.lower))
-        let platform = Platform(newRotationSpeed: randRotationSpeed, newLateralSpeed: randLateralSpeed)
+        let platform = Platform(newRotationSpeed: rotationSpeed, newLateralSpeed: lateralSpeed!)
         
         let w = UInt32(size.width)
         let padding = UInt32(PLATFORM_TURN_POINT)
@@ -56,15 +53,13 @@ class PlatformGenerator: SKSpriteNode
         platform.position.x = CGFloat(rand + padding)
         
         //set platform y position
-        let randDistanceApart = CGFloat(arc4random_uniform(UInt32(distanceApart.upper-distanceApart.lower))) + distanceApart.lower
-
         if platforms.isEmpty
         {
             platform.position.y = STARTING_DISTANCE_FROM_BOTTOM
         }
         else
         {
-            platform.position.y = (platforms.last?.position.y)! + randDistanceApart
+            platform.position.y = (platforms.last?.position.y)! + distanceApart!
         }
         
         platforms.append(platform)
@@ -102,7 +97,7 @@ class PlatformGenerator: SKSpriteNode
         print("\t\tLateral: ", randLateralSpeed)
         print("\t\tDistanceApart: ", randDistanceApart)
         print("\n")
-         */
+        */
     }
     
     func removeBottomPlatform()
@@ -111,37 +106,20 @@ class PlatformGenerator: SKSpriteNode
         platforms.removeFirst()
     }
     
-    func calcNewRotationSpeed(score: Int) -> Range
+    func updateRotationSpeed(score: Int)
     {
-        let lower = (0.12 * sqrt(CGFloat(score)) + 0.7) * CGFloat.pi
-        let upper = (0.17 * sqrt(CGFloat(score)) + 0.7) * CGFloat.pi
-        let ret = Range(lower: CGFloat(lower), upper: CGFloat(upper))
+        rotationSpeed = (0.15 * sqrt(CGFloat(score)) + PLATFORM_ROTATION_SPEED) * CGFloat.pi
         
-        //print("rotation speed lower: ", ret.lower / CGFloat.pi, " upper: ", ret.upper / CGFloat.pi)
-        
-        return ret
     }
     
-    func calcNewLateralSpeed(score: Int) -> Range
+    func updateLateralSpeed(score: Int)
     {
-        let lower = 17 * sqrt(CGFloat(score)) + 38
-        let upper = 22.5 * sqrt(CGFloat(score)) + 38
-        let ret = Range(lower: CGFloat(lower), upper: CGFloat(upper))
-        
-        //print("lateral speed lower: ", ret.lower, " upper: ", ret.upper)
-        
-        return ret
+        lateralSpeed = 20 * sqrt(CGFloat(score)) + PLATFORM_LATERAL_SPEED
     }
     
-    func calcNewDistanceApart(score: Int) -> Range
+    func updateDistanceApart(score: Int)
     {
-        let lower = 3 * sqrt(CGFloat(score)) + 260
-        let upper = 10 * sqrt(CGFloat(score)) + 260
-        let ret = Range(lower: CGFloat(lower), upper: CGFloat(upper))
-        
-        //print("distance apart lower: ", ret.lower, " upper: ", ret.upper)
-        
-        return ret
+        distanceApart = 6 * sqrt(CGFloat(score)) + PLATFORM_DISTANCE_APART
     }
 }
 

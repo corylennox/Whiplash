@@ -25,17 +25,13 @@ class Platform: SKSpriteNode
         
         rotationSpeed = newRotationSpeed
         lateralSpeed = newLateralSpeed
-        
-        let rad: CGFloat = texture.size().width/2
-        loadPhysicsBodyWithRad(rad)
-        //moveRight = SKAction.moveBy(x: PLATFORM_LATERAL_SPEED, y: 0, duration: 1)
-        //moveLeft = SKAction.moveBy(x: -PLATFORM_LATERAL_SPEED, y:0, duration: 1)
-        self.setScale(CGFloat(0.183))
+        self.setScale(CGFloat(0.183 * SCALE))
+        loadPhysicsBody()
     }
     
-    func loadPhysicsBodyWithRad(_ cirRad: CGFloat)
+    func loadPhysicsBody()
     {
-        physicsBody = SKPhysicsBody(circleOfRadius: cirRad)
+        physicsBody = SKPhysicsBody(circleOfRadius: PLATFORM_RADIUS)
         physicsBody?.isDynamic = false
         physicsBody?.affectedByGravity = false
         physicsBody?.usesPreciseCollisionDetection = true

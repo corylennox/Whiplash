@@ -17,7 +17,7 @@
 		8BB98F961EC677B800F86FE1 /* WhiplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */; };
 		8BB98FA11EC677B800F86FE1 /* WhiplashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */; };
 		8BB98FB91EC678C100F86FE1 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FAF1EC678C100F86FE1 /* Base.lproj */; };
-		8BB98FBA1EC678C100F86FE1 /* ConstantsAndStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB01EC678C100F86FE1 /* ConstantsAndStructs.swift */; };
+		8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */; };
 		8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB11EC678C100F86FE1 /* Platform.swift */; };
 		8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB21EC678C100F86FE1 /* platform1.png */; };
 		8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB31EC678C100F86FE1 /* platform2.png */; };
@@ -26,6 +26,7 @@
 		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
 		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
 		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
+		8BEF70F41EDB69C10019B684 /* EndGameMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF70F31EDB69C10019B684 /* EndGameMenu.swift */; };
 		97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */; };
 		BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +67,7 @@
 		8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiplashUITests.swift; sourceTree = "<group>"; };
 		8BB98FA21EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB98FAF1EC678C100F86FE1 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
-		8BB98FB01EC678C100F86FE1 /* ConstantsAndStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAndStructs.swift; sourceTree = "<group>"; };
+		8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstsAndStructs.swift; sourceTree = "<group>"; };
 		8BB98FB11EC678C100F86FE1 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		8BB98FB21EC678C100F86FE1 /* platform1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform1.png; sourceTree = "<group>"; };
 		8BB98FB31EC678C100F86FE1 /* platform2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform2.png; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8BEF70F31EDB69C10019B684 /* EndGameMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameMenu.swift; sourceTree = "<group>"; };
 		9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.release.xcconfig"; sourceTree = "<group>"; };
 		A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whiplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +168,7 @@
 				8BB98F7E1EC677B800F86FE1 /* Actions.sks */,
 				8BB98F821EC677B800F86FE1 /* GameViewController.swift */,
 				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
-				8BB98FB01EC678C100F86FE1 /* ConstantsAndStructs.swift */,
+				8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */,
 				8BB98FC21EC67AF700F86FE1 /* Objects */,
 				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
 				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
@@ -197,6 +199,7 @@
 		8BB98FC21EC67AF700F86FE1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				8BEF70F31EDB69C10019B684 /* EndGameMenu.swift */,
 				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
 				8BB98FC41EC67B9500F86FE1 /* Platform Generation */,
 			);
@@ -513,7 +516,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */,
-				8BB98FBA1EC678C100F86FE1 /* ConstantsAndStructs.swift in Sources */,
+				8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */,
+				8BEF70F41EDB69C10019B684 /* EndGameMenu.swift in Sources */,
 				8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */,
 				8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */,
 				8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */,
@@ -667,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WT6AWRDT6Y;
 				INFOPLIST_FILE = Whiplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -683,7 +687,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WT6AWRDT6Y;
 				INFOPLIST_FILE = Whiplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";

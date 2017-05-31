@@ -30,6 +30,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     {
         backgroundColor = SKColor.lightGray
 
+        getConstants()
         addPhysicsWorld()
         addBorder()
         addPlatformGenerator()
@@ -43,11 +44,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-        if let touch = touches.first{
+        if let touch = touches.first
+        {
             let pos = touch.location(in: self)
             let node = self.atPoint(pos)
             
-            if node == menuButton {
+            if node == menuButton
+            {
                 restart()
             }
         }
@@ -61,10 +64,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
             return
         }
         
-        
-        
-        
-        
         scene?.physicsWorld.remove(joint)
         
         // Calculate vector components x and y
@@ -76,20 +75,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         dx /= magnitude
         dy /= magnitude
         let dir = CGVector(dx: dx * BALL_SPEED, dy: dy * BALL_SPEED)
-        
         ball.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
         ball.physicsBody?.applyImpulse(dir)
         
         currentPlatform = nil
-        
-        if let touch = touches.first{
-            let pos = touch.location(in: self)
-            let node = self.atPoint(pos)
-            
-            if node == menuButton {
-                restart()
-            }
-        }
     }
     
     //contact between two PhysicsBodys occurred
@@ -111,7 +100,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
                 let b = ball.position.y - contact.bodyA.node!.position.y
                 let c = sqrt(a*a+b*b)
                 
-                let magnitude: CGFloat = ANCHOR_RADIUS/c
+                let magnitude: CGFloat = ANCHOR_DISTANCE/c
                 
                 //print("orig dist from center of platform: ",(c), " new: ",(sqrt(a*a*magnitude*magnitude+b*b*magnitude*magnitude)))
                 
@@ -139,7 +128,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let bottomPlatform = platformGenerator.platforms.first
         
         //delete and generate new plat
-        if (bottomPlatform?.position.y)! + ANCHOR_RADIUS < 0
+        if (bottomPlatform?.position.y)! + ANCHOR_DISTANCE < 0
         {
             platformGenerator.removeBottomPlatform()
             platformGenerator.generateNextPlatform(movingLong: true, movingLat: true, rotating: true)
@@ -163,21 +152,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         //runs every time score increases
         if scoreLabel.scoreChanged == true && scoreLabel.number < 80
         {
-            platformGenerator.rotationSpeed = platformGenerator.calcNewRotationSpeed(score: scoreLabel.number)
-            platformGenerator.lateralSpeed = platformGenerator.calcNewLateralSpeed(score: scoreLabel.number)
-            platformGenerator.distanceApart = platformGenerator.calcNewDistanceApart(score: scoreLabel.number)
+            platformGenerator.updateRotationSpeed(score: scoreLabel.number)
+            platformGenerator.updateLateralSpeed(score: scoreLabel.number)
+            platformGenerator.updateDistanceApart(score: scoreLabel.number)
             
             scoreLabel.scoreChanged = false;
         }
     }
-    func addMenu()
-    {
-        let texture = SKTexture(imageNamed: "platform1")
-        let sizeTexture = CGSize(width: texture.size().width, height: texture.size().width)
-        menuButton = SKSpriteNode(texture: texture, color: UIColor.clear, size: sizeTexture)
-        menuButton.position = CGPoint(x: frame.midX, y: frame.midY)
-        self.addChild(menuButton)
-    }
+
     func addPhysicsWorld()
     {
         physicsWorld.contactDelegate = self
@@ -194,7 +176,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func addPlatformGenerator()
     {
-        platformGenerator = PlatformGenerator(color: UIColor.clear, size: view!.frame.size)
+        platformGenerator = PlatformGenerator(color: UIColor.clear, size: size)
         addChild(platformGenerator)
     }
     
@@ -211,11 +193,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         ball.physicsBody?.contactTestBitMask = CollisionCategoryBitMask.Platform
         ball.physicsBody?.collisionBitMask = 0
         ball.physicsBody?.affectedByGravity = false
+        ball.physicsBody?.mass = BALL_MASS
         
         let startingPlat: Platform = platformGenerator.platforms[0]
         
         let x: CGFloat = size.width / 2
-        let y: CGFloat = startingPlat.position.y + ANCHOR_RADIUS
+        let y: CGFloat = startingPlat.position.y + ANCHOR_DISTANCE
         let anchor = CGPoint(x: x, y: y)
         
         ball.position = anchor
@@ -284,21 +267,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func restart()
     {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShow"), object: nil)
-        let newScene = GameScene(size: view!.bounds.size)
+        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShow"), object: nil)
+        let newScene = GameScene(size: size)
         newScene.scaleMode = .aspectFill
         view!.presentScene(newScene)
     }
     
     func gameOver()
     {
-        gameIsOver = true
-        
         // stop everything
-        for platform in platformGenerator.platforms
-        {
-            platform.stopActions()
-        }
+        self.isPaused = true
+        
+        gameIsOver = true
         
         // create game over label
         let gameOverLabel = SKLabelNode(text: "Game Over!")
@@ -336,26 +316,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         self.physicsWorld.add(joint)
     }
     
-    func pauseGame()
+    func addMenu()
     {
-        ball.isPaused = true
-        for platform in platformGenerator.platforms
-        {
-            platform.isPaused = true
-        }
-        gameIsPaused = true
-        
-        //display menu
-
+        let texture = SKTexture(imageNamed: "platform1")
+        let sizeTexture = CGSize(width: texture.size().width, height: texture.size().width)
+        menuButton = SKSpriteNode(texture: texture, color: UIColor.clear, size: sizeTexture)
+        menuButton.position = CGPoint(x: frame.midX, y: frame.midY)
+        self.addChild(menuButton)
     }
     
-    func unpauseGame()
+    func getConstants()
     {
-        ball.isPaused = false
-        for platform in platformGenerator.platforms
-        {
-            platform.isPaused = false
-        }
-        gameIsPaused = false
+        SCALE = size.height/736
+        
+        //Ball
+        BALL_MASS = 0.02
+        BALL_RADIUS = 12.9 * SCALE
+        BALL_SPEED = 10 * SCALE
+        
+        //Platforms
+        //print(size.width, "x", size.height)
+        PLATFORM_RADIUS = 45 * SCALE
+        PLATFORM_TURN_POINT = PLATFORM_RADIUS + 2 * BALL_RADIUS + (5 * SCALE)
+        STARTING_DISTANCE_FROM_BOTTOM = 100 * SCALE
+        PLATFORM_DESCENT_SPEED = 120 * SCALE
+        
+        //Base platform variables:
+        PLATFORM_ROTATION_SPEED = 0.8
+        PLATFORM_LATERAL_SPEED = 38 * SCALE
+        PLATFORM_DISTANCE_APART = 260 * SCALE
+        
+        ANCHOR_DISTANCE = BALL_RADIUS + PLATFORM_RADIUS
     }
 }

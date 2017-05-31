@@ -4,7 +4,7 @@ create menu object--skspritenode?
 create menu adding function
     gamecenter
     purchase no ads
-    resume
+    restart
 
 -menu popup with link to gamecenter, link to buy app, and restart/resume button
 -pause button that brings up menu
