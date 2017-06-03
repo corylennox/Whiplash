@@ -18,14 +18,14 @@ class Platform: SKSpriteNode
     var rotationSpeed: CGFloat = 0
     var lateralSpeed: CGFloat = 0
     
-    init(newRotationSpeed: CGFloat, newLateralSpeed: CGFloat)
+    init(newRotationSpeed: CGFloat, newLateralSpeed: CGFloat, color: String)
     {
-        let texture = SKTexture(imageNamed: "platform1")
+        let texture = SKTexture(imageNamed: color)
         super.init(texture: texture, color: UIColor.clear, size: texture.size())
         
         rotationSpeed = newRotationSpeed
         lateralSpeed = newLateralSpeed
-        self.setScale(CGFloat(0.183 * SCALE))
+        self.setScale(CGFloat(0.45 * SCALE))  //scale it to fit platform physicsbody
         loadPhysicsBody()
     }
     

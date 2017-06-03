@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */; };
 		8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */; };
+		8B660ABE1EE28355000949FA /* BluePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660ABD1EE28355000949FA /* BluePlatform.png */; };
+		8B660AC21EE29D64000949FA /* YellowPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660ABF1EE29D64000949FA /* YellowPlatform.png */; };
+		8B660AC31EE29D64000949FA /* PurplePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660AC01EE29D64000949FA /* PurplePlatform.png */; };
+		8B660AC41EE29D64000949FA /* OrangePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660AC11EE29D64000949FA /* OrangePlatform.png */; };
 		8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */; };
 		8BB98F7F1EC677B800F86FE1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F7E1EC677B800F86FE1 /* Actions.sks */; };
 		8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F801EC677B800F86FE1 /* GameScene.swift */; };
@@ -53,6 +57,10 @@
 		3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B660ABD1EE28355000949FA /* BluePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BluePlatform.png; path = Images/BluePlatform.png; sourceTree = SOURCE_ROOT; };
+		8B660ABF1EE29D64000949FA /* YellowPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YellowPlatform.png; path = Images/YellowPlatform.png; sourceTree = SOURCE_ROOT; };
+		8B660AC01EE29D64000949FA /* PurplePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurplePlatform.png; path = Images/PurplePlatform.png; sourceTree = SOURCE_ROOT; };
+		8B660AC11EE29D64000949FA /* OrangePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangePlatform.png; path = Images/OrangePlatform.png; sourceTree = SOURCE_ROOT; };
 		8BB98F771EC677B800F86FE1 /* Whiplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB98F7E1EC677B800F86FE1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -166,9 +174,9 @@
 				8BB98FC31EC67B4D00F86FE1 /* Images */,
 				8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */,
 				8BB98F7E1EC677B800F86FE1 /* Actions.sks */,
+				8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */,
 				8BB98F821EC677B800F86FE1 /* GameViewController.swift */,
 				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
-				8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */,
 				8BB98FC21EC67AF700F86FE1 /* Objects */,
 				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
 				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
@@ -209,6 +217,10 @@
 		8BB98FC31EC67B4D00F86FE1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8B660ABF1EE29D64000949FA /* YellowPlatform.png */,
+				8B660AC01EE29D64000949FA /* PurplePlatform.png */,
+				8B660AC11EE29D64000949FA /* OrangePlatform.png */,
+				8B660ABD1EE28355000949FA /* BluePlatform.png */,
 				8BB98FB21EC678C100F86FE1 /* platform1.png */,
 				8BB98FB31EC678C100F86FE1 /* platform2.png */,
 				8BB98FB41EC678C100F86FE1 /* platform3.png */,
@@ -345,12 +357,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */,
+				8B660AC41EE29D64000949FA /* OrangePlatform.png in Resources */,
 				8BB98FB91EC678C100F86FE1 /* Base.lproj in Resources */,
 				8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */,
 				8BB98FBE1EC678C100F86FE1 /* platform3.png in Resources */,
 				8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */,
 				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
+				8B660AC31EE29D64000949FA /* PurplePlatform.png in Resources */,
+				8B660ABE1EE28355000949FA /* BluePlatform.png in Resources */,
 				8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */,
+				8B660AC21EE29D64000949FA /* YellowPlatform.png in Resources */,
 				8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */,
 				8BB98F7F1EC677B800F86FE1 /* Actions.sks in Resources */,
 			);

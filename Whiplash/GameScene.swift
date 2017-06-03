@@ -28,7 +28,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view: SKView)
     {
-        backgroundColor = SKColor.lightGray
+        backgroundColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
 
         getConstants()
         addPhysicsWorld()
@@ -95,7 +95,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         {
             if currentPlatform != contact.bodyA
             {
-                
                 let a = ball.position.x - contact.bodyA.node!.position.x
                 let b = ball.position.y - contact.bodyA.node!.position.y
                 let c = sqrt(a*a+b*b)
@@ -183,8 +182,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     func addBall()
     {
         ball = SKShapeNode(circleOfRadius: BALL_RADIUS)
-        ball.fillColor = UIColor.white
-        ball.strokeColor = UIColor.darkGray
+        ball.fillColor = UIColor(colorLiteralRed: 58/256, green: 58/255, blue: 58/255, alpha: 1)
+        ball.strokeColor = UIColor(colorLiteralRed: 58/256, green: 58/255, blue: 58/255, alpha: 1)
         
         ball.physicsBody = SKPhysicsBody(circleOfRadius: BALL_RADIUS)
         ball.physicsBody?.isDynamic = true
@@ -213,14 +212,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     {
         //current score
         scoreLabel = ScoreLabel(num: 0)
-        scoreLabel.position = CGPoint(x: 35.0, y: view!.frame.size.height - 35)
+        scoreLabel.position = CGPoint(x: 35.0 * SCALE, y: view!.frame.size.height - 35 * SCALE)
         scoreLabel.name = "scoreLabel"
         addChild(scoreLabel)
         
         //high score
         highScoreLabel = ScoreLabel(num: 0)
         highScoreLabel.name = "highScoreLabel"
-        highScoreLabel.position = CGPoint(x: view!.frame.size.width - 35, y: view!.frame.size.height - 35)
+        highScoreLabel.position = CGPoint(x: view!.frame.size.width - 35 * SCALE, y: view!.frame.size.height - 35 * SCALE)
         addChild(highScoreLabel)
         
         let highscoreTextLabel = SKLabelNode(text: "High")
@@ -328,7 +327,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     func getConstants()
     {
         SCALE = size.height/736
-        
+
         //Ball
         BALL_MASS = 0.02
         BALL_RADIUS = 12.9 * SCALE
@@ -336,7 +335,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         
         //Platforms
         //print(size.width, "x", size.height)
-        PLATFORM_RADIUS = 45 * SCALE
+        PLATFORM_RADIUS = 50 * SCALE
         PLATFORM_TURN_POINT = PLATFORM_RADIUS + 2 * BALL_RADIUS + (5 * SCALE)
         STARTING_DISTANCE_FROM_BOTTOM = 100 * SCALE
         PLATFORM_DESCENT_SPEED = 120 * SCALE

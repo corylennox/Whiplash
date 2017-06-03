@@ -15,6 +15,7 @@ class PlatformGenerator: SKSpriteNode
     var rotationSpeed = PLATFORM_ROTATION_SPEED * CGFloat.pi
     var lateralSpeed = PLATFORM_LATERAL_SPEED
     var distanceApart = PLATFORM_DISTANCE_APART
+    var currentColor = "BluePlatform"
     
     func calcNumOfPlatsPerScreen() -> Int
     {
@@ -43,7 +44,7 @@ class PlatformGenerator: SKSpriteNode
     
     func generateNextPlatform(movingLong: Bool, movingLat: Bool, rotating: Bool)
     {
-        let platform = Platform(newRotationSpeed: rotationSpeed, newLateralSpeed: lateralSpeed!)
+        let platform = Platform(newRotationSpeed: rotationSpeed, newLateralSpeed: lateralSpeed!, color: getColor())
         
         let w = UInt32(size.width)
         let padding = UInt32(PLATFORM_TURN_POINT)
@@ -85,19 +86,36 @@ class PlatformGenerator: SKSpriteNode
         {
             platform.startRotation()
         }
+    }
+    
+    func getColor() -> String
+    {
+        if currentColor == "BluePlatform"
+        {
+            currentColor = "OrangePlatform"
+            return currentColor
+        }
+        else if currentColor == "OrangePlatform"
+        {
+            currentColor =  "YellowPlatform"
+            return currentColor
+        }
+        else if currentColor == "YellowPlatform"
+        {
+            currentColor =  "PurplePlatform"
+            return currentColor
+        }
+        else if currentColor == "PurplePlatform"
+        {
+            currentColor =  "BluePlatform"
+            return currentColor
+        }
+        else
+        {
+            currentColor =  "BluePlatform"
+            return currentColor
+        }
         
-        /*
-        print("New Platform:")
-        print("\tRanges:")
-        print("\t\tRotation: ", rotationSpeed.lower, " - " ,rotationSpeed.upper)
-        print("\t\tLateral: ", lateralSpeed.lower, " - " ,lateralSpeed.upper)
-        print("\t\tDistanceApart: ", distanceApart.lower, " - " ,distanceApart.upper)
-        print("\tGenerated Values:")
-        print("\t\tRotation: ", randRotationSpeed)
-        print("\t\tLateral: ", randLateralSpeed)
-        print("\t\tDistanceApart: ", randDistanceApart)
-        print("\n")
-        */
     }
     
     func removeBottomPlatform()

@@ -23,7 +23,7 @@ class GameViewController: UIViewController, GADInterstitialDelegate
         // Configure the view
         let skView = view as! SKView
         skView.isMultipleTouchEnabled = false
-        skView.showsPhysics = true;
+        //skView.showsPhysics = true;
         skView.preferredFramesPerSecond = 60
         
         // Create and configure the scene
