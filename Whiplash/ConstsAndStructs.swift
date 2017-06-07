@@ -8,9 +8,12 @@
 import Foundation
 import UIKit
 
-var ANCHOR_DISTANCE: CGFloat!
+var GAMES_PLAYED = 0
 
 var SCALE: CGFloat!
+
+/************** GameScene Constants **************/
+var ANCHOR_DISTANCE: CGFloat!
 
 //Ball
 var BALL_MASS: CGFloat!
@@ -29,6 +32,11 @@ var PLATFORM_ROTATION_SPEED: CGFloat!
 var PLATFORM_LATERAL_SPEED: CGFloat!
 var PLATFORM_DISTANCE_APART: CGFloat!
 
+/************** MenuScene Constants **************/
+var SMALL_BUTTON_SIZE: CGFloat!
+var BIG_BUTTON_SIZE: CGFloat!
+
+/************** Structs **************************/
 struct CollisionCategoryBitMask
 {
     static let Ball: UInt32 = 0x1 << 0

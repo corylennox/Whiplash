@@ -1,16 +1,21 @@
-create menu object--skspritenode?
-    buttons--each one its own
-    label
-create menu adding function
+-get apple dev account
+-code menu functions for:
+    purchase app
     gamecenter
-    purchase no ads
-    restart
-
--menu popup with link to gamecenter, link to buy app, and restart/resume button
--pause button that brings up menu
+    rate
+    share
+    contact
+-customize splash screen
+-add ad
 -music
 -mute button
--change graphics
 -app icon
--come out with ipad version
--add ad banner
+-check ipad version on actual ipad
+
+after app comes out:
+-pause button that brings up menu
+-get rid of ads after rating?
+-add ad banner?
+-add sync with other devices w app feature
+-find better solution for constants?
+-clean up code

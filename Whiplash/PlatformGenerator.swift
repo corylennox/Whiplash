@@ -15,7 +15,7 @@ class PlatformGenerator: SKSpriteNode
     var rotationSpeed = PLATFORM_ROTATION_SPEED * CGFloat.pi
     var lateralSpeed = PLATFORM_LATERAL_SPEED
     var distanceApart = PLATFORM_DISTANCE_APART
-    var currentColor = "BluePlatform"
+    var currentColor = "GreenPlatform"
     
     func calcNumOfPlatsPerScreen() -> Int
     {
@@ -92,15 +92,20 @@ class PlatformGenerator: SKSpriteNode
     {
         if currentColor == "BluePlatform"
         {
-            currentColor = "OrangePlatform"
-            return currentColor
-        }
-        else if currentColor == "OrangePlatform"
-        {
-            currentColor =  "YellowPlatform"
+            currentColor = "YellowPlatform"
             return currentColor
         }
         else if currentColor == "YellowPlatform"
+        {
+            currentColor =  "GreenPlatform"
+            return currentColor
+        }
+        else if currentColor == "GreenPlatform"
+        {
+            currentColor =  "OrangePlatform"
+            return currentColor
+        }
+        else if currentColor == "OrangePlatform"
         {
             currentColor =  "PurplePlatform"
             return currentColor
@@ -110,12 +115,11 @@ class PlatformGenerator: SKSpriteNode
             currentColor =  "BluePlatform"
             return currentColor
         }
-        else
+        else //catch case
         {
             currentColor =  "BluePlatform"
             return currentColor
         }
-        
     }
     
     func removeBottomPlatform()

@@ -39,26 +39,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         addScoreLabels()
         loadHighscore()
         addTapToStartLabel()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-        if let touch = touches.first
-        {
-            let pos = touch.location(in: self)
-            let node = self.atPoint(pos)
-            
-            if node == menuButton
-            {
-                restart()
-            }
-        }
         if !gameIsStarted
         {
             start()
         }
         
+        //so ball only jumps if its on a platform
         if currentPlatform == nil
         {
             return
@@ -117,7 +107,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
                 {
                     highScoreLabel.setTo(scoreLabel.number)
                 }
-                
             }
         }
     }
@@ -212,40 +201,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     {
         //current score
         scoreLabel = ScoreLabel(num: 0)
-        scoreLabel.position = CGPoint(x: 35.0 * SCALE, y: view!.frame.size.height - 35 * SCALE)
+        scoreLabel.position = CGPoint(x: 35.0 * SCALE, y: size.height - 35 * SCALE)
         scoreLabel.name = "scoreLabel"
         addChild(scoreLabel)
         
         //high score
         highScoreLabel = ScoreLabel(num: 0)
         highScoreLabel.name = "highScoreLabel"
-        highScoreLabel.position = CGPoint(x: view!.frame.size.width - 35 * SCALE, y: view!.frame.size.height - 35 * SCALE)
+        highScoreLabel.position = CGPoint(x: size.width - 35 * SCALE, y: size.height - 35 * SCALE)
         addChild(highScoreLabel)
         
-        let highscoreTextLabel = SKLabelNode(text: "High")
-        highscoreTextLabel.fontColor = UIColor.black
-        highscoreTextLabel.fontSize = 14.0
-        highscoreTextLabel.fontName = "Helvetica"
-        highscoreTextLabel.position = CGPoint(x: 0, y: -20)
-        highScoreLabel.addChild(highscoreTextLabel)
+        let highScoreTextLabel = SKLabelNode(text: "Best")
+        highScoreTextLabel.fontName = "Avenir"
+        highScoreTextLabel.fontColor = UIColor.black
+        highScoreTextLabel.fontSize = 18.0 * SCALE
+        highScoreTextLabel.position = CGPoint(x: size.width - 35 * SCALE, y: size.height - 52 * SCALE)
+        addChild(highScoreTextLabel)
     }
     
     func loadHighscore() {
         let defaults = UserDefaults.standard
         
         let highScoreLabel = childNode(withName: "highScoreLabel") as! ScoreLabel
-        highScoreLabel.setTo(defaults.integer(forKey: "highscore"))
+        highScoreLabel.setTo(defaults.integer(forKey: "highScore"))
     }
 
     func addTapToStartLabel()
     {
-        let tapToStartLabel = SKLabelNode(text: "Tap to start!")
+        let tapToStartLabel = SKLabelNode(text: "Tap to start")
         tapToStartLabel.name = "tapToStartLabel"
-        tapToStartLabel.position.x = view!.center.x
-        tapToStartLabel.position.y = view!.center.y + 40
-        tapToStartLabel.fontName = "Helvetica"
-        tapToStartLabel.fontColor = UIColor.white
-        tapToStartLabel.fontSize = 35.0
+        tapToStartLabel.position.x = size.width/2
+        tapToStartLabel.position.y = size.height * 0.65
+        tapToStartLabel.fontName = "Avenir"
+        tapToStartLabel.fontColor = UIColor(colorLiteralRed: 58/256, green: 58/255, blue: 58/255, alpha: 1)
+        tapToStartLabel.fontSize = 40.0 * SCALE
         addChild(tapToStartLabel)
         tapToStartLabel.run(blinkAnimation())
     }
@@ -253,7 +242,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     func start()
     {
         gameIsStarted = true
-        
         let tapToStartLabel = childNode(withName: "tapToStartLabel")
         tapToStartLabel?.removeFromParent()
         
@@ -261,15 +249,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         {
             platform.startMovingLong()
         }
-        
-    }
-    
-    func restart()
-    {
-        //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShow"), object: nil)
-        let newScene = GameScene(size: size)
-        newScene.scaleMode = .aspectFill
-        view!.presentScene(newScene)
     }
     
     func gameOver()
@@ -278,26 +257,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         self.isPaused = true
         
         gameIsOver = true
-        
-        // create game over label
-        let gameOverLabel = SKLabelNode(text: "Game Over!")
-        gameOverLabel.fontColor = UIColor.white
-        gameOverLabel.fontName = "Helvetica"
-        gameOverLabel.position.x = view!.center.x
-        gameOverLabel.position.y = view!.center.y + 40
-        gameOverLabel.fontSize = 35.0
-        addChild(gameOverLabel)
-        gameOverLabel.run(blinkAnimation())
+        GAMES_PLAYED += 1
         
         let defaults = UserDefaults.standard
-        let oldHighScore = defaults.integer(forKey: "highscore")
-        
+        let oldHighScore = defaults.integer(forKey: "highScore")
+    
         if oldHighScore < highScoreLabel.number
         {
-            defaults.set(highScoreLabel.number, forKey: "highscore")
+            defaults.set(highScoreLabel.number, forKey: "highScore")
         }
         
-        addMenu()
+        defaults.set(scoreLabel.number, forKey: "lastScore")
+        
+        let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
+        let newScene = MenuScene(size: size)
+        scene?.view?.presentScene(newScene, transition: reveal)
     }
     
     func blinkAnimation() -> SKAction {
@@ -313,15 +287,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     {
         joint = SKPhysicsJointFixed.joint(withBodyA: bodyA, bodyB: bodyB, anchor: point)
         self.physicsWorld.add(joint)
-    }
-    
-    func addMenu()
-    {
-        let texture = SKTexture(imageNamed: "platform1")
-        let sizeTexture = CGSize(width: texture.size().width, height: texture.size().width)
-        menuButton = SKSpriteNode(texture: texture, color: UIColor.clear, size: sizeTexture)
-        menuButton.position = CGPoint(x: frame.midX, y: frame.midY)
-        self.addChild(menuButton)
     }
     
     func getConstants()

@@ -8,19 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */; };
+		8B0058491EE76AB100E78C55 /* PurchaseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058471EE76AB100E78C55 /* PurchaseButton.png */; };
+		8B00584A1EE76AB100E78C55 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058481EE76AB100E78C55 /* PlayButton.png */; };
+		8B00584C1EE7CA7800E78C55 /* GamecenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B00584B1EE7CA7800E78C55 /* GamecenterButton.png */; };
+		8B0058511EE7CE7D00E78C55 /* GreenPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058501EE7CE7D00E78C55 /* GreenPlatform.png */; };
+		8B0058551EE7DB0900E78C55 /* ShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058521EE7DB0900E78C55 /* ShareButton.png */; };
+		8B0058561EE7DB0900E78C55 /* RateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058531EE7DB0900E78C55 /* RateButton.png */; };
+		8B0058571EE7DB0900E78C55 /* ContactButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058541EE7DB0900E78C55 /* ContactButton.png */; };
+		8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B00585A1EE7EAA600E78C55 /* Assets.xcassets */; };
+		8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00585C1EE7F72B00E78C55 /* WaitScene.swift */; };
+		8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12854B1EE3DEB80050B17E /* MenuScene.swift */; };
 		8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */; };
 		8B660ABE1EE28355000949FA /* BluePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660ABD1EE28355000949FA /* BluePlatform.png */; };
 		8B660AC21EE29D64000949FA /* YellowPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660ABF1EE29D64000949FA /* YellowPlatform.png */; };
 		8B660AC31EE29D64000949FA /* PurplePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660AC01EE29D64000949FA /* PurplePlatform.png */; };
 		8B660AC41EE29D64000949FA /* OrangePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660AC11EE29D64000949FA /* OrangePlatform.png */; };
 		8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */; };
-		8BB98F7F1EC677B800F86FE1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F7E1EC677B800F86FE1 /* Actions.sks */; };
 		8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F801EC677B800F86FE1 /* GameScene.swift */; };
 		8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F821EC677B800F86FE1 /* GameViewController.swift */; };
 		8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F841EC677B800F86FE1 /* Main.storyboard */; };
 		8BB98F961EC677B800F86FE1 /* WhiplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */; };
 		8BB98FA11EC677B800F86FE1 /* WhiplashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */; };
-		8BB98FB91EC678C100F86FE1 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FAF1EC678C100F86FE1 /* Base.lproj */; };
 		8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */; };
 		8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB11EC678C100F86FE1 /* Platform.swift */; };
 		8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB21EC678C100F86FE1 /* platform1.png */; };
@@ -30,7 +38,6 @@
 		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
 		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
 		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
-		8BEF70F41EDB69C10019B684 /* EndGameMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF70F31EDB69C10019B684 /* EndGameMenu.swift */; };
 		97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */; };
 		BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +63,16 @@
 		343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiplash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash.release.xcconfig"; sourceTree = "<group>"; };
 		3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B0058471EE76AB100E78C55 /* PurchaseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurchaseButton.png; path = Images/PurchaseButton.png; sourceTree = SOURCE_ROOT; };
+		8B0058481EE76AB100E78C55 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayButton.png; path = Images/PlayButton.png; sourceTree = SOURCE_ROOT; };
+		8B00584B1EE7CA7800E78C55 /* GamecenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GamecenterButton.png; path = Images/GamecenterButton.png; sourceTree = SOURCE_ROOT; };
+		8B0058501EE7CE7D00E78C55 /* GreenPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenPlatform.png; path = Images/GreenPlatform.png; sourceTree = SOURCE_ROOT; };
+		8B0058521EE7DB0900E78C55 /* ShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShareButton.png; path = Images/ShareButton.png; sourceTree = SOURCE_ROOT; };
+		8B0058531EE7DB0900E78C55 /* RateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RateButton.png; path = Images/RateButton.png; sourceTree = SOURCE_ROOT; };
+		8B0058541EE7DB0900E78C55 /* ContactButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactButton.png; path = Images/ContactButton.png; sourceTree = SOURCE_ROOT; };
+		8B00585A1EE7EAA600E78C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B00585C1EE7F72B00E78C55 /* WaitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitScene.swift; sourceTree = "<group>"; };
+		8B12854B1EE3DEB80050B17E /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B660ABD1EE28355000949FA /* BluePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BluePlatform.png; path = Images/BluePlatform.png; sourceTree = SOURCE_ROOT; };
 		8B660ABF1EE29D64000949FA /* YellowPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YellowPlatform.png; path = Images/YellowPlatform.png; sourceTree = SOURCE_ROOT; };
@@ -63,7 +80,6 @@
 		8B660AC11EE29D64000949FA /* OrangePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangePlatform.png; path = Images/OrangePlatform.png; sourceTree = SOURCE_ROOT; };
 		8BB98F771EC677B800F86FE1 /* Whiplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BB98F7E1EC677B800F86FE1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		8BB98F801EC677B800F86FE1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8BB98F821EC677B800F86FE1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8BB98F851EC677B800F86FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +90,6 @@
 		8BB98F9C1EC677B800F86FE1 /* WhiplashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiplashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiplashUITests.swift; sourceTree = "<group>"; };
 		8BB98FA21EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BB98FAF1EC678C100F86FE1 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstsAndStructs.swift; sourceTree = "<group>"; };
 		8BB98FB11EC678C100F86FE1 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		8BB98FB21EC678C100F86FE1 /* platform1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform1.png; sourceTree = "<group>"; };
@@ -84,7 +99,6 @@
 		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8BEF70F31EDB69C10019B684 /* EndGameMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameMenu.swift; sourceTree = "<group>"; };
 		9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.release.xcconfig"; sourceTree = "<group>"; };
 		A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whiplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +158,42 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8B00584D1EE7CA8200E78C55 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8B0058521EE7DB0900E78C55 /* ShareButton.png */,
+				8B0058531EE7DB0900E78C55 /* RateButton.png */,
+				8B0058541EE7DB0900E78C55 /* ContactButton.png */,
+				8B0058471EE76AB100E78C55 /* PurchaseButton.png */,
+				8B0058481EE76AB100E78C55 /* PlayButton.png */,
+				8B00584B1EE7CA7800E78C55 /* GamecenterButton.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		8B00584E1EE7CA9300E78C55 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				8B0058501EE7CE7D00E78C55 /* GreenPlatform.png */,
+				8B660ABF1EE29D64000949FA /* YellowPlatform.png */,
+				8B660AC01EE29D64000949FA /* PurplePlatform.png */,
+				8B660AC11EE29D64000949FA /* OrangePlatform.png */,
+				8B660ABD1EE28355000949FA /* BluePlatform.png */,
+				8B00584F1EE7CAA900E78C55 /* Other Platforms */,
+			);
+			name = Platforms;
+			sourceTree = "<group>";
+		};
+		8B00584F1EE7CAA900E78C55 /* Other Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB21EC678C100F86FE1 /* platform1.png */,
+				8BB98FB31EC678C100F86FE1 /* platform2.png */,
+				8BB98FB41EC678C100F86FE1 /* platform3.png */,
+			);
+			name = "Other Platforms";
+			sourceTree = "<group>";
+		};
 		8BB98F6E1EC677B800F86FE1 = {
 			isa = PBXGroup;
 			children = (
@@ -170,18 +220,19 @@
 			isa = PBXGroup;
 			children = (
 				8BB98FB71EC678C100F86FE1 /* ToDo.txt */,
-				8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */,
-				8BB98FC31EC67B4D00F86FE1 /* Images */,
 				8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */,
-				8BB98F7E1EC677B800F86FE1 /* Actions.sks */,
 				8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */,
 				8BB98F821EC677B800F86FE1 /* GameViewController.swift */,
+				8B00585C1EE7F72B00E78C55 /* WaitScene.swift */,
 				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
+				8B12854B1EE3DEB80050B17E /* MenuScene.swift */,
 				8BB98FC21EC67AF700F86FE1 /* Objects */,
-				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
+				8BB98FC31EC67B4D00F86FE1 /* Images */,
 				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
-				8BB98FAF1EC678C100F86FE1 /* Base.lproj */,
+				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
+				8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */,
 				8BB98F8C1EC677B800F86FE1 /* Info.plist */,
+				8B00585A1EE7EAA600E78C55 /* Assets.xcassets */,
 			);
 			path = Whiplash;
 			sourceTree = "<group>";
@@ -207,7 +258,6 @@
 		8BB98FC21EC67AF700F86FE1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				8BEF70F31EDB69C10019B684 /* EndGameMenu.swift */,
 				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
 				8BB98FC41EC67B9500F86FE1 /* Platform Generation */,
 			);
@@ -217,13 +267,8 @@
 		8BB98FC31EC67B4D00F86FE1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				8B660ABF1EE29D64000949FA /* YellowPlatform.png */,
-				8B660AC01EE29D64000949FA /* PurplePlatform.png */,
-				8B660AC11EE29D64000949FA /* OrangePlatform.png */,
-				8B660ABD1EE28355000949FA /* BluePlatform.png */,
-				8BB98FB21EC678C100F86FE1 /* platform1.png */,
-				8BB98FB31EC678C100F86FE1 /* platform2.png */,
-				8BB98FB41EC678C100F86FE1 /* platform3.png */,
+				8B00584E1EE7CA9300E78C55 /* Platforms */,
+				8B00584D1EE7CA8200E78C55 /* Buttons */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -357,18 +402,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */,
+				8B0058561EE7DB0900E78C55 /* RateButton.png in Resources */,
 				8B660AC41EE29D64000949FA /* OrangePlatform.png in Resources */,
-				8BB98FB91EC678C100F86FE1 /* Base.lproj in Resources */,
+				8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */,
 				8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */,
 				8BB98FBE1EC678C100F86FE1 /* platform3.png in Resources */,
 				8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */,
 				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
+				8B0058571EE7DB0900E78C55 /* ContactButton.png in Resources */,
 				8B660AC31EE29D64000949FA /* PurplePlatform.png in Resources */,
+				8B0058491EE76AB100E78C55 /* PurchaseButton.png in Resources */,
+				8B00584A1EE76AB100E78C55 /* PlayButton.png in Resources */,
 				8B660ABE1EE28355000949FA /* BluePlatform.png in Resources */,
 				8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */,
 				8B660AC21EE29D64000949FA /* YellowPlatform.png in Resources */,
+				8B0058511EE7CE7D00E78C55 /* GreenPlatform.png in Resources */,
 				8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */,
-				8BB98F7F1EC677B800F86FE1 /* Actions.sks in Resources */,
+				8B00584C1EE7CA7800E78C55 /* GamecenterButton.png in Resources */,
+				8B0058551EE7DB0900E78C55 /* ShareButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +584,8 @@
 			files = (
 				8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */,
 				8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */,
-				8BEF70F41EDB69C10019B684 /* EndGameMenu.swift in Sources */,
+				8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */,
+				8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */,
 				8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */,
 				8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */,
 				8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */,
@@ -692,7 +744,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -708,7 +760,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

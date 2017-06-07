@@ -17,11 +17,12 @@ class GameViewController: UIViewController, GADInterstitialDelegate
 {
     var scene: GameScene!
     var myAd: GADInterstitial!
+    var skView: SKView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Configure the view
-        let skView = view as! SKView
+        skView = view as! SKView
         skView.isMultipleTouchEnabled = false
         //skView.showsPhysics = true;
         skView.preferredFramesPerSecond = 60
@@ -35,7 +36,8 @@ class GameViewController: UIViewController, GADInterstitialDelegate
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShow), name: NSNotification.Name(rawValue: "loadAndShow"), object: nil)
     }
     
-    override var prefersStatusBarHidden: Bool {
+    override var prefersStatusBarHidden: Bool
+    {
         return true
     }
     
@@ -53,5 +55,11 @@ class GameViewController: UIViewController, GADInterstitialDelegate
         {
             myAd.present(fromRootViewController: self)
         }
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial)
+    {
+        scene = GameScene(size: skView.bounds.size)
+        skView.presentScene(scene)
     }
 }

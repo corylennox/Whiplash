@@ -21,7 +21,7 @@ class ScoreLabel: SKLabelNode {
         super.init()
         
         fontColor = UIColor.black
-        fontName = "Helvetica"
+        fontName = "Avenir"
         fontSize = 35.0 * SCALE
         
         number = num
