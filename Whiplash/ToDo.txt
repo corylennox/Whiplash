@@ -1,0 +1,22 @@
+-make app easier
+-code menu functions for:
+    purchase app
+    gamecenter
+    rate
+-when we get app id
+    update share link app id
+    update firebase app id
+-customize splash screen
+-music
+-mute button
+-app icon
+-set up google ad account
+-check ipad version on actual ipad
+
+after app comes out:
+-pause button that brings up menu
+-get rid of ads after rating?
+-add ad banner?
+-add sync with other devices w app feature
+-find better solution for constants?
+-clean up code

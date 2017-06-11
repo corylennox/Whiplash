@@ -1,0 +1,942 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */; };
+		8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B00585A1EE7EAA600E78C55 /* Assets.xcassets */; };
+		8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00585C1EE7F72B00E78C55 /* WaitScene.swift */; };
+		8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12854B1EE3DEB80050B17E /* MenuScene.swift */; };
+		8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */; };
+		8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F891EEBE2CE00848DF6 /* ContactButton.png */; };
+		8B454F951EEBE2CE00848DF6 /* GamecenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8A1EEBE2CE00848DF6 /* GamecenterButton.png */; };
+		8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */; };
+		8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */; };
+		8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8D1EEBE2CE00848DF6 /* RateButton.png */; };
+		8B454F991EEBE2CE00848DF6 /* ShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */; };
+		8B454F9A1EEBE2CE00848DF6 /* BluePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */; };
+		8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */; };
+		8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */; };
+		8B454F9D1EEBE2CE00848DF6 /* PurplePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */; };
+		8B454F9E1EEBE2CE00848DF6 /* YellowPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */; };
+		8B6C06701EEB49620008FE7B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C066F1EEB49620008FE7B /* StoreKit.framework */; };
+		8B6C06721EEB4C520008FE7B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C06711EEB4C520008FE7B /* GameKit.framework */; };
+		8B7916471EEC775A00321379 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916391EEC775A00321379 /* 20.png */; };
+		8B7916481EEC775A00321379 /* 20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163A1EEC775A00321379 /* 20@2x.png */; };
+		8B7916491EEC775A00321379 /* 20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163B1EEC775A00321379 /* 20@3x.png */; };
+		8B79164A1EEC775A00321379 /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163C1EEC775A00321379 /* 29.png */; };
+		8B79164B1EEC775A00321379 /* 29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163D1EEC775A00321379 /* 29@2x.png */; };
+		8B79164C1EEC775A00321379 /* 29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163E1EEC775A00321379 /* 29@3x.png */; };
+		8B79164D1EEC775A00321379 /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163F1EEC775A00321379 /* 40.png */; };
+		8B79164E1EEC775A00321379 /* 40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916401EEC775A00321379 /* 40@2x.png */; };
+		8B79164F1EEC775A00321379 /* 40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916411EEC775A00321379 /* 40@3x.png */; };
+		8B7916501EEC775A00321379 /* 60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916421EEC775A00321379 /* 60@2x.png */; };
+		8B7916511EEC775A00321379 /* 60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916431EEC775A00321379 /* 60@3x.png */; };
+		8B7916521EEC775A00321379 /* 76.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916441EEC775A00321379 /* 76.png */; };
+		8B7916531EEC775A00321379 /* 76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916451EEC775A00321379 /* 76@2x.png */; };
+		8B7916541EEC775A00321379 /* 83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916461EEC775A00321379 /* 83.5@2x.png */; };
+		8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */; };
+		8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F801EC677B800F86FE1 /* GameScene.swift */; };
+		8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F821EC677B800F86FE1 /* GameViewController.swift */; };
+		8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F841EC677B800F86FE1 /* Main.storyboard */; };
+		8BB98F961EC677B800F86FE1 /* WhiplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */; };
+		8BB98FA11EC677B800F86FE1 /* WhiplashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */; };
+		8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */; };
+		8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB11EC678C100F86FE1 /* Platform.swift */; };
+		8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */; };
+		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
+		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
+		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
+		97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */; };
+		BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8BB98F921EC677B800F86FE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BB98F6F1EC677B800F86FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BB98F761EC677B800F86FE1;
+			remoteInfo = Whiplash;
+		};
+		8BB98F9D1EC677B800F86FE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BB98F6F1EC677B800F86FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BB98F761EC677B800F86FE1;
+			remoteInfo = Whiplash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiplash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash.release.xcconfig"; sourceTree = "<group>"; };
+		3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8B00585A1EE7EAA600E78C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B00585C1EE7F72B00E78C55 /* WaitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitScene.swift; sourceTree = "<group>"; };
+		8B12854B1EE3DEB80050B17E /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B189C351EED20DE005816B1 /* Whiplash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Whiplash.entitlements; sourceTree = "<group>"; };
+		8B454F891EEBE2CE00848DF6 /* ContactButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactButton.png; path = Images/Buttons/ContactButton.png; sourceTree = "<group>"; };
+		8B454F8A1EEBE2CE00848DF6 /* GamecenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GamecenterButton.png; path = Images/Buttons/GamecenterButton.png; sourceTree = "<group>"; };
+		8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayButton.png; path = Images/Buttons/PlayButton.png; sourceTree = "<group>"; };
+		8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurchaseButton.png; path = Images/Buttons/PurchaseButton.png; sourceTree = "<group>"; };
+		8B454F8D1EEBE2CE00848DF6 /* RateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RateButton.png; path = Images/Buttons/RateButton.png; sourceTree = "<group>"; };
+		8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShareButton.png; path = Images/Buttons/ShareButton.png; sourceTree = "<group>"; };
+		8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BluePlatform.png; path = Images/Platforms/BluePlatform.png; sourceTree = "<group>"; };
+		8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenPlatform.png; path = Images/Platforms/GreenPlatform.png; sourceTree = "<group>"; };
+		8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangePlatform.png; path = Images/Platforms/OrangePlatform.png; sourceTree = "<group>"; };
+		8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurplePlatform.png; path = Images/Platforms/PurplePlatform.png; sourceTree = "<group>"; };
+		8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YellowPlatform.png; path = Images/Platforms/YellowPlatform.png; sourceTree = "<group>"; };
+		8B6C066F1EEB49620008FE7B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8B6C06711EEB4C520008FE7B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8B7916391EEC775A00321379 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20.png; path = "Images/App Icons/20.png"; sourceTree = "<group>"; };
+		8B79163A1EEC775A00321379 /* 20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@2x.png"; path = "Images/App Icons/20@2x.png"; sourceTree = "<group>"; };
+		8B79163B1EEC775A00321379 /* 20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@3x.png"; path = "Images/App Icons/20@3x.png"; sourceTree = "<group>"; };
+		8B79163C1EEC775A00321379 /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 29.png; path = "Images/App Icons/29.png"; sourceTree = "<group>"; };
+		8B79163D1EEC775A00321379 /* 29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "29@2x.png"; path = "Images/App Icons/29@2x.png"; sourceTree = "<group>"; };
+		8B79163E1EEC775A00321379 /* 29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "29@3x.png"; path = "Images/App Icons/29@3x.png"; sourceTree = "<group>"; };
+		8B79163F1EEC775A00321379 /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 40.png; path = "Images/App Icons/40.png"; sourceTree = "<group>"; };
+		8B7916401EEC775A00321379 /* 40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "40@2x.png"; path = "Images/App Icons/40@2x.png"; sourceTree = "<group>"; };
+		8B7916411EEC775A00321379 /* 40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "40@3x.png"; path = "Images/App Icons/40@3x.png"; sourceTree = "<group>"; };
+		8B7916421EEC775A00321379 /* 60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "60@2x.png"; path = "Images/App Icons/60@2x.png"; sourceTree = "<group>"; };
+		8B7916431EEC775A00321379 /* 60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "60@3x.png"; path = "Images/App Icons/60@3x.png"; sourceTree = "<group>"; };
+		8B7916441EEC775A00321379 /* 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 76.png; path = "Images/App Icons/76.png"; sourceTree = "<group>"; };
+		8B7916451EEC775A00321379 /* 76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "76@2x.png"; path = "Images/App Icons/76@2x.png"; sourceTree = "<group>"; };
+		8B7916461EEC775A00321379 /* 83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "83.5@2x.png"; path = "Images/App Icons/83.5@2x.png"; sourceTree = "<group>"; };
+		8BB98F771EC677B800F86FE1 /* Whiplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BB98F801EC677B800F86FE1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8BB98F821EC677B800F86FE1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8BB98F851EC677B800F86FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BB98F8C1EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB98F911EC677B800F86FE1 /* WhiplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiplashTests.swift; sourceTree = "<group>"; };
+		8BB98F971EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB98F9C1EC677B800F86FE1 /* WhiplashUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiplashUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiplashUITests.swift; sourceTree = "<group>"; };
+		8BB98FA21EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstsAndStructs.swift; sourceTree = "<group>"; };
+		8BB98FB11EC678C100F86FE1 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformGenerator.swift; sourceTree = "<group>"; };
+		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
+		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
+		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.release.xcconfig"; sourceTree = "<group>"; };
+		A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whiplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3E36AF810CB803D7AA19500 /* Pods-Whiplash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiplash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash.debug.xcconfig"; sourceTree = "<group>"; };
+		FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC94324FCF3A4DD69049B81 /* Pods-WhiplashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BB98F741EC677B800F86FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6C06721EEB4C520008FE7B /* GameKit.framework in Frameworks */,
+				8B6C06701EEB49620008FE7B /* StoreKit.framework in Frameworks */,
+				97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F8E1EC677B800F86FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F991EC677B800F86FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		171D4FA01B1B324555DF0530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B6C06711EEB4C520008FE7B /* GameKit.framework */,
+				8B6C066F1EEB49620008FE7B /* StoreKit.framework */,
+				A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */,
+				FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */,
+				3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7878177C07081D111042D385 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3E36AF810CB803D7AA19500 /* Pods-Whiplash.debug.xcconfig */,
+				343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */,
+				FFC94324FCF3A4DD69049B81 /* Pods-WhiplashTests.debug.xcconfig */,
+				9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */,
+				3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */,
+				A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8B454F881EEBE2A600848DF6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8B7916381EEC76BE00321379 /* Platforms */,
+				8B7916371EEC76B800321379 /* Buttons */,
+				8B454F9F1EEBE38B00848DF6 /* App Icons */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8B454F9F1EEBE38B00848DF6 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8B7916391EEC775A00321379 /* 20.png */,
+				8B79163A1EEC775A00321379 /* 20@2x.png */,
+				8B79163B1EEC775A00321379 /* 20@3x.png */,
+				8B79163C1EEC775A00321379 /* 29.png */,
+				8B79163D1EEC775A00321379 /* 29@2x.png */,
+				8B79163E1EEC775A00321379 /* 29@3x.png */,
+				8B79163F1EEC775A00321379 /* 40.png */,
+				8B7916401EEC775A00321379 /* 40@2x.png */,
+				8B7916411EEC775A00321379 /* 40@3x.png */,
+				8B7916421EEC775A00321379 /* 60@2x.png */,
+				8B7916431EEC775A00321379 /* 60@3x.png */,
+				8B7916441EEC775A00321379 /* 76.png */,
+				8B7916451EEC775A00321379 /* 76@2x.png */,
+				8B7916461EEC775A00321379 /* 83.5@2x.png */,
+			);
+			name = "App Icons";
+			sourceTree = "<group>";
+		};
+		8B7916371EEC76B800321379 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8B454F891EEBE2CE00848DF6 /* ContactButton.png */,
+				8B454F8A1EEBE2CE00848DF6 /* GamecenterButton.png */,
+				8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */,
+				8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */,
+				8B454F8D1EEBE2CE00848DF6 /* RateButton.png */,
+				8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		8B7916381EEC76BE00321379 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */,
+				8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */,
+				8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */,
+				8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */,
+				8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */,
+			);
+			name = Platforms;
+			sourceTree = "<group>";
+		};
+		8BB98F6E1EC677B800F86FE1 = {
+			isa = PBXGroup;
+			children = (
+				8BB98F791EC677B800F86FE1 /* Whiplash */,
+				8BB98F941EC677B800F86FE1 /* WhiplashTests */,
+				8BB98F9F1EC677B800F86FE1 /* WhiplashUITests */,
+				8BB98F781EC677B800F86FE1 /* Products */,
+				7878177C07081D111042D385 /* Pods */,
+				171D4FA01B1B324555DF0530 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8BB98F781EC677B800F86FE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98F771EC677B800F86FE1 /* Whiplash.app */,
+				8BB98F911EC677B800F86FE1 /* WhiplashTests.xctest */,
+				8BB98F9C1EC677B800F86FE1 /* WhiplashUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BB98F791EC677B800F86FE1 /* Whiplash */ = {
+			isa = PBXGroup;
+			children = (
+				8B189C351EED20DE005816B1 /* Whiplash.entitlements */,
+				8BB98FB71EC678C100F86FE1 /* ToDo.txt */,
+				8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */,
+				8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */,
+				8BB98F821EC677B800F86FE1 /* GameViewController.swift */,
+				8B00585C1EE7F72B00E78C55 /* WaitScene.swift */,
+				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
+				8B12854B1EE3DEB80050B17E /* MenuScene.swift */,
+				8BB98FC21EC67AF700F86FE1 /* Objects */,
+				8B454F881EEBE2A600848DF6 /* Images */,
+				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
+				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
+				8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */,
+				8BB98F8C1EC677B800F86FE1 /* Info.plist */,
+				8B00585A1EE7EAA600E78C55 /* Assets.xcassets */,
+			);
+			path = Whiplash;
+			sourceTree = "<group>";
+		};
+		8BB98F941EC677B800F86FE1 /* WhiplashTests */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98F951EC677B800F86FE1 /* WhiplashTests.swift */,
+				8BB98F971EC677B800F86FE1 /* Info.plist */,
+			);
+			path = WhiplashTests;
+			sourceTree = "<group>";
+		};
+		8BB98F9F1EC677B800F86FE1 /* WhiplashUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */,
+				8BB98FA21EC677B800F86FE1 /* Info.plist */,
+			);
+			path = WhiplashUITests;
+			sourceTree = "<group>";
+		};
+		8BB98FC21EC67AF700F86FE1 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
+				8BB98FC41EC67B9500F86FE1 /* Platform Generation */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		8BB98FC41EC67B9500F86FE1 /* Platform Generation */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB11EC678C100F86FE1 /* Platform.swift */,
+				8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */,
+			);
+			name = "Platform Generation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BB98F761EC677B800F86FE1 /* Whiplash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB98FA51EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "Whiplash" */;
+			buildPhases = (
+				265D9C9AA5CE0C52A703AF81 /* [CP] Check Pods Manifest.lock */,
+				8BB98F731EC677B800F86FE1 /* Sources */,
+				8BB98F741EC677B800F86FE1 /* Frameworks */,
+				8BB98F751EC677B800F86FE1 /* Resources */,
+				9D8A5017937EE544F0B8D467 /* [CP] Embed Pods Frameworks */,
+				44906F84D1993BCD13DA05F8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Whiplash;
+			productName = Whiplash;
+			productReference = 8BB98F771EC677B800F86FE1 /* Whiplash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8BB98F901EC677B800F86FE1 /* WhiplashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB98FA81EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashTests" */;
+			buildPhases = (
+				03FCB8B95E9BB795B7AFDA75 /* [CP] Check Pods Manifest.lock */,
+				8BB98F8D1EC677B800F86FE1 /* Sources */,
+				8BB98F8E1EC677B800F86FE1 /* Frameworks */,
+				8BB98F8F1EC677B800F86FE1 /* Resources */,
+				E9DD75F261D170D87878C394 /* [CP] Embed Pods Frameworks */,
+				5A315CAD84CB592CDD91FBFF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BB98F931EC677B800F86FE1 /* PBXTargetDependency */,
+			);
+			name = WhiplashTests;
+			productName = WhiplashTests;
+			productReference = 8BB98F911EC677B800F86FE1 /* WhiplashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8BB98F9B1EC677B800F86FE1 /* WhiplashUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB98FAB1EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashUITests" */;
+			buildPhases = (
+				3236985712884DD8AE0EF6A2 /* [CP] Check Pods Manifest.lock */,
+				8BB98F981EC677B800F86FE1 /* Sources */,
+				8BB98F991EC677B800F86FE1 /* Frameworks */,
+				8BB98F9A1EC677B800F86FE1 /* Resources */,
+				D284B463C28928CE3505039D /* [CP] Embed Pods Frameworks */,
+				C99CE5A7BC12DFDFC3945827 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BB98F9E1EC677B800F86FE1 /* PBXTargetDependency */,
+			);
+			name = WhiplashUITests;
+			productName = WhiplashUITests;
+			productReference = 8BB98F9C1EC677B800F86FE1 /* WhiplashUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BB98F6F1EC677B800F86FE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Palm Studios";
+				TargetAttributes = {
+					8BB98F761EC677B800F86FE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = QEWS97H5JD;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+					8BB98F901EC677B800F86FE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WT6AWRDT6Y;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8BB98F761EC677B800F86FE1;
+					};
+					8BB98F9B1EC677B800F86FE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WT6AWRDT6Y;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8BB98F761EC677B800F86FE1;
+					};
+				};
+			};
+			buildConfigurationList = 8BB98F721EC677B800F86FE1 /* Build configuration list for PBXProject "Whiplash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BB98F6E1EC677B800F86FE1;
+			productRefGroup = 8BB98F781EC677B800F86FE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BB98F761EC677B800F86FE1 /* Whiplash */,
+				8BB98F901EC677B800F86FE1 /* WhiplashTests */,
+				8BB98F9B1EC677B800F86FE1 /* WhiplashUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BB98F751EC677B800F86FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B79164C1EEC775A00321379 /* 29@3x.png in Resources */,
+				8B79164A1EEC775A00321379 /* 29.png in Resources */,
+				8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */,
+				8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */,
+				8B7916491EEC775A00321379 /* 20@3x.png in Resources */,
+				8B7916531EEC775A00321379 /* 76@2x.png in Resources */,
+				8B79164B1EEC775A00321379 /* 29@2x.png in Resources */,
+				8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */,
+				8B79164F1EEC775A00321379 /* 40@3x.png in Resources */,
+				8B454F9D1EEBE2CE00848DF6 /* PurplePlatform.png in Resources */,
+				8B7916481EEC775A00321379 /* 20@2x.png in Resources */,
+				8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */,
+				8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */,
+				8B454F9E1EEBE2CE00848DF6 /* YellowPlatform.png in Resources */,
+				8B7916541EEC775A00321379 /* 83.5@2x.png in Resources */,
+				8B454F9A1EEBE2CE00848DF6 /* BluePlatform.png in Resources */,
+				8B7916511EEC775A00321379 /* 60@3x.png in Resources */,
+				8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */,
+				8B79164D1EEC775A00321379 /* 40.png in Resources */,
+				8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */,
+				8B7916471EEC775A00321379 /* 20.png in Resources */,
+				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
+				8B79164E1EEC775A00321379 /* 40@2x.png in Resources */,
+				8B7916501EEC775A00321379 /* 60@2x.png in Resources */,
+				8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */,
+				8B454F951EEBE2CE00848DF6 /* GamecenterButton.png in Resources */,
+				8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */,
+				8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */,
+				8B7916521EEC775A00321379 /* 76.png in Resources */,
+				8B454F991EEBE2CE00848DF6 /* ShareButton.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F8F1EC677B800F86FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F9A1EC677B800F86FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03FCB8B95E9BB795B7AFDA75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		265D9C9AA5CE0C52A703AF81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3236985712884DD8AE0EF6A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44906F84D1993BCD13DA05F8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A315CAD84CB592CDD91FBFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D8A5017937EE544F0B8D467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C99CE5A7BC12DFDFC3945827 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D284B463C28928CE3505039D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9DD75F261D170D87878C394 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BB98F731EC677B800F86FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */,
+				8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */,
+				8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */,
+				8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */,
+				8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */,
+				8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */,
+				8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */,
+				8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */,
+				8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F8D1EC677B800F86FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98F961EC677B800F86FE1 /* WhiplashTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB98F981EC677B800F86FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98FA11EC677B800F86FE1 /* WhiplashUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BB98F931EC677B800F86FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BB98F761EC677B800F86FE1 /* Whiplash */;
+			targetProxy = 8BB98F921EC677B800F86FE1 /* PBXContainerItemProxy */;
+		};
+		8BB98F9E1EC677B800F86FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8BB98F761EC677B800F86FE1 /* Whiplash */;
+			targetProxy = 8BB98F9D1EC677B800F86FE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8BB98F841EC677B800F86FE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BB98F851EC677B800F86FE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BB98FA31EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BB98FA41EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BB98FA61EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E36AF810CB803D7AA19500 /* Pods-Whiplash.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QEWS97H5JD;
+				INFOPLIST_FILE = Whiplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BB98FA71EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QEWS97H5JD;
+				INFOPLIST_FILE = Whiplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8BB98FA91EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC94324FCF3A4DD69049B81 /* Pods-WhiplashTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whiplash.app/Whiplash";
+			};
+			name = Debug;
+		};
+		8BB98FAA1EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Whiplash.app/Whiplash";
+			};
+			name = Release;
+		};
+		8BB98FAC1EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Whiplash;
+			};
+			name = Debug;
+		};
+		8BB98FAD1EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				INFOPLIST_FILE = WhiplashUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.WhiplashUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Whiplash;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BB98F721EC677B800F86FE1 /* Build configuration list for PBXProject "Whiplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA31EC677B800F86FE1 /* Debug */,
+				8BB98FA41EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB98FA51EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "Whiplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA61EC677B800F86FE1 /* Debug */,
+				8BB98FA71EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB98FA81EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA91EC677B800F86FE1 /* Debug */,
+				8BB98FAA1EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB98FAB1EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "WhiplashUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FAC1EC677B800F86FE1 /* Debug */,
+				8BB98FAD1EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BB98F6F1EC677B800F86FE1 /* Project object */;
+}

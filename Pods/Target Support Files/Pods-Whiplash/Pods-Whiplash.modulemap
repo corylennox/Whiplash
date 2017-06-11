@@ -1,0 +1,6 @@
+framework module Pods_Whiplash {
+  umbrella header "Pods-Whiplash-umbrella.h"
+
+  export *
+  module * { export * }
+}
