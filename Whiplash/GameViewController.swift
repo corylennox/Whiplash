@@ -13,8 +13,8 @@ import GoogleMobileAds
 import MessageUI
 import GameKit
 
-let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
-//let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
+//let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
+let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
 
 class GameViewController: UIViewController, MFMailComposeViewControllerDelegate, GADInterstitialDelegate
 {

@@ -1,12 +1,9 @@
--make app easier
 -code menu functions for:
     purchase app
     gamecenter
     rate
--when we get app id
-    update share link app id
-    update firebase app id
 -customize splash screen
+-save high score to icloud
 -music
 -mute button
 -app icon
