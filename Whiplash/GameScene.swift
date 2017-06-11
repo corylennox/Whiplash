@@ -301,7 +301,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     func getConstants()
     {
         //ONLY CHANGE THESE VALUES
-        let platformRad: CGFloat = 65
+        let platformRad: CGFloat = 62
         let distFromBottom: CGFloat = 100
         let descentSpeed: CGFloat = 100
         let rotateSpeed: CGFloat = 0.4

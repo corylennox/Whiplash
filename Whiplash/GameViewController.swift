@@ -13,8 +13,8 @@ import GoogleMobileAds
 import MessageUI
 import GameKit
 
-//let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
-let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
+let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
+//let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
 
 class GameViewController: UIViewController, MFMailComposeViewControllerDelegate, GADInterstitialDelegate
 {
@@ -37,6 +37,7 @@ class GameViewController: UIViewController, MFMailComposeViewControllerDelegate,
         skView.presentScene(scene)
         
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAd), name: NSNotification.Name(rawValue: "loadAd"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowShare), name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowShare), name: NSNotification.Name(rawValue: "loadAndShowShare"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowEmail), name: NSNotification.Name(rawValue: "loadAndShowEmail"), object: nil)
 
@@ -63,8 +64,32 @@ class GameViewController: UIViewController, MFMailComposeViewControllerDelegate,
             myAd.present(fromRootViewController: self)
         }
     }
+    /********* Game Center Stuff *********/
+    func loadAndShowGC()
+    {
+        print("Game Center stuff")
+    }
     
-    /********* Email Stuff *********/
+    /********* Rate Stuff *********/
+    func loadAndShowRate()
+    {
+        print("rate stuff")
+    }
+    
+    /********* Share Stuff *********/
+    func loadAndShowShare()
+    {
+        //let message = "optional message"
+        //let image = UIImage(named: "optional image")
+        if let link = NSURL(string: "https://itunes.apple.com/app/1247181092.com")
+        {
+            let activityVC = UIActivityViewController(activityItems: [link], applicationActivities: nil)
+            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+            self.present(activityVC, animated: true, completion: nil)
+        }
+    }
+    
+    /********* Contact Stuff *********/
     func loadAndShowEmail()
     {
         let mailComposeViewController = configuredMailComposeViewController()
@@ -99,18 +124,5 @@ class GameViewController: UIViewController, MFMailComposeViewControllerDelegate,
     func mailComposeController(_: MFMailComposeViewController, didFinishWith: MFMailComposeResult, error: Error?)
     {
         dismiss(animated: true, completion: nil)
-    }
-    
-    /********* Share Stuff *********/
-    func loadAndShowShare()
-    {
-        //let message = "optional message"
-        //let image = UIImage(named: "optional image")
-        if let link = NSURL(string: "https://itunes.apple.com/app/1247181092.com")
-        {
-            let activityVC = UIActivityViewController(activityItems: [link], applicationActivities: nil)
-            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
-            self.present(activityVC, animated: true, completion: nil)
-        }
     }
 }
