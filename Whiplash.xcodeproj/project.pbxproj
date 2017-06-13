@@ -13,7 +13,7 @@
 		8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12854B1EE3DEB80050B17E /* MenuScene.swift */; };
 		8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */; };
 		8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F891EEBE2CE00848DF6 /* ContactButton.png */; };
-		8B454F951EEBE2CE00848DF6 /* GamecenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8A1EEBE2CE00848DF6 /* GamecenterButton.png */; };
+		8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */; };
 		8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */; };
 		8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */; };
 		8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8D1EEBE2CE00848DF6 /* RateButton.png */; };
@@ -82,7 +82,7 @@
 		8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B189C351EED20DE005816B1 /* Whiplash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Whiplash.entitlements; sourceTree = "<group>"; };
 		8B454F891EEBE2CE00848DF6 /* ContactButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactButton.png; path = Images/Buttons/ContactButton.png; sourceTree = "<group>"; };
-		8B454F8A1EEBE2CE00848DF6 /* GamecenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GamecenterButton.png; path = Images/Buttons/GamecenterButton.png; sourceTree = "<group>"; };
+		8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameCenterButton.png; path = Images/Buttons/GameCenterButton.png; sourceTree = "<group>"; };
 		8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayButton.png; path = Images/Buttons/PlayButton.png; sourceTree = "<group>"; };
 		8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurchaseButton.png; path = Images/Buttons/PurchaseButton.png; sourceTree = "<group>"; };
 		8B454F8D1EEBE2CE00848DF6 /* RateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RateButton.png; path = Images/Buttons/RateButton.png; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				8B454F891EEBE2CE00848DF6 /* ContactButton.png */,
-				8B454F8A1EEBE2CE00848DF6 /* GamecenterButton.png */,
+				8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */,
 				8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */,
 				8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */,
 				8B454F8D1EEBE2CE00848DF6 /* RateButton.png */,
@@ -311,8 +311,8 @@
 		8BB98FC21EC67AF700F86FE1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
 				8BB98FC41EC67B9500F86FE1 /* Platform Generation */,
+				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -481,7 +481,7 @@
 				8B79164E1EEC775A00321379 /* 40@2x.png in Resources */,
 				8B7916501EEC775A00321379 /* 60@2x.png in Resources */,
 				8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */,
-				8B454F951EEBE2CE00848DF6 /* GamecenterButton.png in Resources */,
+				8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */,
 				8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */,
 				8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */,
 				8B7916521EEC775A00321379 /* 76.png in Resources */,

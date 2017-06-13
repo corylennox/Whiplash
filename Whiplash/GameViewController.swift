@@ -13,22 +13,26 @@ import GoogleMobileAds
 import MessageUI
 import GameKit
 
-let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
-//let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
+//let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
+let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
 
-class GameViewController: UIViewController, MFMailComposeViewControllerDelegate, GADInterstitialDelegate
+class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMailComposeViewControllerDelegate, GADInterstitialDelegate
 {
     var scene: GameScene!
     var myAd: GADInterstitial!
     var skView: SKView!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
         // Configure the view
         skView = view as! SKView
         skView.isMultipleTouchEnabled = false
         //skView.showsPhysics = true;
         skView.preferredFramesPerSecond = 60
+        
+        initConstants(size: skView.bounds.size)
         
         // Create and configure the scene
         scene = GameScene(size: skView.bounds.size)
@@ -36,11 +40,18 @@ class GameViewController: UIViewController, MFMailComposeViewControllerDelegate,
         //present scene
         skView.presentScene(scene)
         
+        //NS Observers
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAd), name: NSNotification.Name(rawValue: "loadAd"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowShare), name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowGC), name: NSNotification.Name(rawValue: "loadAndShowGC"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowRate), name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowShare), name: NSNotification.Name(rawValue: "loadAndShowShare"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowEmail), name: NSNotification.Name(rawValue: "loadAndShowEmail"), object: nil)
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        authenticatePlayer() //log in to gamecenter
     }
     
     override var prefersStatusBarHidden: Bool
@@ -67,20 +78,53 @@ class GameViewController: UIViewController, MFMailComposeViewControllerDelegate,
     /********* Game Center Stuff *********/
     func loadAndShowGC()
     {
-        print("Game Center stuff")
+        showLeaderboard()
+    }
+    
+    func authenticatePlayer()
+    {
+        let localPlayer = GKLocalPlayer.localPlayer()
+        localPlayer.authenticateHandler =
+        {
+            (view, error) in
+            
+            if view != nil
+            {
+                self.present(view!, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func showLeaderboard()
+    {
+        let gcViewController = GKGameCenterViewController()
+        gcViewController.gameCenterDelegate = self
+        gcViewController.viewState = GKGameCenterViewControllerState.leaderboards
+        gcViewController.leaderboardIdentifier = "com.palmtech.leaderboard"
+        
+        self.present(gcViewController, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gcViewController: GKGameCenterViewController)
+    {
+        self.dismiss(animated: true, completion: nil)
     }
     
     /********* Rate Stuff *********/
     func loadAndShowRate()
     {
-        print("rate stuff")
+        let appID = "1247181092"
+        let url = URL(string : "itms-apps://itunes.apple.com/app/" + appID)
+        UIApplication.shared.open((url)!, options: [:], completionHandler: nil)
+    }
+    
+    func completion(_ completed: Bool)
+    {
     }
     
     /********* Share Stuff *********/
     func loadAndShowShare()
     {
-        //let message = "optional message"
-        //let image = UIImage(named: "optional image")
         if let link = NSURL(string: "https://itunes.apple.com/app/1247181092.com")
         {
             let activityVC = UIActivityViewController(activityItems: [link], applicationActivities: nil)
@@ -108,8 +152,6 @@ class GameViewController: UIViewController, MFMailComposeViewControllerDelegate,
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
         mailComposerVC.setToRecipients(["contact.palm.tech@gmail.com"])
-        //mailComposerVC.setSubject("Subject")
-        //mailComposerVC.setMessageBody("Body", isHTML: false)
         
         return mailComposerVC
     }
@@ -124,5 +166,37 @@ class GameViewController: UIViewController, MFMailComposeViewControllerDelegate,
     func mailComposeController(_: MFMailComposeViewController, didFinishWith: MFMailComposeResult, error: Error?)
     {
         dismiss(animated: true, completion: nil)
+    }
+    
+    /********* initialize constants *********/
+    func initConstants(size: CGSize)
+    {
+        //ONLY CHANGE THESE VALUES
+        let platformRad: CGFloat = 62
+        let distFromBottom: CGFloat = 100
+        let descentSpeed: CGFloat = 100
+        let rotateSpeed: CGFloat = 0.4
+        let lateralSpeed: CGFloat = 20
+        let distApart: CGFloat = 270
+        let ballRad: CGFloat  = 0.26 * platformRad
+        let ballSpeed: CGFloat  = 10
+        
+        /**** LEAVE ALONE ****/
+        SCALE = size.height/736
+        
+        BALL_MASS = 0.02
+        BALL_RADIUS = ballRad * SCALE
+        BALL_SPEED = ballSpeed * SCALE
+        
+        PLATFORM_RADIUS = platformRad * SCALE
+        PLATFORM_SCALE = (platformRad / 110.7) * SCALE //110.7 = radius of the platform png
+        PLATFORM_TURN_POINT = PLATFORM_RADIUS + 2 * BALL_RADIUS + (5 * SCALE)
+        STARTING_DISTANCE_FROM_BOTTOM = distFromBottom * SCALE
+        PLATFORM_DESCENT_SPEED = descentSpeed * SCALE
+        PLATFORM_ROTATION_SPEED = rotateSpeed
+        PLATFORM_LATERAL_SPEED = lateralSpeed * SCALE
+        PLATFORM_DISTANCE_APART = distApart * SCALE
+        
+        ANCHOR_DISTANCE = BALL_RADIUS + PLATFORM_RADIUS
     }
 }

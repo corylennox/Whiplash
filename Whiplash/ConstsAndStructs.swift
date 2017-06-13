@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 var GAMES_PLAYED = 0
+var SHOW_AD_EVERY_X_GAMES = 3
 
 var SCALE: CGFloat!
 

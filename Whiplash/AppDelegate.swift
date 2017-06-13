@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-5168834967300522~2581417892")
+        GADMobileAds.configure(withApplicationID: "whiplash-f403c")
         return true
     }
 

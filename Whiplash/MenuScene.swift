@@ -172,14 +172,12 @@ class MenuScene: SKScene
     
     func runGameCenter()
     {
-        print("game center button pressed")
-        //run game center stuff
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowGC"), object: nil)
     }
     
     func runRate()
     {
-        print("rate button pressed")
-        //run rate stuff
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
     }
     
     func runShare()
