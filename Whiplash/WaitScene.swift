@@ -25,7 +25,7 @@ class WaitScene: SKScene
     {
         backgroundColor = UIColor.black
         
-        let delayInSeconds = 2.0
+        let delayInSeconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds)
         {
             let reveal = SKTransition.fade(with: UIColor.black, duration: 1)

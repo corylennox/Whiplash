@@ -6,6 +6,7 @@
 -check ipad version on actual ipad
 
 maybe before app comes out:
+-make a one time how to tutorial
 -fix gamecenter problem of getting highscore when offline
 -add main menu
 -add sync with other devices w app feature
@@ -14,6 +15,7 @@ maybe before app comes out:
     -mute button
 
 after app comes out:
+-give extra life for watching ad
 -pause button that brings up menu
 -get rid of ads after rating?
 -add ad banner?

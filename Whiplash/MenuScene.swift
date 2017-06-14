@@ -159,8 +159,7 @@ class MenuScene: SKScene
 
     func runPurchase()
     {
-        print("purchase button pressed")
-        //run purchase stuff
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowPurchase"), object: nil)
     }
     
     func runPlay()

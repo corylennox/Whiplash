@@ -12,6 +12,7 @@ import Firebase
 import GoogleMobileAds
 import MessageUI
 import GameKit
+import StoreKit
 
 //let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
 let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
@@ -42,6 +43,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         
         //NS Observers
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAd), name: NSNotification.Name(rawValue: "loadAd"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowPurchase), name: NSNotification.Name(rawValue: "loadAndShowPurchase"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowGC), name: NSNotification.Name(rawValue: "loadAndShowGC"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowRate), name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowShare), name: NSNotification.Name(rawValue: "loadAndShowShare"), object: nil)
@@ -75,6 +77,13 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
             myAd.present(fromRootViewController: self)
         }
     }
+    
+    /*********** Purchase Stuff ***********/
+    func loadAndShowPurchase()
+    {
+        
+    }
+    
     /********* Game Center Stuff *********/
     func loadAndShowGC()
     {

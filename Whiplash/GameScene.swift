@@ -228,7 +228,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
 
     func addTapToStartLabel()
     {
-        let tapToStartLabel = SKLabelNode(text: "Tap to jump")
+        let tapToStartLabel = SKLabelNode(text: "tap to jump")
         tapToStartLabel.name = "tapToStartLabel"
         tapToStartLabel.position.x = size.width/2
         tapToStartLabel.position.y = size.height * 0.65
