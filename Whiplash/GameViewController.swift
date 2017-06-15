@@ -12,7 +12,6 @@ import Firebase
 import GoogleMobileAds
 import MessageUI
 import GameKit
-import StoreKit
 
 //let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
 let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
@@ -87,7 +86,17 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     /********* Game Center Stuff *********/
     func loadAndShowGC()
     {
-        showLeaderboard()
+        let gcViewController = GKGameCenterViewController()
+        gcViewController.gameCenterDelegate = self
+        gcViewController.viewState = GKGameCenterViewControllerState.leaderboards
+        gcViewController.leaderboardIdentifier = "com.palmtech.leaderboard"
+        
+        self.present(gcViewController, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gcViewController: GKGameCenterViewController)
+    {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func authenticatePlayer()
@@ -102,21 +111,6 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
                 self.present(view!, animated: true, completion: nil)
             }
         }
-    }
-    
-    func showLeaderboard()
-    {
-        let gcViewController = GKGameCenterViewController()
-        gcViewController.gameCenterDelegate = self
-        gcViewController.viewState = GKGameCenterViewControllerState.leaderboards
-        gcViewController.leaderboardIdentifier = "com.palmtech.leaderboard"
-        
-        self.present(gcViewController, animated: true, completion: nil)
-    }
-    
-    func gameCenterViewControllerDidFinish(_ gcViewController: GKGameCenterViewController)
-    {
-        self.dismiss(animated: true, completion: nil)
     }
     
     /********* Rate Stuff *********/
