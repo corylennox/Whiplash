@@ -1,20 +1,20 @@
 Before app comes out:
 Cory
--add the in app purchase for remove adds
 -learn how to add in app purchases/restore purchases
+-add the in app purchase for remove adds
 -turn purchase button into the restore purchases button when bought
 -make a one time how to tutorial
 -sync highscore with other devices automatically using icloud
 -set up google ad account
 -check ipad version on actual ipad
--add achievements
 
 Julio
 -load new scene after ad is closed
 -add main menu
 -add levels
 
-?:
+collab:
+-add achievements
 -customize splash screen
 
 after app comes out:
