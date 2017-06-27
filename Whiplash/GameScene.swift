@@ -262,7 +262,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let defaults = UserDefaults.standard
         let oldHighScore = defaults.integer(forKey: "highScore")
     
-        //uncomment to reset highscore defaults.set(0, forKey: "highScore")
+        //uncomment to reset highscore 
+        //defaults.set(0, forKey: "highScore")
         
         if oldHighScore < highScoreLabel.number
         {

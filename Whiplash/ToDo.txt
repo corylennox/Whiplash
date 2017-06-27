@@ -1,21 +1,31 @@
--code menu functions removeAds
-    -remove ad button becomes restore purchases button when purchased
--make logo
--customize splash screen
+Before app comes out:
+Cory
+-add the in app purchase for remove adds
+-learn how to add in app purchases/restore purchases
+-turn purchase button into the restore purchases button when bought
+-make a one time how to tutorial
+-sync highscore with other devices automatically using icloud
 -set up google ad account
 -check ipad version on actual ipad
+-add achievements
 
-maybe before app comes out:
--make a one time how to tutorial
--fix gamecenter problem of getting highscore when offline
+Julio
+-load new scene after ad is closed
 -add main menu
--add sync with other devices w app feature
-    -save high score to icloud
--music
-    -mute button
+-add levels
+
+?:
+-customize splash screen
 
 after app comes out:
+-add in app currency
+    -buy themes, backgrounds, player colors, etc.
+-sound
+    -music
+    -in game sounds
+    -mute button
 -give extra life for watching ad
+-make logo
 -pause button that brings up menu
 -get rid of ads after rating?
 -add ad banner?
