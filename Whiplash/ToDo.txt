@@ -16,15 +16,15 @@ Julio
 collab:
 -add achievements
 -customize splash screen
-
-after app comes out:
 -add in app currency
     -buy themes, backgrounds, player colors, etc.
+-give extra life/currency for watching ad
+
+After app comes out:
 -sound
     -music
     -in game sounds
     -mute button
--give extra life for watching ad
 -make logo
 -pause button that brings up menu
 -get rid of ads after rating?
