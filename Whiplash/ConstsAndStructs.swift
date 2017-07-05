@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
+var SURVIVAL: Bool!
+
 var GAMES_PLAYED = 0
+var SHOW_AD_EVERY_X_GAMES = 3
 
 var SCALE: CGFloat!
 
@@ -22,6 +25,7 @@ var BALL_SPEED: CGFloat!
 
 //Platforms
 var PLATFORM_RADIUS: CGFloat!
+var PLATFORM_SCALE: CGFloat!
 var BORDER_PLATFORM_PADDING: CGFloat!
 var PLATFORM_TURN_POINT: CGFloat!
 var STARTING_DISTANCE_FROM_BOTTOM: CGFloat!

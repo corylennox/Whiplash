@@ -9,9 +9,11 @@
 import UIKit
 import Firebase
 import GoogleMobileAds
+import StoreKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
 
     var window: UIWindow?
 
@@ -19,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-5168834967300522~2581417892")
+        GADMobileAds.configure(withApplicationID: "whiplash-f403c")
         return true
     }
 
@@ -44,7 +46,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

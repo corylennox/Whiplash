@@ -24,5 +24,13 @@ class WaitScene: SKScene
     override func didMove(to view: SKView)
     {
         backgroundColor = UIColor.black
+        
+        let delayInSeconds = 4.0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds)
+        {
+            let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
+            let newScene = MenuScene(size: self.size)
+            self.scene?.view?.presentScene(newScene, transition: reveal)
+        }
     }
 }

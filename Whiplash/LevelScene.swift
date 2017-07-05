@@ -1,16 +1,16 @@
 //
-//  GameScene.swift
-//  ProjectNoName
+//  LevelScene.swift
+//  Whiplash
 //
-//  Created by Julio "Jay Palm" Hernandez on 12/15/16.
-//  Copyright © 2016 Palm Studios. All rights reserved.
+//  Created by Julio Hernandez on 7/3/17.
+//  Copyright © 2017 Palm Studios. All rights reserved.
 //
 
 import SpriteKit
 import GameplayKit
 import GameKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate
+class LevelScene: SKScene, SKPhysicsContactDelegate
 {
     //member variables
     var platformGenerator: PlatformGenerator!
@@ -22,6 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     var scoreLabel: ScoreLabel!
     var highScoreLabel: ScoreLabel!
+    var levelLabel: ScoreLabel!
     var gameIsStarted = false
     var gameIsOver = false
     var gameIsPaused = false
@@ -31,17 +32,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     override func didMove(to view: SKView)
     {
         backgroundColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
-
+        
         addPhysicsWorld()
         addBorder()
         addPlatformGenerator()
         platformGenerator.generateStartScreenPlatforms()
         addBall()
         addScoreLabels()
-        loadHighscore()
+        loadLevel()
+        //loadHighscore()
         addTapToStartLabel()
         
-        SURVIVAL = true
+        SURVIVAL = false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
@@ -106,13 +108,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate
                 
                 scoreLabel.increment()
                 scoreLabel.scoreChanged = true
-                
+                /*
                 if highScoreLabel.number < scoreLabel.number
                 {
                     highScoreLabel.setTo(scoreLabel.number)
                 }
-                
-                
+                */
+                if scoreLabel.number % 10 == 0
+                {
+                    levelLabel.increment()
+                    showLevel()
+                }
             }
         }
     }
@@ -146,16 +152,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         }
         
         //runs every time score increases
-        if scoreLabel.number < 75 && scoreLabel.scoreChanged == true
+        if levelLabel.scoreChanged == true
         {
-            platformGenerator.updateRotationSpeed(score: scoreLabel.number)
-            platformGenerator.updateLateralSpeed(score: scoreLabel.number)
-            platformGenerator.updateDistanceApart(score: scoreLabel.number)
+            platformGenerator.updateRotationSpeed(score: levelLabel.number)
+            platformGenerator.updateLateralSpeed(score: levelLabel.number)
+            platformGenerator.updateDistanceApart(score: levelLabel.number)
             
-            scoreLabel.scoreChanged = false;
+            levelLabel.scoreChanged = false;
         }
     }
-
+    
     func addPhysicsWorld()
     {
         physicsWorld.contactDelegate = self
@@ -214,27 +220,50 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         scoreLabel.name = "scoreLabel"
         addChild(scoreLabel)
         
-        //high score
-        highScoreLabel = ScoreLabel(num: 0)
-        highScoreLabel.name = "highScoreLabel"
-        highScoreLabel.position = CGPoint(x: size.width - 35 * SCALE, y: size.height - 35 * SCALE)
-        addChild(highScoreLabel)
+        //Level
+        levelLabel = ScoreLabel(num: 1)
+        levelLabel.name = "levelLabel"
+        levelLabel.position = CGPoint(x: size.width - 35 * SCALE, y: size.height - 35 * SCALE)
+        addChild(levelLabel)
         
-        let highScoreTextLabel = SKLabelNode(text: "Best")
+        let highScoreTextLabel = SKLabelNode(text: "level")
         highScoreTextLabel.fontName = "Avenir"
         highScoreTextLabel.fontColor = UIColor.black
         highScoreTextLabel.fontSize = 18.0 * SCALE
         highScoreTextLabel.position = CGPoint(x: size.width - 35 * SCALE, y: size.height - 52 * SCALE)
         addChild(highScoreTextLabel)
     }
-    
+    /*
     func loadHighscore() {
         let defaults = UserDefaults.standard
         
         let highScoreLabel = childNode(withName: "highScoreLabel") as! ScoreLabel
         highScoreLabel.setTo(defaults.integer(forKey: "highScore"))
     }
-
+    */
+    func loadLevel() {
+        let defaults = UserDefaults.standard
+        
+        let levelLabel = childNode(withName: "levelLabel") as! ScoreLabel
+        levelLabel.setTo(defaults.integer(forKey: "level"))
+    }
+    
+    func showLevel() {
+        let levelDisplay = SKLabelNode()
+        levelDisplay.position = CGPoint(x: size.width / 2 * SCALE, y: size.height / 2 * SCALE)
+        levelDisplay.text = "level \(levelLabel.number)"
+        levelDisplay.fontColor = UIColor.black
+        levelDisplay.fontName = "Avenir"
+        levelDisplay.fontSize = 35.0 * SCALE
+        
+        addChild(levelDisplay)
+        let delayInSeconds = 2.0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds)
+        {
+            levelDisplay.removeFromParent()
+        }
+    }
+    
     func addTapToStartLabel()
     {
         let tapToStartLabel = SKLabelNode(text: "tap to jump")
@@ -269,16 +298,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         GAMES_PLAYED += 1
         
         let defaults = UserDefaults.standard
-        let oldHighScore = defaults.integer(forKey: "highScore")
-    
-        //uncomment to reset highscore 
+        let oldHighLevel = defaults.integer(forKey: "level")
+        
+        
+        //uncomment to reset highscore
         //defaults.set(0, forKey: "highScore")
         
-        if oldHighScore < highScoreLabel.number
+        if oldHighLevel < levelLabel.number
         {
             //set new high score
-            defaults.set(highScoreLabel.number, forKey: "highScore")
-            
+            defaults.set(levelLabel.number, forKey: "level")
             //set new hs in gamecenter
             
             
@@ -317,3 +346,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         self.physicsWorld.add(joint)
     }
 }
+

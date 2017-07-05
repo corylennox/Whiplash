@@ -1,8 +1,8 @@
 //
-//  MenuScene.swift
+//  StartScene.swift
 //  Whiplash
 //
-//  Created by Cory Lennox on 6/4/17.
+//  Created by Julio Hernandez on 7/2/17.
 //  Copyright © 2017 Palm Studios. All rights reserved.
 //
 
@@ -10,16 +10,17 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-class MenuScene: SKScene
+class StartScene: SKScene
 {
     //member variables
     var purchaseButton: SKSpriteNode!
     var playButton: SKSpriteNode!
     var gameCenterButton: SKSpriteNode!
+    
     var rateButton: SKSpriteNode!
     var shareButton: SKSpriteNode!
     var contactButton: SKSpriteNode!
-
+    
     override func didMove(to view: SKView)
     {
         backgroundColor = UIColor(colorLiteralRed: 58/255, green: 58/255, blue: 58/255, alpha: 1)
@@ -88,13 +89,13 @@ class MenuScene: SKScene
         rateButton.position = CGPoint(x: rateX, y: rateY)
         rateButton.scale(to: CGSize(width: SMALL_BUTTON_SIZE, height: SMALL_BUTTON_SIZE))
         addChild(rateButton)
-
+        
         //share button
         shareButton = SKSpriteNode(imageNamed: "ShareButton")
         shareButton.position = CGPoint(x: shareX, y: shareY)
         shareButton.scale(to: CGSize(width: SMALL_BUTTON_SIZE, height: SMALL_BUTTON_SIZE))
         addChild(shareButton)
-
+        
         //contact button
         contactButton = SKSpriteNode(imageNamed: "ContactButton")
         contactButton.position = CGPoint(x: contactX, y: contactY)
@@ -116,13 +117,7 @@ class MenuScene: SKScene
         bestTextLabel.fontColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
         bestTextLabel.fontName = "Avenir"
         bestTextLabel.fontSize = 35 * SCALE
-        if SURVIVAL == true
-        {
-            bestTextLabel.text = "Best"
-        } else {
-            bestTextLabel.text = "Level"
-        }
-        
+        bestTextLabel.text = "Best"
         bestTextLabel.position = CGPoint(x: secondColumn, y: rowOne)
         addChild(bestTextLabel)
         
@@ -140,13 +135,7 @@ class MenuScene: SKScene
         bestLabel.fontColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
         bestLabel.fontName = "Avenir"
         bestLabel.fontSize = 60 * SCALE
-        if SURVIVAL == true
-        {
-            bestLabel.text = "\(UserDefaults.standard.integer(forKey: "highScore"))"
-        } else {
-            bestLabel.text = "\(UserDefaults.standard.integer(forKey: "level"))"
-        }
-        
+        bestLabel.text = "\(UserDefaults.standard.integer(forKey: "highScore"))"
         bestLabel.position = CGPoint(x: secondColumn, y: rowTwo)
         addChild(bestLabel)
         
@@ -168,27 +157,21 @@ class MenuScene: SKScene
         whiplashLabel.position = CGPoint(x: size.width/2, y: size.height * 0.8)
         addChild(whiplashLabel)
     }
-
+    
     
     
     func runPlay()
     {
-        if SURVIVAL == true
-        {
-            let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
-            let newScene = GameScene(size: size)
-            scene?.view?.presentScene(newScene, transition: reveal)
-        } else {
-            let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
-            let newScene = LevelScene(size: size)
-            scene?.view?.presentScene(newScene, transition: reveal)
-        }
-        
+        let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
+        let newScene = GameScene(size: size)
+        scene?.view?.presentScene(newScene, transition: reveal)
     }
     
     func runGameCenter()
     {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowGC"), object: nil)
+        let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
+        let newScene = LevelScene(size: size)
+        scene?.view?.presentScene(newScene, transition: reveal)
     }
     
     func runRate()

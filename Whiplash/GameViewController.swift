@@ -10,30 +10,48 @@ import UIKit
 import SpriteKit
 import Firebase
 import GoogleMobileAds
+import MessageUI
+import GameKit
 
-let kBannerAdUnitID = "ca-app-pub-5168834967300522/9510438698"
 
-class GameViewController: UIViewController, GADInterstitialDelegate
+//let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
+let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
+
+class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMailComposeViewControllerDelegate, GADInterstitialDelegate
 {
-    var scene: GameScene!
+    var scene: StartScene!
     var myAd: GADInterstitial!
     var skView: SKView!
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
         // Configure the view
         skView = view as! SKView
         skView.isMultipleTouchEnabled = false
         //skView.showsPhysics = true;
         skView.preferredFramesPerSecond = 60
         
+        initConstants(size: skView.bounds.size)
+        
         // Create and configure the scene
-        scene = GameScene(size: skView.bounds.size)
+        scene = StartScene(size: skView.bounds.size)
         
         //present scene
         skView.presentScene(scene)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShow), name: NSNotification.Name(rawValue: "loadAndShow"), object: nil)
+        //NS Observers
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAd), name: NSNotification.Name(rawValue: "loadAd"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowPurchase), name: NSNotification.Name(rawValue: "loadAndShowPurchase"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowGC), name: NSNotification.Name(rawValue: "loadAndShowGC"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowEmail), name: NSNotification.Name(rawValue: "loadAndShowEmail"), object: nil)
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        authenticatePlayer() //log in to gamecenter
     }
     
     override var prefersStatusBarHidden: Bool
@@ -41,7 +59,8 @@ class GameViewController: UIViewController, GADInterstitialDelegate
         return true
     }
     
-    func loadAndShow()
+    /*********** Ad Stuff ***********/
+    func loadAd()
     {
         myAd = GADInterstitial(adUnitID: kBannerAdUnitID)
         let request = GADRequest()
@@ -57,9 +76,133 @@ class GameViewController: UIViewController, GADInterstitialDelegate
         }
     }
     
-    func interstitialWillDismissScreen(_ ad: GADInterstitial)
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        if SURVIVAL == true
+        {
+            let newScene = GameScene(size: skView.bounds.size)
+            skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
+        } else {
+            let newScene = LevelScene(size: skView.bounds.size)
+            skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
+        }
+        
+    }
+    
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        let newScene = GameScene(size: skView.bounds.size)
+        skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
+    }
+    
+    /*********** Purchase Stuff ***********/
+    func loadAndShowPurchase()
     {
-        scene = GameScene(size: skView.bounds.size)
-        skView.presentScene(scene)
+        
+    }
+    
+    /********* Game Center Stuff *********/
+    func loadAndShowGC()
+    {
+        let gcViewController = GKGameCenterViewController()
+        gcViewController.gameCenterDelegate = self
+        gcViewController.viewState = GKGameCenterViewControllerState.leaderboards
+        gcViewController.leaderboardIdentifier = "com.palmtech.leaderboard"
+        
+        self.present(gcViewController, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gcViewController: GKGameCenterViewController)
+    {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func authenticatePlayer()
+    {
+        let localPlayer = GKLocalPlayer.localPlayer()
+        localPlayer.authenticateHandler =
+        {
+            (view, error) in
+            
+            if view != nil
+            {
+                self.present(view!, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    /********* Rate Stuff *********/
+    
+    
+    func completion(_ completed: Bool)
+    {
+    }
+    
+    /********* Share Stuff *********/
+    
+    
+    /********* Contact Stuff *********/
+    func loadAndShowEmail()
+    {
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail()
+        {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        }
+        else
+        {
+            self.showSendMailErrorAlert()
+        }
+    }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController
+    {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["contact.palm.tech@gmail.com"])
+        
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert()
+    {
+        let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Please check your e-mail configuration and try again.", preferredStyle: UIAlertControllerStyle.alert)
+        sendMailErrorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_: MFMailComposeViewController, didFinishWith: MFMailComposeResult, error: Error?)
+    {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    /********* initialize constants *********/
+    func initConstants(size: CGSize)
+    {
+        //ONLY CHANGE THESE VALUES
+        let platformRad: CGFloat = 62
+        let distFromBottom: CGFloat = 100
+        let descentSpeed: CGFloat = 100
+        let rotateSpeed: CGFloat = 0.4
+        let lateralSpeed: CGFloat = 20
+        let distApart: CGFloat = 270
+        let ballRad: CGFloat  = 0.26 * platformRad
+        let ballSpeed: CGFloat  = 10
+        
+        /**** LEAVE ALONE ****/
+        SCALE = size.height/736
+        
+        BALL_MASS = 0.02
+        BALL_RADIUS = ballRad * SCALE
+        BALL_SPEED = ballSpeed * SCALE
+        
+        PLATFORM_RADIUS = platformRad * SCALE
+        PLATFORM_SCALE = (platformRad / 110.7) * SCALE //110.7 = radius of the platform png
+        PLATFORM_TURN_POINT = PLATFORM_RADIUS + 2 * BALL_RADIUS + (5 * SCALE)
+        STARTING_DISTANCE_FROM_BOTTOM = distFromBottom * SCALE
+        PLATFORM_DESCENT_SPEED = descentSpeed * SCALE
+        PLATFORM_ROTATION_SPEED = rotateSpeed
+        PLATFORM_LATERAL_SPEED = lateralSpeed * SCALE
+        PLATFORM_DISTANCE_APART = distApart * SCALE
+        
+        ANCHOR_DISTANCE = BALL_RADIUS + PLATFORM_RADIUS
     }
 }

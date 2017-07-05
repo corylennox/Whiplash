@@ -25,7 +25,7 @@ class Platform: SKSpriteNode
         
         rotationSpeed = newRotationSpeed
         lateralSpeed = newLateralSpeed
-        self.setScale(CGFloat(0.45 * SCALE))  //scale it to fit platform physicsbody
+        self.setScale(PLATFORM_SCALE)  //scale it to fit platform physicsbody
         loadPhysicsBody()
     }
     
