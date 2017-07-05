@@ -15,7 +15,7 @@ class MenuScene: SKScene
     //member variables
     var purchaseButton: SKSpriteNode!
     var playButton: SKSpriteNode!
-    var gamecenterButton: SKSpriteNode!
+    var gameCenterButton: SKSpriteNode!
     var rateButton: SKSpriteNode!
     var shareButton: SKSpriteNode!
     var contactButton: SKSpriteNode!
@@ -56,8 +56,8 @@ class MenuScene: SKScene
         let purchaseY = firstRow
         let playX = secondColumn
         let playY = firstRow
-        let gamecenterX = thirdColumn
-        let gamecenterY = firstRow
+        let gameCenterX = thirdColumn
+        let gameCenterY = firstRow
         let rateX = firstColumn
         let rateY = secondRow
         let shareX = secondColumn
@@ -77,11 +77,11 @@ class MenuScene: SKScene
         playButton.scale(to: CGSize(width: BIG_BUTTON_SIZE, height: BIG_BUTTON_SIZE))
         addChild(playButton)
         
-        //gamecenter button
-        gamecenterButton = SKSpriteNode(imageNamed: "GamecenterButton")
-        gamecenterButton.position = CGPoint(x: gamecenterX, y: gamecenterY)
-        gamecenterButton.scale(to: CGSize(width: SMALL_BUTTON_SIZE, height: SMALL_BUTTON_SIZE))
-        addChild(gamecenterButton)
+        //game center button
+        gameCenterButton = SKSpriteNode(imageNamed: "GameCenterButton")
+        gameCenterButton.position = CGPoint(x: gameCenterX, y: gameCenterY)
+        gameCenterButton.scale(to: CGSize(width: SMALL_BUTTON_SIZE, height: SMALL_BUTTON_SIZE))
+        addChild(gameCenterButton)
         
         //rate button
         rateButton = SKSpriteNode(imageNamed: "RateButton")
@@ -159,8 +159,7 @@ class MenuScene: SKScene
 
     func runPurchase()
     {
-        print("purchase button pressed")
-        //run purchase stuff
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowPurchase"), object: nil)
     }
     
     func runPlay()
@@ -170,16 +169,14 @@ class MenuScene: SKScene
         scene?.view?.presentScene(newScene, transition: reveal)
     }
     
-    func runGamecenter()
+    func runGameCenter()
     {
-        print("gamecenter button pressed")
-        //run gamecenter stuff
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowGC"), object: nil)
     }
     
     func runRate()
     {
-        print("rate button pressed")
-        //run rate stuff
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
     }
     
     func runShare()
@@ -207,9 +204,9 @@ class MenuScene: SKScene
             {
                 runPlay()
             }
-            if clickedNode == gamecenterButton
+            if clickedNode == gameCenterButton
             {
-                runGamecenter()
+                runGameCenter()
             }
             if clickedNode == rateButton
             {

@@ -1,22 +1,33 @@
--make app easier
--code menu functions for:
-    purchase app
-    gamecenter
-    rate
--when we get app id
-    update share link app id
-    update firebase app id
--customize splash screen
--music
--mute button
--app icon
+Before app comes out:
+Cory
+-learn how to add in app purchases/restore purchases
+-add the in app purchase for remove adds
+-turn purchase button into the restore purchases button when bought
+-make a one time how to tutorial
+-sync highscore with other devices automatically using icloud
 -set up google ad account
 -check ipad version on actual ipad
 
-after app comes out:
+Julio
+-load new scene after ad is closed
+-add main menu
+-add levels
+
+collab:
+-add achievements
+-customize splash screen
+-add in app currency
+    -buy themes, backgrounds, player colors, etc.
+-give extra life/currency for watching ad
+
+After app comes out:
+-sound
+    -music
+    -in game sounds
+    -mute button
+-make logo
 -pause button that brings up menu
 -get rid of ads after rating?
 -add ad banner?
--add sync with other devices w app feature
 -find better solution for constants?
 -clean up code

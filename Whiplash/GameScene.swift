@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import GameKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate
 {
@@ -29,7 +30,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     {
         backgroundColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
 
-        getConstants()
         addPhysicsWorld()
         addBorder()
         addPlatformGenerator()
@@ -154,7 +154,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     func addBorder()
     {
-        border = SKPhysicsBody(edgeLoopFrom: self.frame)
+        let borderWithExtraHeight = CGRect(x: 0, y: 0, width: size.width, height: size.height + 2 * PLATFORM_RADIUS)
+        border = SKPhysicsBody(edgeLoopFrom: borderWithExtraHeight)
         border.categoryBitMask = CollisionCategoryBitMask.Border
         border.contactTestBitMask = CollisionCategoryBitMask.Ball
         border.collisionBitMask = 0
@@ -227,7 +228,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
 
     func addTapToStartLabel()
     {
-        let tapToStartLabel = SKLabelNode(text: "Tap to start")
+        let tapToStartLabel = SKLabelNode(text: "tap to jump")
         tapToStartLabel.name = "tapToStartLabel"
         tapToStartLabel.position.x = size.width/2
         tapToStartLabel.position.y = size.height * 0.65
@@ -261,16 +262,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         let defaults = UserDefaults.standard
         let oldHighScore = defaults.integer(forKey: "highScore")
     
+        //uncomment to reset highscore 
+        //defaults.set(0, forKey: "highScore")
+        
         if oldHighScore < highScoreLabel.number
         {
+            //set new high score
             defaults.set(highScoreLabel.number, forKey: "highScore")
+            
+            //set new hs in gamecenter
+            let leaderboardID = "com.palmtech.leaderboard"
+            let sScore = GKScore(leaderboardIdentifier: leaderboardID)
+            sScore.value = Int64(highScoreLabel.number)
+            
+            GKScore.report([sScore], withCompletionHandler: { (error: NSError?) -> Void in
+                if error != nil
+                {
+                    print(error!.localizedDescription)
+                }
+                else
+                {
+                    print("Score submitted")
+                }
+            } as? (Error?) -> Void)
         }
         
         defaults.set(scoreLabel.number, forKey: "lastScore")
         
         //present next scene
         let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
-        if GAMES_PLAYED % 5 == 0
+        if GAMES_PLAYED % SHOW_AD_EVERY_X_GAMES == 0
         {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAd"), object: nil)
             let newScene = WaitScene(size: size)
@@ -296,36 +317,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     {
         joint = SKPhysicsJointFixed.joint(withBodyA: bodyA, bodyB: bodyB, anchor: point)
         self.physicsWorld.add(joint)
-    }
-    
-    func getConstants()
-    {
-        //ONLY CHANGE THESE VALUES
-        let platformRad: CGFloat = 65
-        let distFromBottom: CGFloat = 100
-        let descentSpeed: CGFloat = 100
-        let rotateSpeed: CGFloat = 0.4
-        let lateralSpeed: CGFloat = 20
-        let distApart: CGFloat = 260
-        let ballRad: CGFloat  = 0.26 * platformRad
-        let ballSpeed: CGFloat  = 10
-        
-        /**** LEAVE ALONE ****/
-        SCALE = size.height/736
-        
-        BALL_MASS = 0.02
-        BALL_RADIUS = ballRad * SCALE
-        BALL_SPEED = ballSpeed * SCALE
-        
-        PLATFORM_RADIUS = platformRad * SCALE
-        PLATFORM_SCALE = (platformRad / 110.7) * SCALE //110.7 = radius of the platform png
-        PLATFORM_TURN_POINT = PLATFORM_RADIUS + 2 * BALL_RADIUS + (5 * SCALE)
-        STARTING_DISTANCE_FROM_BOTTOM = distFromBottom * SCALE
-        PLATFORM_DESCENT_SPEED = descentSpeed * SCALE
-        PLATFORM_ROTATION_SPEED = rotateSpeed
-        PLATFORM_LATERAL_SPEED = lateralSpeed * SCALE
-        PLATFORM_DISTANCE_APART = distApart * SCALE
-        
-        ANCHOR_DISTANCE = BALL_RADIUS + PLATFORM_RADIUS
     }
 }
