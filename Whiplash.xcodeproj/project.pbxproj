@@ -7,22 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4BA22D1F09E6EE004D8B16 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BA22C1F09E6EE004D8B16 /* StartScene.swift */; };
+		0E4BA22F1F09FA19004D8B16 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BA22E1F09FA19004D8B16 /* LevelScene.swift */; };
 		635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */; };
-		8B0058491EE76AB100E78C55 /* PurchaseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058471EE76AB100E78C55 /* PurchaseButton.png */; };
-		8B00584A1EE76AB100E78C55 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058481EE76AB100E78C55 /* PlayButton.png */; };
-		8B00584C1EE7CA7800E78C55 /* GamecenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B00584B1EE7CA7800E78C55 /* GamecenterButton.png */; };
-		8B0058511EE7CE7D00E78C55 /* GreenPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058501EE7CE7D00E78C55 /* GreenPlatform.png */; };
-		8B0058551EE7DB0900E78C55 /* ShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058521EE7DB0900E78C55 /* ShareButton.png */; };
-		8B0058561EE7DB0900E78C55 /* RateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058531EE7DB0900E78C55 /* RateButton.png */; };
-		8B0058571EE7DB0900E78C55 /* ContactButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B0058541EE7DB0900E78C55 /* ContactButton.png */; };
 		8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B00585A1EE7EAA600E78C55 /* Assets.xcassets */; };
 		8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00585C1EE7F72B00E78C55 /* WaitScene.swift */; };
 		8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12854B1EE3DEB80050B17E /* MenuScene.swift */; };
 		8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */; };
-		8B660ABE1EE28355000949FA /* BluePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660ABD1EE28355000949FA /* BluePlatform.png */; };
-		8B660AC21EE29D64000949FA /* YellowPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660ABF1EE29D64000949FA /* YellowPlatform.png */; };
-		8B660AC31EE29D64000949FA /* PurplePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660AC01EE29D64000949FA /* PurplePlatform.png */; };
-		8B660AC41EE29D64000949FA /* OrangePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B660AC11EE29D64000949FA /* OrangePlatform.png */; };
+		8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F891EEBE2CE00848DF6 /* ContactButton.png */; };
+		8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */; };
+		8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */; };
+		8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */; };
+		8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8D1EEBE2CE00848DF6 /* RateButton.png */; };
+		8B454F991EEBE2CE00848DF6 /* ShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */; };
+		8B454F9A1EEBE2CE00848DF6 /* BluePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */; };
+		8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */; };
+		8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */; };
+		8B454F9D1EEBE2CE00848DF6 /* PurplePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */; };
+		8B454F9E1EEBE2CE00848DF6 /* YellowPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */; };
+		8B6C06701EEB49620008FE7B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C066F1EEB49620008FE7B /* StoreKit.framework */; };
+		8B6C06721EEB4C520008FE7B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C06711EEB4C520008FE7B /* GameKit.framework */; };
+		8B7916471EEC775A00321379 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916391EEC775A00321379 /* 20.png */; };
+		8B7916481EEC775A00321379 /* 20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163A1EEC775A00321379 /* 20@2x.png */; };
+		8B7916491EEC775A00321379 /* 20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163B1EEC775A00321379 /* 20@3x.png */; };
+		8B79164A1EEC775A00321379 /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163C1EEC775A00321379 /* 29.png */; };
+		8B79164B1EEC775A00321379 /* 29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163D1EEC775A00321379 /* 29@2x.png */; };
+		8B79164C1EEC775A00321379 /* 29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163E1EEC775A00321379 /* 29@3x.png */; };
+		8B79164D1EEC775A00321379 /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163F1EEC775A00321379 /* 40.png */; };
+		8B79164E1EEC775A00321379 /* 40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916401EEC775A00321379 /* 40@2x.png */; };
+		8B79164F1EEC775A00321379 /* 40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916411EEC775A00321379 /* 40@3x.png */; };
+		8B7916501EEC775A00321379 /* 60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916421EEC775A00321379 /* 60@2x.png */; };
+		8B7916511EEC775A00321379 /* 60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916431EEC775A00321379 /* 60@3x.png */; };
+		8B7916521EEC775A00321379 /* 76.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916441EEC775A00321379 /* 76.png */; };
+		8B7916531EEC775A00321379 /* 76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916451EEC775A00321379 /* 76@2x.png */; };
+		8B7916541EEC775A00321379 /* 83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916461EEC775A00321379 /* 83.5@2x.png */; };
 		8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */; };
 		8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F801EC677B800F86FE1 /* GameScene.swift */; };
 		8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F821EC677B800F86FE1 /* GameViewController.swift */; };
@@ -31,9 +49,6 @@
 		8BB98FA11EC677B800F86FE1 /* WhiplashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FA01EC677B800F86FE1 /* WhiplashUITests.swift */; };
 		8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */; };
 		8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB11EC678C100F86FE1 /* Platform.swift */; };
-		8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB21EC678C100F86FE1 /* platform1.png */; };
-		8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB31EC678C100F86FE1 /* platform2.png */; };
-		8BB98FBE1EC678C100F86FE1 /* platform3.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB41EC678C100F86FE1 /* platform3.png */; };
 		8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */; };
 		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
 		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
@@ -60,24 +75,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4BA22C1F09E6EE004D8B16 /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		0E4BA22E1F09FA19004D8B16 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiplash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash.release.xcconfig"; sourceTree = "<group>"; };
 		3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8B0058471EE76AB100E78C55 /* PurchaseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurchaseButton.png; path = Images/PurchaseButton.png; sourceTree = SOURCE_ROOT; };
-		8B0058481EE76AB100E78C55 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayButton.png; path = Images/PlayButton.png; sourceTree = SOURCE_ROOT; };
-		8B00584B1EE7CA7800E78C55 /* GamecenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GamecenterButton.png; path = Images/GamecenterButton.png; sourceTree = SOURCE_ROOT; };
-		8B0058501EE7CE7D00E78C55 /* GreenPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenPlatform.png; path = Images/GreenPlatform.png; sourceTree = SOURCE_ROOT; };
-		8B0058521EE7DB0900E78C55 /* ShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShareButton.png; path = Images/ShareButton.png; sourceTree = SOURCE_ROOT; };
-		8B0058531EE7DB0900E78C55 /* RateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RateButton.png; path = Images/RateButton.png; sourceTree = SOURCE_ROOT; };
-		8B0058541EE7DB0900E78C55 /* ContactButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactButton.png; path = Images/ContactButton.png; sourceTree = SOURCE_ROOT; };
 		8B00585A1EE7EAA600E78C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B00585C1EE7F72B00E78C55 /* WaitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitScene.swift; sourceTree = "<group>"; };
 		8B12854B1EE3DEB80050B17E /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8B660ABD1EE28355000949FA /* BluePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BluePlatform.png; path = Images/BluePlatform.png; sourceTree = SOURCE_ROOT; };
-		8B660ABF1EE29D64000949FA /* YellowPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YellowPlatform.png; path = Images/YellowPlatform.png; sourceTree = SOURCE_ROOT; };
-		8B660AC01EE29D64000949FA /* PurplePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurplePlatform.png; path = Images/PurplePlatform.png; sourceTree = SOURCE_ROOT; };
-		8B660AC11EE29D64000949FA /* OrangePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangePlatform.png; path = Images/OrangePlatform.png; sourceTree = SOURCE_ROOT; };
+		8B189C351EED20DE005816B1 /* Whiplash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Whiplash.entitlements; sourceTree = "<group>"; };
+		8B454F891EEBE2CE00848DF6 /* ContactButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactButton.png; path = Images/Buttons/ContactButton.png; sourceTree = "<group>"; };
+		8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameCenterButton.png; path = Images/Buttons/GameCenterButton.png; sourceTree = "<group>"; };
+		8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayButton.png; path = Images/Buttons/PlayButton.png; sourceTree = "<group>"; };
+		8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurchaseButton.png; path = Images/Buttons/PurchaseButton.png; sourceTree = "<group>"; };
+		8B454F8D1EEBE2CE00848DF6 /* RateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RateButton.png; path = Images/Buttons/RateButton.png; sourceTree = "<group>"; };
+		8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShareButton.png; path = Images/Buttons/ShareButton.png; sourceTree = "<group>"; };
+		8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BluePlatform.png; path = Images/Platforms/BluePlatform.png; sourceTree = "<group>"; };
+		8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenPlatform.png; path = Images/Platforms/GreenPlatform.png; sourceTree = "<group>"; };
+		8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangePlatform.png; path = Images/Platforms/OrangePlatform.png; sourceTree = "<group>"; };
+		8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurplePlatform.png; path = Images/Platforms/PurplePlatform.png; sourceTree = "<group>"; };
+		8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YellowPlatform.png; path = Images/Platforms/YellowPlatform.png; sourceTree = "<group>"; };
+		8B6C066F1EEB49620008FE7B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8B6C06711EEB4C520008FE7B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8B7916391EEC775A00321379 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20.png; path = "Images/App Icons/20.png"; sourceTree = "<group>"; };
+		8B79163A1EEC775A00321379 /* 20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@2x.png"; path = "Images/App Icons/20@2x.png"; sourceTree = "<group>"; };
+		8B79163B1EEC775A00321379 /* 20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@3x.png"; path = "Images/App Icons/20@3x.png"; sourceTree = "<group>"; };
+		8B79163C1EEC775A00321379 /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 29.png; path = "Images/App Icons/29.png"; sourceTree = "<group>"; };
+		8B79163D1EEC775A00321379 /* 29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "29@2x.png"; path = "Images/App Icons/29@2x.png"; sourceTree = "<group>"; };
+		8B79163E1EEC775A00321379 /* 29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "29@3x.png"; path = "Images/App Icons/29@3x.png"; sourceTree = "<group>"; };
+		8B79163F1EEC775A00321379 /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 40.png; path = "Images/App Icons/40.png"; sourceTree = "<group>"; };
+		8B7916401EEC775A00321379 /* 40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "40@2x.png"; path = "Images/App Icons/40@2x.png"; sourceTree = "<group>"; };
+		8B7916411EEC775A00321379 /* 40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "40@3x.png"; path = "Images/App Icons/40@3x.png"; sourceTree = "<group>"; };
+		8B7916421EEC775A00321379 /* 60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "60@2x.png"; path = "Images/App Icons/60@2x.png"; sourceTree = "<group>"; };
+		8B7916431EEC775A00321379 /* 60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "60@3x.png"; path = "Images/App Icons/60@3x.png"; sourceTree = "<group>"; };
+		8B7916441EEC775A00321379 /* 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 76.png; path = "Images/App Icons/76.png"; sourceTree = "<group>"; };
+		8B7916451EEC775A00321379 /* 76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "76@2x.png"; path = "Images/App Icons/76@2x.png"; sourceTree = "<group>"; };
+		8B7916461EEC775A00321379 /* 83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "83.5@2x.png"; path = "Images/App Icons/83.5@2x.png"; sourceTree = "<group>"; };
 		8BB98F771EC677B800F86FE1 /* Whiplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB98F801EC677B800F86FE1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -92,9 +126,6 @@
 		8BB98FA21EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstsAndStructs.swift; sourceTree = "<group>"; };
 		8BB98FB11EC678C100F86FE1 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
-		8BB98FB21EC678C100F86FE1 /* platform1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform1.png; sourceTree = "<group>"; };
-		8BB98FB31EC678C100F86FE1 /* platform2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform2.png; sourceTree = "<group>"; };
-		8BB98FB41EC678C100F86FE1 /* platform3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = platform3.png; sourceTree = "<group>"; };
 		8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformGenerator.swift; sourceTree = "<group>"; };
 		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
@@ -112,6 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6C06721EEB4C520008FE7B /* GameKit.framework in Frameworks */,
+				8B6C06701EEB49620008FE7B /* StoreKit.framework in Frameworks */,
 				97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +171,8 @@
 		171D4FA01B1B324555DF0530 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8B6C06711EEB4C520008FE7B /* GameKit.framework */,
+				8B6C066F1EEB49620008FE7B /* StoreKit.framework */,
 				A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */,
 				FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */,
 				3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */,
@@ -158,40 +193,61 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		8B00584D1EE7CA8200E78C55 /* Buttons */ = {
+		8B454F881EEBE2A600848DF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				8B0058521EE7DB0900E78C55 /* ShareButton.png */,
-				8B0058531EE7DB0900E78C55 /* RateButton.png */,
-				8B0058541EE7DB0900E78C55 /* ContactButton.png */,
-				8B0058471EE76AB100E78C55 /* PurchaseButton.png */,
-				8B0058481EE76AB100E78C55 /* PlayButton.png */,
-				8B00584B1EE7CA7800E78C55 /* GamecenterButton.png */,
+				8B7916381EEC76BE00321379 /* Platforms */,
+				8B7916371EEC76B800321379 /* Buttons */,
+				8B454F9F1EEBE38B00848DF6 /* App Icons */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8B454F9F1EEBE38B00848DF6 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8B7916391EEC775A00321379 /* 20.png */,
+				8B79163A1EEC775A00321379 /* 20@2x.png */,
+				8B79163B1EEC775A00321379 /* 20@3x.png */,
+				8B79163C1EEC775A00321379 /* 29.png */,
+				8B79163D1EEC775A00321379 /* 29@2x.png */,
+				8B79163E1EEC775A00321379 /* 29@3x.png */,
+				8B79163F1EEC775A00321379 /* 40.png */,
+				8B7916401EEC775A00321379 /* 40@2x.png */,
+				8B7916411EEC775A00321379 /* 40@3x.png */,
+				8B7916421EEC775A00321379 /* 60@2x.png */,
+				8B7916431EEC775A00321379 /* 60@3x.png */,
+				8B7916441EEC775A00321379 /* 76.png */,
+				8B7916451EEC775A00321379 /* 76@2x.png */,
+				8B7916461EEC775A00321379 /* 83.5@2x.png */,
+			);
+			name = "App Icons";
+			sourceTree = "<group>";
+		};
+		8B7916371EEC76B800321379 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8B454F891EEBE2CE00848DF6 /* ContactButton.png */,
+				8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */,
+				8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */,
+				8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */,
+				8B454F8D1EEBE2CE00848DF6 /* RateButton.png */,
+				8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
 		};
-		8B00584E1EE7CA9300E78C55 /* Platforms */ = {
+		8B7916381EEC76BE00321379 /* Platforms */ = {
 			isa = PBXGroup;
 			children = (
-				8B0058501EE7CE7D00E78C55 /* GreenPlatform.png */,
-				8B660ABF1EE29D64000949FA /* YellowPlatform.png */,
-				8B660AC01EE29D64000949FA /* PurplePlatform.png */,
-				8B660AC11EE29D64000949FA /* OrangePlatform.png */,
-				8B660ABD1EE28355000949FA /* BluePlatform.png */,
-				8B00584F1EE7CAA900E78C55 /* Other Platforms */,
+				8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */,
+				8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */,
+				8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */,
+				8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */,
+				8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */,
 			);
 			name = Platforms;
-			sourceTree = "<group>";
-		};
-		8B00584F1EE7CAA900E78C55 /* Other Platforms */ = {
-			isa = PBXGroup;
-			children = (
-				8BB98FB21EC678C100F86FE1 /* platform1.png */,
-				8BB98FB31EC678C100F86FE1 /* platform2.png */,
-				8BB98FB41EC678C100F86FE1 /* platform3.png */,
-			);
-			name = "Other Platforms";
 			sourceTree = "<group>";
 		};
 		8BB98F6E1EC677B800F86FE1 = {
@@ -219,6 +275,7 @@
 		8BB98F791EC677B800F86FE1 /* Whiplash */ = {
 			isa = PBXGroup;
 			children = (
+				8B189C351EED20DE005816B1 /* Whiplash.entitlements */,
 				8BB98FB71EC678C100F86FE1 /* ToDo.txt */,
 				8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */,
 				8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */,
@@ -226,10 +283,12 @@
 				8B00585C1EE7F72B00E78C55 /* WaitScene.swift */,
 				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
 				8B12854B1EE3DEB80050B17E /* MenuScene.swift */,
+				0E4BA22E1F09FA19004D8B16 /* LevelScene.swift */,
+				0E4BA22C1F09E6EE004D8B16 /* StartScene.swift */,
 				8BB98FC21EC67AF700F86FE1 /* Objects */,
-				8BB98FC31EC67B4D00F86FE1 /* Images */,
-				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
+				8B454F881EEBE2A600848DF6 /* Images */,
 				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
+				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
 				8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */,
 				8BB98F8C1EC677B800F86FE1 /* Info.plist */,
 				8B00585A1EE7EAA600E78C55 /* Assets.xcassets */,
@@ -258,19 +317,10 @@
 		8BB98FC21EC67AF700F86FE1 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
 				8BB98FC41EC67B9500F86FE1 /* Platform Generation */,
+				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
 			);
 			name = Objects;
-			sourceTree = "<group>";
-		};
-		8BB98FC31EC67B4D00F86FE1 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				8B00584E1EE7CA9300E78C55 /* Platforms */,
-				8B00584D1EE7CA8200E78C55 /* Buttons */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		8BB98FC41EC67B9500F86FE1 /* Platform Generation */ = {
@@ -359,8 +409,19 @@
 				TargetAttributes = {
 					8BB98F761EC677B800F86FE1 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = WT6AWRDT6Y;
+						DevelopmentTeam = QEWS97H5JD;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					8BB98F901EC677B800F86FE1 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -401,25 +462,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B79164C1EEC775A00321379 /* 29@3x.png in Resources */,
+				8B79164A1EEC775A00321379 /* 29.png in Resources */,
+				8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */,
+				8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */,
+				8B7916491EEC775A00321379 /* 20@3x.png in Resources */,
+				8B7916531EEC775A00321379 /* 76@2x.png in Resources */,
+				8B79164B1EEC775A00321379 /* 29@2x.png in Resources */,
+				8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */,
+				8B79164F1EEC775A00321379 /* 40@3x.png in Resources */,
+				8B454F9D1EEBE2CE00848DF6 /* PurplePlatform.png in Resources */,
+				8B7916481EEC775A00321379 /* 20@2x.png in Resources */,
 				8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */,
-				8B0058561EE7DB0900E78C55 /* RateButton.png in Resources */,
-				8B660AC41EE29D64000949FA /* OrangePlatform.png in Resources */,
 				8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */,
+				8B454F9E1EEBE2CE00848DF6 /* YellowPlatform.png in Resources */,
+				8B7916541EEC775A00321379 /* 83.5@2x.png in Resources */,
+				8B454F9A1EEBE2CE00848DF6 /* BluePlatform.png in Resources */,
+				8B7916511EEC775A00321379 /* 60@3x.png in Resources */,
 				8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */,
-				8BB98FBE1EC678C100F86FE1 /* platform3.png in Resources */,
-				8BB98FBD1EC678C100F86FE1 /* platform2.png in Resources */,
+				8B79164D1EEC775A00321379 /* 40.png in Resources */,
+				8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */,
+				8B7916471EEC775A00321379 /* 20.png in Resources */,
 				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
-				8B0058571EE7DB0900E78C55 /* ContactButton.png in Resources */,
-				8B660AC31EE29D64000949FA /* PurplePlatform.png in Resources */,
-				8B0058491EE76AB100E78C55 /* PurchaseButton.png in Resources */,
-				8B00584A1EE76AB100E78C55 /* PlayButton.png in Resources */,
-				8B660ABE1EE28355000949FA /* BluePlatform.png in Resources */,
+				8B79164E1EEC775A00321379 /* 40@2x.png in Resources */,
+				8B7916501EEC775A00321379 /* 60@2x.png in Resources */,
+				8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */,
+				8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */,
 				8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */,
-				8B660AC21EE29D64000949FA /* YellowPlatform.png in Resources */,
-				8B0058511EE7CE7D00E78C55 /* GreenPlatform.png in Resources */,
-				8BB98FBC1EC678C100F86FE1 /* platform1.png in Resources */,
-				8B00584C1EE7CA7800E78C55 /* GamecenterButton.png in Resources */,
-				8B0058551EE7DB0900E78C55 /* ShareButton.png in Resources */,
+				8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */,
+				8B7916521EEC775A00321379 /* 76.png in Resources */,
+				8B454F991EEBE2CE00848DF6 /* ShareButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,9 +654,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4BA22F1F09FA19004D8B16 /* LevelScene.swift in Sources */,
 				8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */,
 				8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */,
 				8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */,
+				0E4BA22D1F09E6EE004D8B16 /* StartScene.swift in Sources */,
 				8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */,
 				8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */,
 				8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */,
@@ -737,12 +811,15 @@
 			baseConfigurationReference = C3E36AF810CB803D7AA19500 /* Pods-Whiplash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QEWS97H5JD;
 				INFOPLIST_FILE = Whiplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -753,12 +830,14 @@
 			baseConfigurationReference = 343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WT6AWRDT6Y;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QEWS97H5JD;
 				INFOPLIST_FILE = Whiplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PalmStudios.Whiplash;
+				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
