@@ -9,25 +9,30 @@ Cory
 -check ipad version on actual ipad
 
 Julio
--load new scene after ad is closed
--add main menu
+-load new scene after ad is closed X
+-add main menu 
 -add levels
 
 collab:
 -add achievements
+    -streak
+    -bounce back and forth
 -customize splash screen
-
-after app comes out:
 -add in app currency
     -buy themes, backgrounds, player colors, etc.
+-give extra life for watching ad
+
+after app comes out:
 -sound
     -music
     -in game sounds
     -mute button
--give extra life for watching ad
 -make logo
 -pause button that brings up menu
 -get rid of ads after rating?
 -add ad banner?
 -find better solution for constants?
 -clean up code
+~ISSUE:
+    ~Cannot shoot down
+

@@ -13,12 +13,13 @@ import GoogleMobileAds
 import MessageUI
 import GameKit
 
+
 //let kBannerAdUnitID = "ca-app-pub-3940256099942544/4411468910"  //test ID
 let kBannerAdUnitID = "ca-app-pub-8989932856434416/4656694886"  //real ID
 
 class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMailComposeViewControllerDelegate, GADInterstitialDelegate
 {
-    var scene: GameScene!
+    var scene: StartScene!
     var myAd: GADInterstitial!
     var skView: SKView!
     
@@ -35,7 +36,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         initConstants(size: skView.bounds.size)
         
         // Create and configure the scene
-        scene = GameScene(size: skView.bounds.size)
+        scene = StartScene(size: skView.bounds.size)
         
         //present scene
         skView.presentScene(scene)
@@ -44,8 +45,6 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAd), name: NSNotification.Name(rawValue: "loadAd"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowPurchase), name: NSNotification.Name(rawValue: "loadAndShowPurchase"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowGC), name: NSNotification.Name(rawValue: "loadAndShowGC"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowRate), name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowShare), name: NSNotification.Name(rawValue: "loadAndShowShare"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowEmail), name: NSNotification.Name(rawValue: "loadAndShowEmail"), object: nil)
 
     }
@@ -75,6 +74,23 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         {
             myAd.present(fromRootViewController: self)
         }
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        if SURVIVAL == true
+        {
+            let newScene = GameScene(size: skView.bounds.size)
+            skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
+        } else {
+            let newScene = LevelScene(size: skView.bounds.size)
+            skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
+        }
+        
+    }
+    
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        let newScene = GameScene(size: skView.bounds.size)
+        skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
     }
     
     /*********** Purchase Stuff ***********/
@@ -114,27 +130,14 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /********* Rate Stuff *********/
-    func loadAndShowRate()
-    {
-        let appID = "1247181092"
-        let url = URL(string : "itms-apps://itunes.apple.com/app/" + appID)
-        UIApplication.shared.open((url)!, options: [:], completionHandler: nil)
-    }
+    
     
     func completion(_ completed: Bool)
     {
     }
     
     /********* Share Stuff *********/
-    func loadAndShowShare()
-    {
-        if let link = NSURL(string: "https://itunes.apple.com/app/1247181092.com")
-        {
-            let activityVC = UIActivityViewController(activityItems: [link], applicationActivities: nil)
-            activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
-            self.present(activityVC, animated: true, completion: nil)
-        }
-    }
+    
     
     /********* Contact Stuff *********/
     func loadAndShowEmail()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4BA22D1F09E6EE004D8B16 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BA22C1F09E6EE004D8B16 /* StartScene.swift */; };
+		0E4BA22F1F09FA19004D8B16 /* LevelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4BA22E1F09FA19004D8B16 /* LevelScene.swift */; };
 		635C2BB33CDA996CAB77AD64 /* Pods_WhiplashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5DE9628F9E6527FAFF6A57 /* Pods_WhiplashTests.framework */; };
 		8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B00585A1EE7EAA600E78C55 /* Assets.xcassets */; };
 		8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00585C1EE7F72B00E78C55 /* WaitScene.swift */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4BA22C1F09E6EE004D8B16 /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		0E4BA22E1F09FA19004D8B16 /* LevelScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelScene.swift; sourceTree = "<group>"; };
 		343E51DBBC1BDF442A932783 /* Pods-Whiplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whiplash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whiplash/Pods-Whiplash.release.xcconfig"; sourceTree = "<group>"; };
 		3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhiplashUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDBF184A88414D9903DCB61 /* Pods-WhiplashUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 				8B00585C1EE7F72B00E78C55 /* WaitScene.swift */,
 				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
 				8B12854B1EE3DEB80050B17E /* MenuScene.swift */,
+				0E4BA22E1F09FA19004D8B16 /* LevelScene.swift */,
+				0E4BA22C1F09E6EE004D8B16 /* StartScene.swift */,
 				8BB98FC21EC67AF700F86FE1 /* Objects */,
 				8B454F881EEBE2A600848DF6 /* Images */,
 				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
@@ -648,9 +654,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4BA22F1F09FA19004D8B16 /* LevelScene.swift in Sources */,
 				8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */,
 				8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */,
 				8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */,
+				0E4BA22D1F09E6EE004D8B16 /* StartScene.swift in Sources */,
 				8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */,
 				8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */,
 				8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */,
@@ -806,7 +814,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QEWS97H5JD;
 				INFOPLIST_FILE = Whiplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -825,7 +833,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QEWS97H5JD;
 				INFOPLIST_FILE = Whiplash/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";

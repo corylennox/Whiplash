@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+var SURVIVAL: Bool!
+
 var GAMES_PLAYED = 0
 var SHOW_AD_EVERY_X_GAMES = 3
 
