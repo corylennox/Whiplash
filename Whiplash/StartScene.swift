@@ -16,6 +16,7 @@ class StartScene: SKScene
     var purchaseButton: SKSpriteNode!
     var playButton: SKSpriteNode!
     var gameCenterButton: SKSpriteNode!
+    
     var rateButton: SKSpriteNode!
     var shareButton: SKSpriteNode!
     var contactButton: SKSpriteNode!
