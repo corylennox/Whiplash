@@ -66,6 +66,12 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         let request = GADRequest()
         myAd.delegate = self
         myAd.load(request)
+        
+        if !(self.myAd.isReady)
+        {
+            let newScene = LevelScene(size: skView.bounds.size)
+            skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
+        }
     }
     
     func interstitialDidReceiveAd(_ ad: GADInterstitial)
@@ -73,6 +79,9 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         if (self.myAd.isReady)
         {
             myAd.present(fromRootViewController: self)
+        } else {
+            let newScene = LevelScene(size: skView.bounds.size)
+            skView.presentScene(newScene, transition: SKTransition.reveal(with: .down, duration: 1))
         }
     }
     
@@ -178,13 +187,13 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     func initConstants(size: CGSize)
     {
         //ONLY CHANGE THESE VALUES
-        let platformRad: CGFloat = 62
+        let platformRad: CGFloat = 79
         let distFromBottom: CGFloat = 100
-        let descentSpeed: CGFloat = 100
-        let rotateSpeed: CGFloat = 0.4
+        let descentSpeed: CGFloat = 150
+        let rotateSpeed: CGFloat = 0.7
         let lateralSpeed: CGFloat = 20
         let distApart: CGFloat = 270
-        let ballRad: CGFloat  = 0.26 * platformRad
+        let ballRad: CGFloat  = 0.35 * platformRad
         let ballSpeed: CGFloat  = 10
         
         /**** LEAVE ALONE ****/
