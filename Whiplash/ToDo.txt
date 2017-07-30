@@ -1,26 +1,10 @@
 Before app comes out:
-Cory
--learn how to add in app purchases/restore purchases
--add the in app purchase for remove adds
--turn purchase button into the restore purchases button when bought
--make a one time how to tutorial
 -sync highscore with other devices automatically using icloud
--set up google ad account
--check ipad version on actual ipad
-
-Julio
--load new scene after ad is closed
--add main menu
--add levels
-
-collab:
--add achievements
--customize splash screen
--add in app currency
-    -buy themes, backgrounds, player colors, etc.
--give extra life/currency for watching ad
 
 After app comes out:
+-add main menu
+-add levels
+-make a one time how to tutorial
 -sound
     -music
     -in game sounds
@@ -31,3 +15,8 @@ After app comes out:
 -add ad banner?
 -find better solution for constants?
 -clean up code
+-add achievements
+-customize splash screen
+-add in app currency
+-buy themes, backgrounds, player colors, etc.
+-give extra life/currency for watching ad

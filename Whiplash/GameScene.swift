@@ -261,8 +261,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         
         let defaults = UserDefaults.standard
         let oldHighScore = defaults.integer(forKey: "highScore")
+        let boughtAds = defaults.bool(forKey: "ads")
+        
     
-        //uncomment to reset highscore 
+        //uncomment to reset highscore
         //defaults.set(0, forKey: "highScore")
         
         if oldHighScore < highScoreLabel.number
@@ -291,7 +293,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         
         //present next scene
         let reveal = SKTransition.fade(with: UIColor.black, duration: 1)
-        if GAMES_PLAYED % SHOW_AD_EVERY_X_GAMES == 0
+        if boughtAds == false && GAMES_PLAYED % SHOW_AD_EVERY_X_GAMES == 0
         {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAd"), object: nil)
             let newScene = WaitScene(size: size)
