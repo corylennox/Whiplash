@@ -12,6 +12,7 @@
 		8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00585C1EE7F72B00E78C55 /* WaitScene.swift */; };
 		8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12854B1EE3DEB80050B17E /* MenuScene.swift */; };
 		8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */; };
+		8B3295B41F4D3CF000EC2074 /* RestorePurchasesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3295B31F4D3CF000EC2074 /* RestorePurchasesButton.png */; };
 		8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F891EEBE2CE00848DF6 /* ContactButton.png */; };
 		8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */; };
 		8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */; };
@@ -51,7 +52,6 @@
 		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
 		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
 		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
-		8BCD90811F4D340F00CCCF5E /* RestorePurchasesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BCD90801F4D340F00CCCF5E /* RestorePurchasesButton.png */; };
 		97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */; };
 		BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +82,7 @@
 		8B12854B1EE3DEB80050B17E /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8B189C351EED20DE005816B1 /* Whiplash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Whiplash.entitlements; sourceTree = "<group>"; };
+		8B3295B31F4D3CF000EC2074 /* RestorePurchasesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RestorePurchasesButton.png; path = Images/Buttons/RestorePurchasesButton.png; sourceTree = "<group>"; };
 		8B454F891EEBE2CE00848DF6 /* ContactButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactButton.png; path = Images/Buttons/ContactButton.png; sourceTree = "<group>"; };
 		8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameCenterButton.png; path = Images/Buttons/GameCenterButton.png; sourceTree = "<group>"; };
 		8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayButton.png; path = Images/Buttons/PlayButton.png; sourceTree = "<group>"; };
@@ -127,7 +128,6 @@
 		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8BCD90801F4D340F00CCCF5E /* RestorePurchasesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RestorePurchasesButton.png; path = Images/Buttons/RestorePurchasesButton.png; sourceTree = "<group>"; };
 		9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.release.xcconfig"; sourceTree = "<group>"; };
 		A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whiplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,7 +226,7 @@
 		8B7916371EEC76B800321379 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				8BCD90801F4D340F00CCCF5E /* RestorePurchasesButton.png */,
+				8B3295B31F4D3CF000EC2074 /* RestorePurchasesButton.png */,
 				8B454F891EEBE2CE00848DF6 /* ContactButton.png */,
 				8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */,
 				8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */,
@@ -461,6 +461,7 @@
 			files = (
 				8B79164C1EEC775A00321379 /* 29@3x.png in Resources */,
 				8B79164A1EEC775A00321379 /* 29.png in Resources */,
+				8B3295B41F4D3CF000EC2074 /* RestorePurchasesButton.png in Resources */,
 				8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */,
 				8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */,
 				8B7916491EEC775A00321379 /* 20@3x.png in Resources */,
@@ -486,7 +487,6 @@
 				8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */,
 				8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */,
 				8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */,
-				8BCD90811F4D340F00CCCF5E /* RestorePurchasesButton.png in Resources */,
 				8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */,
 				8B7916521EEC775A00321379 /* 76.png in Resources */,
 				8B454F991EEBE2CE00848DF6 /* ShareButton.png in Resources */,
