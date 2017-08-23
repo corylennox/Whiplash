@@ -59,7 +59,8 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowRate), name: NSNotification.Name(rawValue: "loadAndShowRate"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowShare), name: NSNotification.Name(rawValue: "loadAndShowShare"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.loadAndShowEmail), name: NSNotification.Name(rawValue: "loadAndShowEmail"), object: nil)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.restorePurchases), name: NSNotification.Name(rawValue: "restorePurchases"), object: nil)
+        
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -178,9 +179,14 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /*********** Purchase Stuff ***********/
+    func restorePurchases()
+    {
+        SKPaymentQueue.default().add(self)
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+    
     func loadAndShowPurchase()
     {
-
         if(!SKPaymentQueue.canMakePayments())
         {
             //alert that IAP is disabled
@@ -235,7 +241,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     func removeAds() {
-        print("removing ads")
+        print("removing ads...")
         let defaults = UserDefaults.standard
         defaults.set(true, forKey: "ads")
     }
@@ -254,20 +260,46 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         }
     }
     
+    func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error)
+    {
+        //show IAP restore error alert
+        let sendPurchaseAlert = UIAlertController(title: "In-App Purchases", message: "There was a problem restoring your in-app purchases.", preferredStyle: UIAlertControllerStyle.alert)
+        sendPurchaseAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(sendPurchaseAlert, animated: true, completion: nil)
+    }
+    
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
-        print("transactions restored")
-        for transaction in queue.transactions {
+        var purchasedSomething: Bool = false
+        for transaction in queue.transactions
+        {
             let t: SKPaymentTransaction = transaction
             let prodID = t.payment.productIdentifier as String
             
             switch prodID {
             case "com.palmtech.removeads":
-                print("remove ads")
+                purchasedSomething = true
                 removeAds()
             default:
                 print("IAP not found")
             }
         }
+        
+        if purchasedSomething == true
+        {
+            //show IAP restored alert
+            let sendPurchaseAlert = UIAlertController(title: "In-App Purchases", message: "Your in-app purchases have been restored.", preferredStyle: UIAlertControllerStyle.alert)
+            sendPurchaseAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(sendPurchaseAlert, animated: true, completion: nil)
+        }
+        else
+        {
+            //show no IAP restored alert
+            let sendPurchaseAlert = UIAlertController(title: "In-App Purchases", message: "No in-app purchases found for this account.", preferredStyle: UIAlertControllerStyle.alert)
+            sendPurchaseAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(sendPurchaseAlert, animated: true, completion: nil)
+        }
+        
+        print("transactions restored")
     }
     
     /********* initialize constants *********/
@@ -282,6 +314,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         let distApart: CGFloat = 270
         let ballRad: CGFloat  = 0.26 * platformRad
         let ballSpeed: CGFloat  = 10
+
         
         /**** LEAVE ALONE ****/
         SCALE = size.height/736

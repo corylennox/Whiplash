@@ -14,6 +14,7 @@ class MenuScene: SKScene
 {
     //member variables
     var purchaseButton: SKSpriteNode!
+    var restorePurchasesButton: SKSpriteNode!
     var playButton: SKSpriteNode!
     var gameCenterButton: SKSpriteNode!
     var rateButton: SKSpriteNode!
@@ -70,6 +71,13 @@ class MenuScene: SKScene
         purchaseButton.position = CGPoint(x: purchaseX, y: purchaseY)
         purchaseButton.scale(to: CGSize(width: SMALL_BUTTON_SIZE, height: SMALL_BUTTON_SIZE))
         addChild(purchaseButton)
+        
+        //restore purchases button
+        restorePurchasesButton = SKSpriteNode(imageNamed: "RestorePurchasesButton")
+        restorePurchasesButton.alpha = 0.5
+        restorePurchasesButton.position = CGPoint(x: size.width * 0.07, y: size.height * 0.96)
+        restorePurchasesButton.scale(to: CGSize(width: SMALL_BUTTON_SIZE * 0.6, height: SMALL_BUTTON_SIZE * 0.6))
+        addChild(restorePurchasesButton)
         
         //play button
         playButton = SKSpriteNode(imageNamed: "PlayButton")
@@ -189,6 +197,11 @@ class MenuScene: SKScene
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadAndShowEmail"), object: nil)
     }
     
+    func runRestorePurchases()
+    {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "restorePurchases"), object: nil)
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
     {
         if let touch = touches.first
@@ -199,6 +212,10 @@ class MenuScene: SKScene
             if clickedNode == purchaseButton
             {
                 runPurchase()
+            }
+            if clickedNode == restorePurchasesButton
+            {
+                runRestorePurchases()
             }
             if clickedNode == playButton
             {
