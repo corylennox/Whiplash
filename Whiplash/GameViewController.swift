@@ -31,7 +31,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         
         if(SKPaymentQueue.canMakePayments()) {
             print("IAP is enabled, loading")
-            let productID: NSSet = NSSet(objects: "com.palmtech.removeads")
+            let productID: NSSet = NSSet(objects: "com.palmtech.remove_ads")
             let request: SKProductsRequest = SKProductsRequest(productIdentifiers: productID as! Set<String>)
             request.delegate = self
             request.start()
@@ -198,7 +198,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
         
         for product in list {
             let prodID = product.productIdentifier
-            if(prodID == "com.palmtech.removeads") {
+            if(prodID == "com.palmtech.remove_ads") {
                 p = product
                 buyProduct()
             }
@@ -223,7 +223,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
                 
                 let prodID = p.productIdentifier
                 switch prodID {
-                case "com.palmtech.removeads":
+                case "com.palmtech.remove_ads":
                     removeAds()
                 default:
                     print("IAP not found")
@@ -276,7 +276,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
             let prodID = t.payment.productIdentifier as String
             
             switch prodID {
-            case "com.palmtech.removeads":
+            case "com.palmtech.remove_ads":
                 purchasedSomething = true
                 removeAds()
             default:
