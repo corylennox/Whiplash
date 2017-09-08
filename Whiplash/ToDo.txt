@@ -1,7 +1,4 @@
-Before app comes out:
 -sync highscore with other devices automatically using icloud
-
-After app comes out:
 -add main menu
 -add levels
 -make a one time how to tutorial
@@ -11,6 +8,7 @@ After app comes out:
     -mute button
 -make logo
 -pause button that brings up menu
+-add button that slows down time for x seconds?
 -get rid of ads after rating?
 -add ad banner?
 -find better solution for constants?
