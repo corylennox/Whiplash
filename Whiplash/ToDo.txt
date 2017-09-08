@@ -7,6 +7,7 @@
     -in game sounds
     -mute button
 -make logo
+-submit to app all knight
 -pause button that brings up menu
 -add button that slows down time for x seconds?
 -get rid of ads after rating?
