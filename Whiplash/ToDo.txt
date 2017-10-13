@@ -1,27 +1,39 @@
--sync highscore with other devices automatically using icloud
--make a one time how to tutorial
+-----------------------------------1.3-----------------------------------
+-fix the rating
+
+-customize splash screen with palm logo
 
 -sound
-    -music
-    -in game sounds
-    -mute button
+    -music - erykah - otis mcdonald
+    -mute button in menu
+
+-make a one time how to tutorial, tap anywhere to jump and dont touch edges
+
+-sync highscore with other devices automatically using icloud
 
 -pause button that brings up menu
--add button that slows down time for x seconds?
--get rid of ads after rating?
--add ad banner?
--find better solution for constants?
--clean up code
--add achievements
--customize splash screen
-
--make existing app
--add in app currency
--buy themes, backgrounds, player colors, etc.
--give extra life/currency for watching ad
--add levels
+-----------------------------------2.0-----------------------------------
 -add main menu
+-2 modes
+    survival mode with powerups
+        -gives amount of currency based on score percentage
+        - powerups:
+            bigger/smaller ball
+            bigger/smaller plats
+            slows down/speed up game for x seconds
+            closer/further apart plats
+            double for every plat
+    -campaign mode
+        -levels that give currency
 
-ez af
--make logo
+-give extra life for watching ad
+-----------------------------------2.2-----------------------------------
+-add in app currency for level completion and survival mode scores
+-buy themes, backgrounds, ball colors/designs, etc.
+-------------------------------------------------------------------------
 -submit to app all knight
+
+-add ad banner?
+-add achievements?
+-find better solution for constants?
+-clean up code?
