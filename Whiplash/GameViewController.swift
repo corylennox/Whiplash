@@ -74,7 +74,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /*********** Ad Stuff ***********/
-    func loadAd()
+    @objc func loadAd()
     {
         myAd = GADInterstitial(adUnitID: kBannerAdUnitID)
         let request = GADRequest()
@@ -91,7 +91,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /********* Game Center Stuff *********/
-    func loadAndShowGC()
+    @objc func loadAndShowGC()
     {
         let gcViewController = GKGameCenterViewController()
         gcViewController.gameCenterDelegate = self
@@ -121,7 +121,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /********* Rate Stuff *********/
-    func loadAndShowRate()
+    @objc func loadAndShowRate()
     {
         let appID = "1247181092"
         let url = URL(string : "itms-apps://itunes.apple.com/app/" + appID)
@@ -133,7 +133,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /********* Share Stuff *********/
-    func loadAndShowShare()
+    @objc func loadAndShowShare()
     {
         if let link = NSURL(string: "https://itunes.apple.com/app/1247181092.com")
         {
@@ -144,7 +144,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /********* Contact Stuff *********/
-    func loadAndShowEmail()
+    @objc func loadAndShowEmail()
     {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail()
@@ -179,13 +179,13 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     }
     
     /*********** Purchase Stuff ***********/
-    func restorePurchases()
+    @objc func restorePurchases()
     {
         SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
-    func loadAndShowPurchase()
+    @objc func loadAndShowPurchase()
     {
         if(!SKPaymentQueue.canMakePayments())
         {

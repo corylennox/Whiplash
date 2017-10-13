@@ -1,13 +1,11 @@
 -sync highscore with other devices automatically using icloud
--add main menu
--add levels
 -make a one time how to tutorial
+
 -sound
     -music
     -in game sounds
     -mute button
--make logo
--submit to app all knight
+
 -pause button that brings up menu
 -add button that slows down time for x seconds?
 -get rid of ads after rating?
@@ -16,6 +14,14 @@
 -clean up code
 -add achievements
 -customize splash screen
+
+-make existing app
 -add in app currency
 -buy themes, backgrounds, player colors, etc.
 -give extra life/currency for watching ad
+-add levels
+-add main menu
+
+ez af
+-make logo
+-submit to app all knight

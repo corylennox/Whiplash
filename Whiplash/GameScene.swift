@@ -28,8 +28,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     
     override func didMove(to view: SKView)
     {
-        backgroundColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
+        backgroundColor = UIColor(red: 244/255, green: 236/255, blue: 211/255, alpha: 1)
 
+        self.speed = self.speed * 0.5
         addPhysicsWorld()
         addBorder()
         addPlatformGenerator()
@@ -171,8 +172,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     func addBall()
     {
         ball = SKShapeNode(circleOfRadius: BALL_RADIUS)
-        ball.fillColor = UIColor(colorLiteralRed: 58/256, green: 58/255, blue: 58/255, alpha: 1)
-        ball.strokeColor = UIColor(colorLiteralRed: 58/256, green: 58/255, blue: 58/255, alpha: 1)
+        ball.fillColor = UIColor(red: 58/256, green: 58/255, blue: 58/255, alpha: 1)
+        ball.strokeColor = UIColor(red: 58/256, green: 58/255, blue: 58/255, alpha: 1)
         
         ball.physicsBody = SKPhysicsBody(circleOfRadius: BALL_RADIUS)
         ball.physicsBody?.isDynamic = true
@@ -233,7 +234,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         tapToStartLabel.position.x = size.width/2
         tapToStartLabel.position.y = size.height * 0.65
         tapToStartLabel.fontName = "Avenir"
-        tapToStartLabel.fontColor = UIColor(colorLiteralRed: 58/256, green: 58/255, blue: 58/255, alpha: 1)
+        tapToStartLabel.fontColor = UIColor(red: 58/256, green: 58/255, blue: 58/255, alpha: 1)
         tapToStartLabel.fontSize = 40.0 * SCALE
         addChild(tapToStartLabel)
         tapToStartLabel.run(blinkAnimation())

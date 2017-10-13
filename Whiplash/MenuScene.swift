@@ -23,7 +23,7 @@ class MenuScene: SKScene
 
     override func didMove(to view: SKView)
     {
-        backgroundColor = UIColor(colorLiteralRed: 58/255, green: 58/255, blue: 58/255, alpha: 1)
+        backgroundColor = UIColor(red: 58/255, green: 58/255, blue: 58/255, alpha: 1)
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         
         getConstants()
@@ -121,7 +121,7 @@ class MenuScene: SKScene
         
         //"Best" label
         let bestTextLabel = SKLabelNode()
-        bestTextLabel.fontColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
+        bestTextLabel.fontColor = UIColor(red: 244/255, green: 236/255, blue: 211/255, alpha: 1)
         bestTextLabel.fontName = "Avenir"
         bestTextLabel.fontSize = 35 * SCALE
         bestTextLabel.text = "Best"
@@ -130,7 +130,7 @@ class MenuScene: SKScene
         
         //"Score" label
         let scoreTextLabel = SKLabelNode()
-        scoreTextLabel.fontColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
+        scoreTextLabel.fontColor = UIColor(red: 244/255, green: 236/255, blue: 211/255, alpha: 1)
         scoreTextLabel.fontName = "Avenir"
         scoreTextLabel.fontSize = 35 * SCALE
         scoreTextLabel.text = "Score"
@@ -139,7 +139,7 @@ class MenuScene: SKScene
         
         //high Score
         let bestLabel = SKLabelNode()
-        bestLabel.fontColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
+        bestLabel.fontColor = UIColor(red: 244/255, green: 236/255, blue: 211/255, alpha: 1)
         bestLabel.fontName = "Avenir"
         bestLabel.fontSize = 60 * SCALE
         bestLabel.text = "\(UserDefaults.standard.integer(forKey: "highScore"))"
@@ -148,7 +148,7 @@ class MenuScene: SKScene
         
         //latest Score
         let scoreLabel = SKLabelNode()
-        scoreLabel.fontColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
+        scoreLabel.fontColor = UIColor(red: 244/255, green: 236/255, blue: 211/255, alpha: 1)
         scoreLabel.fontName = "Avenir"
         scoreLabel.fontSize = 60 * SCALE
         scoreLabel.text = "\(UserDefaults.standard.integer(forKey: "lastScore"))"
@@ -157,7 +157,7 @@ class MenuScene: SKScene
         
         //add "Whiplash" label
         let whiplashLabel = SKLabelNode()
-        whiplashLabel.fontColor = UIColor(colorLiteralRed: 244/255, green: 236/255, blue: 211/255, alpha: 1)
+        whiplashLabel.fontColor = UIColor(red: 244/255, green: 236/255, blue: 211/255, alpha: 1)
         whiplashLabel.fontName = "Avenir"
         whiplashLabel.fontSize = 80 * SCALE
         whiplashLabel.text = "Whiplash"
