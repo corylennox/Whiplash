@@ -27,7 +27,7 @@
         -levels that give currency
 
 -give extra life for watching ad
------------------------------------2.2-----------------------------------
+-----------------------------------2.1-----------------------------------
 -add in app currency for level completion and survival mode scores
 -buy themes, backgrounds, ball colors/designs, etc.
 -------------------------------------------------------------------------
