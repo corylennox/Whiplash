@@ -123,9 +123,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     /********* Rate Stuff *********/
     @objc func loadAndShowRate()
     {
-        let appID = "1247181092"
-        let url = URL(string : "itms-apps://itunes.apple.com/app/" + appID)
-        UIApplication.shared.open((url)!, options: [:], completionHandler: nil)
+        SKStoreReviewController.requestReview()
     }
     
     func completion(_ completed: Bool)
