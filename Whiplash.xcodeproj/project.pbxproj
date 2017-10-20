@@ -26,6 +26,7 @@
 		8B454F9E1EEBE2CE00848DF6 /* YellowPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */; };
 		8B6C06701EEB49620008FE7B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C066F1EEB49620008FE7B /* StoreKit.framework */; };
 		8B6C06721EEB4C520008FE7B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C06711EEB4C520008FE7B /* GameKit.framework */; };
+		8B6F44BB1F99B5AF00EA4637 /* PalmTechLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6F44BA1F99B5AF00EA4637 /* PalmTechLogo.png */; };
 		8B7916471EEC775A00321379 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916391EEC775A00321379 /* 20.png */; };
 		8B7916481EEC775A00321379 /* 20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163A1EEC775A00321379 /* 20@2x.png */; };
 		8B7916491EEC775A00321379 /* 20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163B1EEC775A00321379 /* 20@3x.png */; };
@@ -96,6 +97,7 @@
 		8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YellowPlatform.png; path = Images/Platforms/YellowPlatform.png; sourceTree = "<group>"; };
 		8B6C066F1EEB49620008FE7B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8B6C06711EEB4C520008FE7B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8B6F44BA1F99B5AF00EA4637 /* PalmTechLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PalmTechLogo.png; path = Images/Logo/PalmTechLogo.png; sourceTree = "<group>"; };
 		8B7916391EEC775A00321379 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20.png; path = "Images/App Icons/20.png"; sourceTree = "<group>"; };
 		8B79163A1EEC775A00321379 /* 20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@2x.png"; path = "Images/App Icons/20@2x.png"; sourceTree = "<group>"; };
 		8B79163B1EEC775A00321379 /* 20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@3x.png"; path = "Images/App Icons/20@3x.png"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		8B454F881EEBE2A600848DF6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8B6F44B91F99B4E800EA4637 /* Logo */,
 				8B7916381EEC76BE00321379 /* Platforms */,
 				8B7916371EEC76B800321379 /* Buttons */,
 				8B454F9F1EEBE38B00848DF6 /* App Icons */,
@@ -221,6 +224,14 @@
 				8B7916461EEC775A00321379 /* 83.5@2x.png */,
 			);
 			name = "App Icons";
+			sourceTree = "<group>";
+		};
+		8B6F44B91F99B4E800EA4637 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				8B6F44BA1F99B5AF00EA4637 /* PalmTechLogo.png */,
+			);
+			name = Logo;
 			sourceTree = "<group>";
 		};
 		8B7916371EEC76B800321379 /* Buttons */ = {
@@ -464,6 +475,7 @@
 			files = (
 				8B79164C1EEC775A00321379 /* 29@3x.png in Resources */,
 				8B79164A1EEC775A00321379 /* 29.png in Resources */,
+				8B6F44BB1F99B5AF00EA4637 /* PalmTechLogo.png in Resources */,
 				8B3295B41F4D3CF000EC2074 /* RestorePurchasesButton.png in Resources */,
 				8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */,
 				8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */,
