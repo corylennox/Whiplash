@@ -1,33 +1,37 @@
-Before app comes out:
-Cory
--learn how to add in app purchases/restore purchases
--add the in app purchase for remove adds
--turn purchase button into the restore purchases button when bought
--make a one time how to tutorial
--sync highscore with other devices automatically using icloud
--set up google ad account
--check ipad version on actual ipad
+-----------------------------------1.3-----------------------------------
+-customize splash screen with palm logo
 
-Julio
--load new scene after ad is closed
--add main menu
--add levels
-
-collab:
--add achievements
--customize splash screen
--add in app currency
-    -buy themes, backgrounds, player colors, etc.
--give extra life/currency for watching ad
-
-After app comes out:
 -sound
-    -music
-    -in game sounds
-    -mute button
--make logo
+    -music - erykah - otis mcdonald
+    -mute button in menu
+
+-make a one time how to tutorial, tap anywhere to jump and dont touch edges
+
+-sync highscore with other devices automatically using icloud
+
 -pause button that brings up menu
--get rid of ads after rating?
+-----------------------------------2.0-----------------------------------
+-add main menu
+-2 modes
+    survival mode with powerups
+        -gives amount of currency based on score percentage
+        - powerups:
+            bigger/smaller ball
+            bigger/smaller plats
+            slows down/speed up game for x seconds
+            closer/further apart plats
+            double for every plat
+    -campaign mode
+        -levels that give currency
+
+-give extra life for watching ad
+-----------------------------------2.1-----------------------------------
+-add in app currency for level completion and survival mode scores
+-buy themes, backgrounds, ball colors/designs, etc.
+-------------------------------------------------------------------------
+-submit to app all knight
+
 -add ad banner?
+-add achievements?
 -find better solution for constants?
--clean up code
+-clean up code?
