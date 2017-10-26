@@ -52,7 +52,8 @@
 		8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */; };
 		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
 		8BB98FC11EC678C100F86FE1 /* ToDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FB71EC678C100F86FE1 /* ToDo.txt */; };
-		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
+		8BEAA5511FA068FB003262AC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEAA5501FA068FB003262AC /* Launch Screen.storyboard */; };
+		8BEAA5531FA06994003262AC /* example.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BEAA5521FA06994003262AC /* example.storyboard */; };
 		97E3B02226C57DA00CEAFB95 /* Pods_Whiplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */; };
 		BEEC34224FDB361DA9E3A589 /* Pods_WhiplashUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAF83B76C4F087C55A2B637 /* Pods_WhiplashUITests.framework */; };
 /* End PBXBuildFile section */
@@ -129,7 +130,8 @@
 		8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformGenerator.swift; sourceTree = "<group>"; };
 		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
 		8BB98FB71EC678C100F86FE1 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
-		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8BEAA5501FA068FB003262AC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8BEAA5521FA06994003262AC /* example.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = example.storyboard; sourceTree = "<group>"; };
 		9084315DFFE2E07EEFE5CB24 /* Pods-WhiplashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashTests/Pods-WhiplashTests.release.xcconfig"; sourceTree = "<group>"; };
 		A037D658F8773357B6FC14F8 /* Pods-WhiplashUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiplashUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiplashUITests/Pods-WhiplashUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A4B5118AEBDFD6E1C15346E9 /* Pods_Whiplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whiplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,7 +298,8 @@
 				8BB98FC21EC67AF700F86FE1 /* Objects */,
 				8B454F881EEBE2A600848DF6 /* Images */,
 				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
-				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
+				8BEAA5501FA068FB003262AC /* Launch Screen.storyboard */,
+				8BEAA5521FA06994003262AC /* example.storyboard */,
 				8B1474F61EC680E5007DDBBC /* GoogleService-Info.plist */,
 				8BB98F8C1EC677B800F86FE1 /* Info.plist */,
 				8B00585A1EE7EAA600E78C55 /* Assets.xcassets */,
@@ -483,6 +486,7 @@
 				8B7916531EEC775A00321379 /* 76@2x.png in Resources */,
 				8B79164B1EEC775A00321379 /* 29@2x.png in Resources */,
 				8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */,
+				8BEAA5511FA068FB003262AC /* Launch Screen.storyboard in Resources */,
 				8B79164F1EEC775A00321379 /* 40@3x.png in Resources */,
 				8B454F9D1EEBE2CE00848DF6 /* PurplePlatform.png in Resources */,
 				8B7916481EEC775A00321379 /* 20@2x.png in Resources */,
@@ -492,11 +496,11 @@
 				8B7916541EEC775A00321379 /* 83.5@2x.png in Resources */,
 				8B454F9A1EEBE2CE00848DF6 /* BluePlatform.png in Resources */,
 				8B7916511EEC775A00321379 /* 60@3x.png in Resources */,
+				8BEAA5531FA06994003262AC /* example.storyboard in Resources */,
 				8B1474F71EC680E5007DDBBC /* GoogleService-Info.plist in Resources */,
 				8B79164D1EEC775A00321379 /* 40.png in Resources */,
 				8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */,
 				8B7916471EEC775A00321379 /* 20.png in Resources */,
-				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
 				8B79164E1EEC775A00321379 /* 40@2x.png in Resources */,
 				8B7916501EEC775A00321379 /* 60@2x.png in Resources */,
 				8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */,
