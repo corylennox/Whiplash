@@ -1,0 +1,17 @@
+# Cocoapods
+Pods/
+Podfile.lock
+
+# Firebase
+GoogleService-Info.plist
+
+# Xcode
+*.xcuserstate
+*.xcuserdata
+
+# macOS
+.DS_Store
+
+# Misc.
+ToDo.txt
+

@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B00585A1EE7EAA600E78C55 /* Assets.xcassets */; };
+		8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B00585C1EE7F72B00E78C55 /* WaitScene.swift */; };
+		8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B12854B1EE3DEB80050B17E /* MenuScene.swift */; };
+		8B1B16AC2ACA66D0008B7A6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B1B16AB2ACA66D0008B7A6C /* GoogleService-Info.plist */; };
+		8B1B16AF2AD347FC008B7A6C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1B16AE2AD347FC008B7A6C /* FirebaseAnalytics */; };
+		8B1B16B12AD347FC008B7A6C /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1B16B02AD347FC008B7A6C /* FirebaseAnalyticsSwift */; };
+		8B1B16B42AD34A8C008B7A6C /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 8B1B16B32AD34A8C008B7A6C /* GoogleMobileAds */; };
+		8B20137026E2A20800B704C0 /* 1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B20136F26E2A20800B704C0 /* 1024.png */; };
+		8B3295B41F4D3CF000EC2074 /* RestorePurchasesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B3295B31F4D3CF000EC2074 /* RestorePurchasesButton.png */; };
+		8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F891EEBE2CE00848DF6 /* ContactButton.png */; };
+		8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */; };
+		8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */; };
+		8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */; };
+		8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8D1EEBE2CE00848DF6 /* RateButton.png */; };
+		8B454F991EEBE2CE00848DF6 /* ShareButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */; };
+		8B454F9A1EEBE2CE00848DF6 /* BluePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */; };
+		8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */; };
+		8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */; };
+		8B454F9D1EEBE2CE00848DF6 /* PurplePlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */; };
+		8B454F9E1EEBE2CE00848DF6 /* YellowPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */; };
+		8B5197CE26EAC49B0054B7B4 /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 8B5197CD26EAC49B0054B7B4 /* Configuration.storekit */; };
+		8B6C06701EEB49620008FE7B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C066F1EEB49620008FE7B /* StoreKit.framework */; };
+		8B6C06721EEB4C520008FE7B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6C06711EEB4C520008FE7B /* GameKit.framework */; };
+		8B6F44BB1F99B5AF00EA4637 /* PalmTechLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B6F44BA1F99B5AF00EA4637 /* PalmTechLogo.png */; };
+		8B7916471EEC775A00321379 /* 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916391EEC775A00321379 /* 20.png */; };
+		8B7916481EEC775A00321379 /* 20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163A1EEC775A00321379 /* 20@2x.png */; };
+		8B7916491EEC775A00321379 /* 20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163B1EEC775A00321379 /* 20@3x.png */; };
+		8B79164A1EEC775A00321379 /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163C1EEC775A00321379 /* 29.png */; };
+		8B79164B1EEC775A00321379 /* 29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163D1EEC775A00321379 /* 29@2x.png */; };
+		8B79164C1EEC775A00321379 /* 29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163E1EEC775A00321379 /* 29@3x.png */; };
+		8B79164D1EEC775A00321379 /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B79163F1EEC775A00321379 /* 40.png */; };
+		8B79164E1EEC775A00321379 /* 40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916401EEC775A00321379 /* 40@2x.png */; };
+		8B79164F1EEC775A00321379 /* 40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916411EEC775A00321379 /* 40@3x.png */; };
+		8B7916501EEC775A00321379 /* 60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916421EEC775A00321379 /* 60@2x.png */; };
+		8B7916511EEC775A00321379 /* 60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916431EEC775A00321379 /* 60@3x.png */; };
+		8B7916521EEC775A00321379 /* 76.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916441EEC775A00321379 /* 76.png */; };
+		8B7916531EEC775A00321379 /* 76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916451EEC775A00321379 /* 76@2x.png */; };
+		8B7916541EEC775A00321379 /* 83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B7916461EEC775A00321379 /* 83.5@2x.png */; };
+		8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */; };
+		8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F801EC677B800F86FE1 /* GameScene.swift */; };
+		8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98F821EC677B800F86FE1 /* GameViewController.swift */; };
+		8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98F841EC677B800F86FE1 /* Main.storyboard */; };
+		8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */; };
+		8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB11EC678C100F86FE1 /* Platform.swift */; };
+		8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */; };
+		8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */; };
+		8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B00585A1EE7EAA600E78C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B00585C1EE7F72B00E78C55 /* WaitScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitScene.swift; sourceTree = "<group>"; };
+		8B12854B1EE3DEB80050B17E /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		8B189C351EED20DE005816B1 /* Whiplash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Whiplash.entitlements; sourceTree = "<group>"; };
+		8B1B16AB2ACA66D0008B7A6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B20136F26E2A20800B704C0 /* 1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1024.png; path = "Images/App Icons/1024.png"; sourceTree = "<group>"; };
+		8B3295B31F4D3CF000EC2074 /* RestorePurchasesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RestorePurchasesButton.png; path = Images/Buttons/RestorePurchasesButton.png; sourceTree = "<group>"; };
+		8B454F891EEBE2CE00848DF6 /* ContactButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContactButton.png; path = Images/Buttons/ContactButton.png; sourceTree = "<group>"; };
+		8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameCenterButton.png; path = Images/Buttons/GameCenterButton.png; sourceTree = "<group>"; };
+		8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PlayButton.png; path = Images/Buttons/PlayButton.png; sourceTree = "<group>"; };
+		8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurchaseButton.png; path = Images/Buttons/PurchaseButton.png; sourceTree = "<group>"; };
+		8B454F8D1EEBE2CE00848DF6 /* RateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RateButton.png; path = Images/Buttons/RateButton.png; sourceTree = "<group>"; };
+		8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShareButton.png; path = Images/Buttons/ShareButton.png; sourceTree = "<group>"; };
+		8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BluePlatform.png; path = Images/Platforms/BluePlatform.png; sourceTree = "<group>"; };
+		8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GreenPlatform.png; path = Images/Platforms/GreenPlatform.png; sourceTree = "<group>"; };
+		8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OrangePlatform.png; path = Images/Platforms/OrangePlatform.png; sourceTree = "<group>"; };
+		8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PurplePlatform.png; path = Images/Platforms/PurplePlatform.png; sourceTree = "<group>"; };
+		8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YellowPlatform.png; path = Images/Platforms/YellowPlatform.png; sourceTree = "<group>"; };
+		8B5197CD26EAC49B0054B7B4 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		8B6C066F1EEB49620008FE7B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8B6C06711EEB4C520008FE7B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8B6F44BA1F99B5AF00EA4637 /* PalmTechLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PalmTechLogo.png; path = Images/Logo/PalmTechLogo.png; sourceTree = "<group>"; };
+		8B7916391EEC775A00321379 /* 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 20.png; path = "Images/App Icons/20.png"; sourceTree = "<group>"; };
+		8B79163A1EEC775A00321379 /* 20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@2x.png"; path = "Images/App Icons/20@2x.png"; sourceTree = "<group>"; };
+		8B79163B1EEC775A00321379 /* 20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "20@3x.png"; path = "Images/App Icons/20@3x.png"; sourceTree = "<group>"; };
+		8B79163C1EEC775A00321379 /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 29.png; path = "Images/App Icons/29.png"; sourceTree = "<group>"; };
+		8B79163D1EEC775A00321379 /* 29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "29@2x.png"; path = "Images/App Icons/29@2x.png"; sourceTree = "<group>"; };
+		8B79163E1EEC775A00321379 /* 29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "29@3x.png"; path = "Images/App Icons/29@3x.png"; sourceTree = "<group>"; };
+		8B79163F1EEC775A00321379 /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 40.png; path = "Images/App Icons/40.png"; sourceTree = "<group>"; };
+		8B7916401EEC775A00321379 /* 40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "40@2x.png"; path = "Images/App Icons/40@2x.png"; sourceTree = "<group>"; };
+		8B7916411EEC775A00321379 /* 40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "40@3x.png"; path = "Images/App Icons/40@3x.png"; sourceTree = "<group>"; };
+		8B7916421EEC775A00321379 /* 60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "60@2x.png"; path = "Images/App Icons/60@2x.png"; sourceTree = "<group>"; };
+		8B7916431EEC775A00321379 /* 60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "60@3x.png"; path = "Images/App Icons/60@3x.png"; sourceTree = "<group>"; };
+		8B7916441EEC775A00321379 /* 76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 76.png; path = "Images/App Icons/76.png"; sourceTree = "<group>"; };
+		8B7916451EEC775A00321379 /* 76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "76@2x.png"; path = "Images/App Icons/76@2x.png"; sourceTree = "<group>"; };
+		8B7916461EEC775A00321379 /* 83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "83.5@2x.png"; path = "Images/App Icons/83.5@2x.png"; sourceTree = "<group>"; };
+		8BB98F771EC677B800F86FE1 /* Whiplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whiplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8BB98F801EC677B800F86FE1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8BB98F821EC677B800F86FE1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8BB98F851EC677B800F86FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BB98F8C1EC677B800F86FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstsAndStructs.swift; sourceTree = "<group>"; };
+		8BB98FB11EC678C100F86FE1 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
+		8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformGenerator.swift; sourceTree = "<group>"; };
+		8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreLabel.swift; sourceTree = "<group>"; };
+		8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BB98F741EC677B800F86FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B1B16B12AD347FC008B7A6C /* FirebaseAnalyticsSwift in Frameworks */,
+				8B6C06721EEB4C520008FE7B /* GameKit.framework in Frameworks */,
+				8B1B16B42AD34A8C008B7A6C /* GoogleMobileAds in Frameworks */,
+				8B6C06701EEB49620008FE7B /* StoreKit.framework in Frameworks */,
+				8B1B16AF2AD347FC008B7A6C /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		171D4FA01B1B324555DF0530 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B6C06711EEB4C520008FE7B /* GameKit.framework */,
+				8B6C066F1EEB49620008FE7B /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B454F881EEBE2A600848DF6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8B6F44B91F99B4E800EA4637 /* Logo */,
+				8B7916381EEC76BE00321379 /* Platforms */,
+				8B7916371EEC76B800321379 /* Buttons */,
+				8B454F9F1EEBE38B00848DF6 /* App Icons */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8B454F9F1EEBE38B00848DF6 /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				8B20136F26E2A20800B704C0 /* 1024.png */,
+				8B7916391EEC775A00321379 /* 20.png */,
+				8B79163A1EEC775A00321379 /* 20@2x.png */,
+				8B79163B1EEC775A00321379 /* 20@3x.png */,
+				8B79163C1EEC775A00321379 /* 29.png */,
+				8B79163D1EEC775A00321379 /* 29@2x.png */,
+				8B79163E1EEC775A00321379 /* 29@3x.png */,
+				8B79163F1EEC775A00321379 /* 40.png */,
+				8B7916401EEC775A00321379 /* 40@2x.png */,
+				8B7916411EEC775A00321379 /* 40@3x.png */,
+				8B7916421EEC775A00321379 /* 60@2x.png */,
+				8B7916431EEC775A00321379 /* 60@3x.png */,
+				8B7916441EEC775A00321379 /* 76.png */,
+				8B7916451EEC775A00321379 /* 76@2x.png */,
+				8B7916461EEC775A00321379 /* 83.5@2x.png */,
+			);
+			name = "App Icons";
+			sourceTree = "<group>";
+		};
+		8B6F44B91F99B4E800EA4637 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				8B6F44BA1F99B5AF00EA4637 /* PalmTechLogo.png */,
+			);
+			name = Logo;
+			sourceTree = "<group>";
+		};
+		8B7916371EEC76B800321379 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8B3295B31F4D3CF000EC2074 /* RestorePurchasesButton.png */,
+				8B454F891EEBE2CE00848DF6 /* ContactButton.png */,
+				8B454F8A1EEBE2CE00848DF6 /* GameCenterButton.png */,
+				8B454F8B1EEBE2CE00848DF6 /* PlayButton.png */,
+				8B454F8C1EEBE2CE00848DF6 /* PurchaseButton.png */,
+				8B454F8D1EEBE2CE00848DF6 /* RateButton.png */,
+				8B454F8E1EEBE2CE00848DF6 /* ShareButton.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		8B7916381EEC76BE00321379 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				8B454F8F1EEBE2CE00848DF6 /* BluePlatform.png */,
+				8B454F901EEBE2CE00848DF6 /* GreenPlatform.png */,
+				8B454F911EEBE2CE00848DF6 /* OrangePlatform.png */,
+				8B454F921EEBE2CE00848DF6 /* PurplePlatform.png */,
+				8B454F931EEBE2CE00848DF6 /* YellowPlatform.png */,
+			);
+			name = Platforms;
+			sourceTree = "<group>";
+		};
+		8BB98F6E1EC677B800F86FE1 = {
+			isa = PBXGroup;
+			children = (
+				8BB98F791EC677B800F86FE1 /* Whiplash */,
+				8BB98F781EC677B800F86FE1 /* Products */,
+				171D4FA01B1B324555DF0530 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8BB98F781EC677B800F86FE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98F771EC677B800F86FE1 /* Whiplash.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BB98F791EC677B800F86FE1 /* Whiplash */ = {
+			isa = PBXGroup;
+			children = (
+				8B1B16AB2ACA66D0008B7A6C /* GoogleService-Info.plist */,
+				8B189C351EED20DE005816B1 /* Whiplash.entitlements */,
+				8BB98F7A1EC677B800F86FE1 /* AppDelegate.swift */,
+				8BB98FB01EC678C100F86FE1 /* ConstsAndStructs.swift */,
+				8BB98F821EC677B800F86FE1 /* GameViewController.swift */,
+				8B00585C1EE7F72B00E78C55 /* WaitScene.swift */,
+				8BB98F801EC677B800F86FE1 /* GameScene.swift */,
+				8B5197CD26EAC49B0054B7B4 /* Configuration.storekit */,
+				8B12854B1EE3DEB80050B17E /* MenuScene.swift */,
+				8BB98FC21EC67AF700F86FE1 /* Objects */,
+				8B454F881EEBE2A600848DF6 /* Images */,
+				8BB98F841EC677B800F86FE1 /* Main.storyboard */,
+				8BB98FC51EC67C5200F86FE1 /* LaunchScreen.xib */,
+				8BB98F8C1EC677B800F86FE1 /* Info.plist */,
+				8B00585A1EE7EAA600E78C55 /* Assets.xcassets */,
+			);
+			path = Whiplash;
+			sourceTree = "<group>";
+		};
+		8BB98FC21EC67AF700F86FE1 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FC41EC67B9500F86FE1 /* Platform Generation */,
+				8BB98FB61EC678C100F86FE1 /* ScoreLabel.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		8BB98FC41EC67B9500F86FE1 /* Platform Generation */ = {
+			isa = PBXGroup;
+			children = (
+				8BB98FB11EC678C100F86FE1 /* Platform.swift */,
+				8BB98FB51EC678C100F86FE1 /* PlatformGenerator.swift */,
+			);
+			name = "Platform Generation";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BB98F761EC677B800F86FE1 /* Whiplash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB98FA51EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "Whiplash" */;
+			buildPhases = (
+				8BB98F731EC677B800F86FE1 /* Sources */,
+				8BB98F741EC677B800F86FE1 /* Frameworks */,
+				8BB98F751EC677B800F86FE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Whiplash;
+			packageProductDependencies = (
+				8B1B16AE2AD347FC008B7A6C /* FirebaseAnalytics */,
+				8B1B16B02AD347FC008B7A6C /* FirebaseAnalyticsSwift */,
+				8B1B16B32AD34A8C008B7A6C /* GoogleMobileAds */,
+			);
+			productName = Whiplash;
+			productReference = 8BB98F771EC677B800F86FE1 /* Whiplash.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BB98F6F1EC677B800F86FE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 1500;
+				ORGANIZATIONNAME = "Palm Studios";
+				TargetAttributes = {
+					8BB98F761EC677B800F86FE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = QEWS97H5JD;
+						LastSwiftMigration = 1240;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 8BB98F721EC677B800F86FE1 /* Build configuration list for PBXProject "Whiplash" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BB98F6E1EC677B800F86FE1;
+			packageReferences = (
+				8B1B16AD2AD347FC008B7A6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8B1B16B22AD34A8C008B7A6C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
+			productRefGroup = 8BB98F781EC677B800F86FE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BB98F761EC677B800F86FE1 /* Whiplash */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BB98F751EC677B800F86FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B79164C1EEC775A00321379 /* 29@3x.png in Resources */,
+				8B79164A1EEC775A00321379 /* 29.png in Resources */,
+				8B6F44BB1F99B5AF00EA4637 /* PalmTechLogo.png in Resources */,
+				8B3295B41F4D3CF000EC2074 /* RestorePurchasesButton.png in Resources */,
+				8B454F9C1EEBE2CE00848DF6 /* OrangePlatform.png in Resources */,
+				8B454F971EEBE2CE00848DF6 /* PurchaseButton.png in Resources */,
+				8B7916491EEC775A00321379 /* 20@3x.png in Resources */,
+				8B7916531EEC775A00321379 /* 76@2x.png in Resources */,
+				8B1B16AC2ACA66D0008B7A6C /* GoogleService-Info.plist in Resources */,
+				8B79164B1EEC775A00321379 /* 29@2x.png in Resources */,
+				8B20137026E2A20800B704C0 /* 1024.png in Resources */,
+				8B454F981EEBE2CE00848DF6 /* RateButton.png in Resources */,
+				8B79164F1EEC775A00321379 /* 40@3x.png in Resources */,
+				8B454F9D1EEBE2CE00848DF6 /* PurplePlatform.png in Resources */,
+				8B7916481EEC775A00321379 /* 20@2x.png in Resources */,
+				8BB98F861EC677B800F86FE1 /* Main.storyboard in Resources */,
+				8B00585B1EE7EAA600E78C55 /* Assets.xcassets in Resources */,
+				8B454F9E1EEBE2CE00848DF6 /* YellowPlatform.png in Resources */,
+				8B7916541EEC775A00321379 /* 83.5@2x.png in Resources */,
+				8B454F9A1EEBE2CE00848DF6 /* BluePlatform.png in Resources */,
+				8B7916511EEC775A00321379 /* 60@3x.png in Resources */,
+				8B79164D1EEC775A00321379 /* 40.png in Resources */,
+				8B454F961EEBE2CE00848DF6 /* PlayButton.png in Resources */,
+				8B7916471EEC775A00321379 /* 20.png in Resources */,
+				8BB98FC61EC67C5200F86FE1 /* LaunchScreen.xib in Resources */,
+				8B79164E1EEC775A00321379 /* 40@2x.png in Resources */,
+				8B7916501EEC775A00321379 /* 60@2x.png in Resources */,
+				8B454F941EEBE2CE00848DF6 /* ContactButton.png in Resources */,
+				8B454F951EEBE2CE00848DF6 /* GameCenterButton.png in Resources */,
+				8B454F9B1EEBE2CE00848DF6 /* GreenPlatform.png in Resources */,
+				8B5197CE26EAC49B0054B7B4 /* Configuration.storekit in Resources */,
+				8B7916521EEC775A00321379 /* 76.png in Resources */,
+				8B454F991EEBE2CE00848DF6 /* ShareButton.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BB98F731EC677B800F86FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB98FBB1EC678C100F86FE1 /* Platform.swift in Sources */,
+				8BB98FBA1EC678C100F86FE1 /* ConstsAndStructs.swift in Sources */,
+				8B00585D1EE7F72B00E78C55 /* WaitScene.swift in Sources */,
+				8B12854C1EE3DEB80050B17E /* MenuScene.swift in Sources */,
+				8BB98FBF1EC678C100F86FE1 /* PlatformGenerator.swift in Sources */,
+				8BB98FC01EC678C100F86FE1 /* ScoreLabel.swift in Sources */,
+				8BB98F811EC677B800F86FE1 /* GameScene.swift in Sources */,
+				8BB98F831EC677B800F86FE1 /* GameViewController.swift in Sources */,
+				8BB98F7B1EC677B800F86FE1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8BB98F841EC677B800F86FE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BB98F851EC677B800F86FE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BB98FA31EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BB98FA41EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BB98FA61EC677B800F86FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Whiplash/Whiplash.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QEWS97H5JD;
+				INFOPLIST_FILE = Whiplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BB98FA71EC677B800F86FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Whiplash/Whiplash.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QEWS97H5JD;
+				INFOPLIST_FILE = Whiplash/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BB98F721EC677B800F86FE1 /* Build configuration list for PBXProject "Whiplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA31EC677B800F86FE1 /* Debug */,
+				8BB98FA41EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB98FA51EC677B800F86FE1 /* Build configuration list for PBXNativeTarget "Whiplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB98FA61EC677B800F86FE1 /* Debug */,
+				8BB98FA71EC677B800F86FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B1B16AD2AD347FC008B7A6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.16.0;
+			};
+		};
+		8B1B16B22AD34A8C008B7A6C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B1B16AE2AD347FC008B7A6C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B1B16AD2AD347FC008B7A6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8B1B16B02AD347FC008B7A6C /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B1B16AD2AD347FC008B7A6C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		8B1B16B32AD34A8C008B7A6C /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B1B16B22AD34A8C008B7A6C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8BB98F6F1EC677B800F86FE1 /* Project object */;
+}
