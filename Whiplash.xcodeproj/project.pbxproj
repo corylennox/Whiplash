@@ -542,7 +542,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.1.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.palmtech.whiplash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -607,16 +607,18 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = exactVersion;
-				version = 10.16.0;
+				kind = versionRange;
+				maximumVersion = 11.0.0;
+				minimumVersion = 10.16.0;
 			};
 		};
 		8B1B16B22AD34A8C008B7A6C /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
 			requirement = {
-				kind = exactVersion;
-				version = 10.12.0;
+				kind = versionRange;
+				maximumVersion = 11.0.0;
+				minimumVersion = 10.12.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

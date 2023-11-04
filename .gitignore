@@ -1,13 +1,10 @@
-# Cocoapods
-Pods/
-Podfile.lock
-
 # Firebase
 GoogleService-Info.plist
 
 # Xcode
-*.xcuserstate
-*.xcuserdata
+xcuserdata
+!xcshareddata
+!xcschemes
 
 # macOS
 .DS_Store
