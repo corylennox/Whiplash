@@ -92,9 +92,17 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate, MFMa
     
     func loadNewInterstitial()
     {
+        var adUnitID = ""
+        #if DEBUG
+            // Test ad unit
+            adUnitID = "ca-app-pub-3940256099942544/4411468910"
+        #else
+            // Release ad unit
+            adUnitID = "ca-app-pub-8989932856434416/4656694886"
+        #endif
+        
         let request = GADRequest()
-        // GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910", //test ad
-        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-8989932856434416/4656694886", //real ad
+        GADInterstitialAd.load(withAdUnitID: adUnitID,
                             request: request,
                             completionHandler: { [self] ad, error in
                                 if let error = error {
