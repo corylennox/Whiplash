@@ -9,6 +9,7 @@ xcuserdata
 # macOS
 .DS_Store
 
-# Misc.
-ToDo.txt
+# Environment
+.env
+.env.*
 
